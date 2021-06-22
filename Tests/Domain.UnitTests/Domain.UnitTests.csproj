@@ -2,7 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-
+    <RootNamespace>CaseCore.Domain.UnitTests</RootNamespace>
+    <AssemblyName>CaseCore.Domain.UnitTests</AssemblyName>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
@@ -12,5 +13,11 @@
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
     <PackageReference Include="coverlet.collector" Version="1.2.0" />
   </ItemGroup>
-
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Common\Common.csproj" />
+    <ProjectReference Include="..\..\src\Domain\Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entities\" />
+  </ItemGroup>
 </Project>
