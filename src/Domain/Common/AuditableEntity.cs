@@ -20,9 +20,6 @@ namespace CaseCore.Domain.Common
         /// The username of the User who last modified the Entity.
         /// </summary>
         public string LastModifiedBy { get; set; }
-        /// <summary>
-        /// The Timestamp for when the Entity was last modified.
-        /// </summary>
-        public DateTime? LastModified { get; set; }
+
     }
 }

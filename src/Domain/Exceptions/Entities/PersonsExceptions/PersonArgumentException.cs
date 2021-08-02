@@ -1,6 +1,7 @@
 ﻿using System;
 
-namespace CaseCore.Domain.Exceptions.Entities
+namespace CaseCore.Domain.Exceptions.Entities.PersonsExceptions
+
 {
     /// <summary>
     /// Exception class used in the <see cref="Domain.Entities.Person"></see> class.
