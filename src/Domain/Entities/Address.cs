@@ -1,6 +1,6 @@
 ﻿using CaseCore.Domain.Common;
 using CaseCore.Domain.Enums;
-using CaseCore.Domain.Exceptions.Entities;
+using CaseCore.Domain.Exceptions.Entities.Address;
 using CaseCore.Domain.Types;
 using System;
 using System.Text.RegularExpressions;
@@ -10,7 +10,7 @@ namespace CaseCore.Domain.Entities
     /// <summary>
     /// Domain Entity that represents a physical or mailing address.
     /// </summary>
-    public class Address : BaseEntity
+    public class Address : AuditableEntity
     {
         private Address()
         {
@@ -18,15 +18,15 @@ namespace CaseCore.Domain.Entities
         /// <summary>
         /// Creates a new Address instance from the provided parameters.
         /// </summary>
-        /// <param name="addressTypeId">The id of the <see cref="Types.AddressType"/> of the Address.</param>
+        /// <param name="type">The <see cref="AddressType"/> of the address being created.</param>
         /// <param name="street">The street address, e.g. "123 Anywhere St." Required, cannot be null/whitespace/empty string.</param>
         /// <param name="suite">The suite/apartment/room number. This is an optional field.</param>
         /// <param name="city">The name of the city in which the address is located. Required, cannot be null/whitespace/empty string.</param>
         /// <param name="state">The 2-digit Postal Abbreviation for the state in which the address is located. Required, cannot be null/whitespace/empty string.</param>        
         /// <param name="zipCode">The 5-digit ZIP code for the address. Required, cannot be null/whitespace/empty string.</param>
-        public Address(int addressTypeId, string street, string suite, string city, string state, string zipCode)
+        public Address(AddressType type, string street, string suite, string city, string state, string zipCode)
         {
-            UpdateTypeId(addressTypeId);
+            UpdateType(type);
             UpdateStreet(street);
             UpdateSuite(suite);
             UpdateCity(city);
@@ -36,31 +36,79 @@ namespace CaseCore.Domain.Entities
         /// <summary>
         /// Creates a new Address instance from the provided parameters.
         /// </summary>
-        /// <param name="addressTypeId">The id of the <see cref="Types.AddressType"/> of the Address.</param>
+        /// <param name="type">The <see cref="AddressType"/> of the address being created.</param>
         /// <param name="street">The street address, e.g. "123 Anywhere St." Required, cannot be null/whitespace/empty string.</param>
         /// <param name="suite">The suite/apartment/room number. This is an optional field.</param>
         /// <param name="city">The name of the city in which the address is located. Required, cannot be null/whitespace/empty string.</param>
         /// <param name="state">The 2-digit Postal Abbreviation for the state in which the address is located. Required, cannot be null/whitespace/empty string.</param>        
         /// <param name="zipCode">The 5-digit ZIP code for the address. Required, cannot be null/whitespace/empty string.</param>
-        public Address(int addressTypeId, string street, string suite, string city, string state, string zipCode, AddressMeta meta)
+        /// <param name="latitude">A double in the range of -90.0 to 90.0 that represents the latitude coordinate of the address. Defaults to 0.0.</param>
+        /// <param name="longitude">A double in the range of -180.0 to 180.0 that represents the longitude coordinate of the address. Defaults to 0.0.</param>
+        public Address(AddressType type, string street, string suite, string city, string state, string zipCode, double latitude = 0.0, double longitude = 0.0)
         {
-            UpdateTypeId(addressTypeId);
+            UpdateType(type);
+            UpdateStreet(street);
+            UpdateSuite(suite);
+            UpdateCity(city);
+            UpdateState(state);
+            UpdateZip(zipCode); 
+            UpdateCoordinates(latitude, longitude);
+        }
+        /// <summary>
+        /// Creates a new Address instance from the provided parameters.
+        /// </summary>
+        /// <param name="type">The <see cref="AddressType"/> of the address being created.</param>
+        /// <param name="street">The street address, e.g. "123 Anywhere St." Required, cannot be null/whitespace/empty string.</param>
+        /// <param name="suite">The suite/apartment/room number. This is an optional field.</param>
+        /// <param name="city">The name of the city in which the address is located. Required, cannot be null/whitespace/empty string.</param>
+        /// <param name="state">The 2-digit Postal Abbreviation for the state in which the address is located. Required, cannot be null/whitespace/empty string.</param>        
+        /// <param name="zipCode">The 5-digit ZIP code for the address. Required, cannot be null/whitespace/empty string.</param>
+        /// <param name="beat">A string of 5 characters or fewer representing the beat associated with the address.</param>
+        /// <param name="reportingArea">A string of 10 characters or fewer representing the Reporting Area associated with the address.</param>
+        public Address(AddressType type, string street, string suite, string city, string state, string zipCode, string beat, string reportingArea)
+        {
+            UpdateType(type);
             UpdateStreet(street);
             UpdateSuite(suite);
             UpdateCity(city);
             UpdateState(state);
             UpdateZip(zipCode);
-            _meta = meta;
+            UpdateBeat(beat);
+            UpdateReportingArea(reportingArea);
         }
-        private int _addressTypeId;
         /// <summary>
-        ///  Returns the Id of the <see cref="AddressType"/> associated with the Address.
+        /// Creates a new Address instance from the provided parameters.
         /// </summary>
-        public int AddressTypeId => _addressTypeId;
+        /// <param name="type">The <see cref="AddressType"/> of the address being created.</param>
+        /// <param name="street">The street address, e.g. "123 Anywhere St." Required, cannot be null/whitespace/empty string.</param>
+        /// <param name="suite">The suite/apartment/room number. This is an optional field.</param>
+        /// <param name="city">The name of the city in which the address is located. Required, cannot be null/whitespace/empty string.</param>
+        /// <param name="state">The 2-digit Postal Abbreviation for the state in which the address is located. Required, cannot be null/whitespace/empty string.</param>        
+        /// <param name="zipCode">The 5-digit ZIP code for the address. Required, cannot be null/whitespace/empty string.</param>
+        /// <param name="beat">A string of 5 characters or fewer representing the beat associated with the address.</param>
+        /// <param name="reportingArea">A string of 10 characters or fewer representing the Reporting Area associated with the address.</param>
+        /// <param name="latitude">A double in the range of -90.0 to 90.0 that represents the latitude coordinate of the address. Defaults to 0.0.</param>
+        /// <param name="longitude">A double in the range of -180.0 to 180.0 that represents the longitude coordinate of the address. Defaults to 0.0.</param>
+        public Address(AddressType type, string street, string suite, string city, string state, string zipCode, string beat, string reportingArea, double latitude = 0.0, double longitude = 0.0)
+        {
+            UpdateType(type);
+            UpdateStreet(street);
+            UpdateSuite(suite);
+            UpdateCity(city);
+            UpdateState(state);
+            UpdateZip(zipCode);
+            UpdateBeat(beat);
+            UpdateReportingArea(reportingArea);
+            UpdateCoordinates(latitude, longitude);
+        }
         /// <summary>
-        /// Returns the <see cref="AddressType"/> associated with the Address.
+        /// The <see cref="AddressType"/> of the Address.
         /// </summary>
         public AddressType AddressType { get; private set;}
+        /// <summary>
+        /// The ID of the <see cref="AddressType"/> of the Address.
+        /// </summary>
+        public int AddressTypeId { get; private set; }
         private string _street;
         /// <summary>
         /// Returns a string with the Address's Street Address.
@@ -77,58 +125,42 @@ namespace CaseCore.Domain.Entities
         /// </summary>
         public string City => _city;
         private State _state;
+        public State State => _state;
+        /// <summary>
+        /// Returns the State enum as as string.
+        /// </summary>
         public string StatePostalCode => _state.ToString();
+
         private string _zip;
         /// <summary>
         /// Returns a string containing the Address's 5-digit ZIP Code.
         /// </summary>
         public string Zip => _zip;
-        public string TypeName => AddressType?.Name ?? "Unknown";
-        public string TypeAbbreviation => AddressType?.Abbreviation ?? "XX";
+        private string _beat;
         /// <summary>
         /// Returns a string containing the Beat associated with the address.
         /// </summary>
-        /// <remarks>
-        /// This will return "N/A" if the Address has no meta or if the address's associated Meta information has not been loaded.
-        /// </remarks>
-        public string Beat => _meta?.Beat ?? "N/A";
+        public string Beat => _beat;
+        private string _reportingArea;
         /// <summary>
-        /// Returns a string containing the Reporting Area associated with the address.
+        /// Returns a string containing the reporting area associated with the address.
         /// </summary>
-        /// <remarks>
-        /// This will return "N/A" if the Address has no meta or if the address's associated Meta information has not been loaded.
-        /// </remarks>
-        public string ReportingArea => _meta?.ReportingArea ?? "N/A";
+        public string ReportingArea => _reportingArea;
+        private double? _longitude;
         /// <summary>
-        /// Returns a double containing the Logitude associated with the address.
+        /// Returns a double containing the Longitude coordinate for the address.
         /// </summary>
-        /// <remarks>
-        /// This will return 0.0 if the Address has no meta or if the address's associated Meta information has not been loaded.
-        /// </remarks>
-        public double Longitude => _meta?.Longitude ?? 0.0;
+        public double? Longitude => _longitude;
+        private double? _latitude;
+        public double? Latitude => _latitude;
+        public string FullAddressText => $"{Street}{(!string.IsNullOrEmpty(Suite) ? $" {Suite}" : "")}, {City}, {State} {Zip}";
         /// <summary>
-        /// Returns a double containing the Latitude associated with the address.
+        /// Updates the <see cref="AddressType"/> associated with the Address.
         /// </summary>
-        /// <remarks>
-        /// This will return 0.0 if the Address has no meta or if the address's associated Meta information has not been loaded.
-        /// </remarks>
-        public double Latitude => _meta?.Latitude ?? 0.0;
-        private readonly AddressMeta _meta;
-        public string FullAddressText => $"{Street}{(!string.IsNullOrEmpty(Suite) ? $" {Suite}" : "")}, {City}, {StatePostalCode} {Zip}";
-        /// <summary>
-        /// Updates the id of the <see cref="Types.AddressType"/> associated with the address. 
-        /// </summary>
-        /// <param name="newAddressTypeId"></param>
-        /// <exception cref="AddressArgumentException">
-        /// Thrown when the parameter is less than 1.
-        /// </exception>
-        public void UpdateTypeId(int newAddressTypeId)
+        /// <param name="newType">The new <see cref="AddressType"/></param>
+        public void UpdateType(AddressType newType)
         {
-            if (newAddressTypeId < 1)
-            {
-                throw new AddressArgumentException("Cannot update Address Type Id: parameter cannot be less than 1.", nameof(newAddressTypeId));
-            }
-            _addressTypeId = newAddressTypeId;
+            AddressType = newType;
         }
         /// <summary>
         /// Updates the Street of the Address.
@@ -216,7 +248,104 @@ namespace CaseCore.Domain.Entities
             }
             _zip = newZip;
         }
-
+        /// <summary>
+        /// Updates the Beat associated with the Address's meta information.
+        /// </summary>
+        /// <param name="newBeat">A string of 5 characters or fewer representing the beat associated with the address.</param>
+        /// <exception cref="AddressArgumentException">
+        /// Thrown when the provided parameter is null, whitespace, or more than 5 characters.
+        /// </exception>
+        public void UpdateBeat(string newBeat)
+        {
+            if (string.IsNullOrWhiteSpace(newBeat))
+            {
+                throw new AddressArgumentException("Cannot update Address Beat: parameter cannot be null or whitespace.", nameof(newBeat));
+            }
+            else if (newBeat.Length > 5)
+            {
+                throw new AddressArgumentException("Cannot update Address Beat: parameter must be 5 characters or fewer.", nameof(newBeat));
+            }
+            else
+            {
+                _beat = newBeat;
+            }
+        }
+        /// <summary>
+        /// Updates the Reporting Area associated with the Address's meta information.
+        /// </summary>
+        /// <param name="newReportingArea">A string of 10 characters or fewer representing the Reporting Area associated with the address.</param>
+        /// <exception cref="AddressArgumentException">
+        /// Thrown when the provided parameter is null, whitespace, or more than 10 characters.
+        /// </exception>
+        public void UpdateReportingArea(string newReportingArea)
+        {
+            if (string.IsNullOrWhiteSpace(newReportingArea))
+            {
+                throw new AddressArgumentException("Cannot update Address Reporting Area: parameter cannot be null or whitespace.", nameof(newReportingArea));
+            }
+            else if (newReportingArea.Length > 10)
+            {
+                throw new AddressArgumentException("Cannot update Address Reporting Area: parameter must be 10 characters or fewer.", nameof(newReportingArea));
+            }
+            else
+            {
+                _reportingArea = newReportingArea;
+            }
+        }
+        /// <summary>
+        /// Updates the GPS coordinates associated with the address.
+        /// </summary>
+        /// <param name="latitude">A double in the range of -90.0 to 90.0.</param>
+        /// <param name="longitude">A double in the range of -180.0 to 180.0.</param>
+        /// <exception cref="AddressArgumentException">
+        /// Thrown when the latitude paramater is not within the range of -90.0 to 90.0 or the longitude parameter is not within the range of -180.0 to 180.0.
+        /// </exception>
+        public void UpdateCoordinates(double? latitude = null, double? longitude = null)
+        {
+            if (latitude != null && longitude == null) // User wants to update lat only
+            {                
+                if (_longitude == null) 
+                {
+                    // if current long property is null, we cannot update coords with just lat
+                    throw new AddressInvalidOperationException("Cannot update Address Coordinate Latitude: Object Longitude property is null. Both a Latitude and Longitude value are required.");
+                }
+                else if (latitude > 90.0 || latitude < -90.0)
+                {
+                    throw new AddressArgumentException("Cannot update Address Latitude: parameter must be between -90.0 and 90.0.", nameof(latitude));
+                }
+                _latitude = latitude;
+            }
+            else if (latitude == null && longitude != null) // User wants to update long only
+            {
+                if (_latitude == null)
+                {
+                    // if current lat property is null, we cannot update coords with just long
+                    throw new AddressInvalidOperationException("Cannot update Address Coordinate Longitude: Object Latitude property is null. Both a Latitude and Longitude value are required.");
+                }
+                else if (longitude > 180.0 || longitude < -180.0)
+                {
+                    throw new AddressArgumentException("Cannot update Address Latitude: parameter must be between 180.0 and -180.0.", nameof(longitude));
+                }
+                _longitude = longitude;
+            }
+            else
+            {
+                if (latitude > 90.0 || latitude < -90.0)
+                {
+                    throw new AddressArgumentException("Cannot update Address Latitude: parameter must be between -90.0 and 90.0.", nameof(latitude));
+                }
+                else if (longitude > 180.0 || longitude < -180.0)
+                {
+                    throw new AddressArgumentException("Cannot update Address Latitude: parameter must be between 180.0 and -180.0.", nameof(longitude));
+                }
+                else
+                {
+                    _latitude = latitude;
+                    _longitude = longitude;
+                }
+            }
+            
+        }
 
         private bool IsUSOrCanadianZipCode(string zipCode)
         {

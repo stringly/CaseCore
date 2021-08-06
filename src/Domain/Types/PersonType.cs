@@ -5,6 +5,7 @@ namespace CaseCore.Domain.Types
 {
     public class PersonType : BaseEntity
     {
+        private PersonType() { }
         /// <summary>
         /// Creates a new Instance of the Class
         /// </summary>

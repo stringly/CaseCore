@@ -1,5 +1,5 @@
-﻿using CaseCore.Domain.Entities.Persons;
-using CaseCore.Domain.Exceptions.Entities.PersonsExceptions;
+﻿using CaseCore.Domain.Entities;
+using CaseCore.Domain.Exceptions.Entities;
 using CaseCore.Domain.Types;
 using System;
 using Xunit;
@@ -15,7 +15,7 @@ namespace CaseCore.Domain.UnitTests.Entities
         private Person CreatePerson()
         {
             // Arrange
-            int personTypeId = 1;
+            PersonType testType = new PersonType("Test", "X");
             string prefix = "Mr";
             string firstName = "John";
             string middleName = "Que";
@@ -26,7 +26,7 @@ namespace CaseCore.Domain.UnitTests.Entities
             DateTime dob = new DateTime(1980, 1, 1);
             string ssn = "123-45-6789";
 
-            return new Person(personTypeId, prefix, firstName, middleName, lastName, suffix, gender, race, dob, ssn);
+            return new Person(testType, prefix, firstName, middleName, lastName, suffix, gender, race, dob, ssn);
         }
         [Fact]
         public void Given_Valid_Values_Person_Is_Valid()
@@ -52,14 +52,14 @@ namespace CaseCore.Domain.UnitTests.Entities
             newPerson.UpdateHonorific(newHonorific);
 
             // Assert
-            Assert.Equal("Mrs.", newPerson.Prefix);
+            Assert.Equal("Mrs.", newPerson.TitleOfCourtesy);
         }
         [Fact]
         public void Should_Throw_PersonArgumentException_For_Invalid_Honorific()
         {
 
         }
-
+        // TODO: Add testing for collections: Phone, Email, Address
 
     }
 }

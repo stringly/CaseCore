@@ -14,7 +14,7 @@ namespace CaseCore.Domain.UnitTests.Types
             string abbreviation = "H";
 
             // Act
-            var type = new PhoneType(name, abbreviation);
+            var type = new PhoneNumberType(name, abbreviation);
 
             // Assert
             Assert.Equal("Home", type.Name);
@@ -30,7 +30,7 @@ namespace CaseCore.Domain.UnitTests.Types
             string abbreviation = "H";
             
             // Act/Assert
-            Assert.Throws<PhoneTypeArgumentException>(() => new PhoneType(value, abbreviation));            
+            Assert.Throws<PhoneNumberTypeArgumentException>(() => new PhoneNumberType(value, abbreviation));            
         }
         [Theory]
         [InlineData("")]
@@ -42,14 +42,14 @@ namespace CaseCore.Domain.UnitTests.Types
             string name = "Home";
 
             // Act/Assert
-            Assert.Throws<PhoneTypeArgumentException>(() => new PhoneType(name, value));
+            Assert.Throws<PhoneNumberTypeArgumentException>(() => new PhoneNumberType(name, value));
         }
 
         [Fact]
         public void Can_Update_FullName()
         {
             // Arrange
-            var newType = new PhoneType("Home", "H");
+            var newType = new PhoneNumberType("Home", "H");
             var newName = "Work";
 
             // Act
@@ -62,7 +62,7 @@ namespace CaseCore.Domain.UnitTests.Types
         public void Can_Update_Abbreviation()
         {
             // Arrange
-            var newType = new PhoneType("Home", "H");
+            var newType = new PhoneNumberType("Home", "H");
             var newAbbreviation = "W";
 
             // Act

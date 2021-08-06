@@ -5,6 +5,7 @@ namespace CaseCore.Domain.Types
 {
     public class OffenseType : BaseEntity
     {
+        private OffenseType() { }
         /// <summary>
         /// Creates a new Instance of the Class
         /// </summary>
