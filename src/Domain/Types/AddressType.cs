@@ -8,6 +8,7 @@ namespace CaseCore.Domain.Types
     /// </summary>
     public class AddressType : BaseEntity
     {
+        private AddressType() { }
         /// <summary>
         /// Creates a new Instance of the Class
         /// </summary>

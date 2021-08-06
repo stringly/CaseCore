@@ -10,5 +10,7 @@
     <Folder Include="Exceptions\ValueObjects\" />
     <Folder Include="ValueObjects\" />
   </ItemGroup>
-
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj" />
+  </ItemGroup>
 </Project>

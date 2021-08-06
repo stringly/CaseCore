@@ -14,6 +14,6 @@ namespace CaseCore.Domain.Common
         /// <summary>
         /// The Timestamp for when the Entity was last modified.
         /// </summary>
-        public DateTime? LastModified { get; set; }
+        public DateTime? Modified { get; set; }
     }
 }

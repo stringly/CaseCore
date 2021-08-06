@@ -1,13 +1,19 @@
 ﻿using CaseCore.Domain.Common;
 using CaseCore.Domain.Exceptions.Entities;
 using CaseCore.Domain.Types;
-using System.Linq;
 
 namespace CaseCore.Domain.Entities
 {
+    /// <summary>
+    /// Class that represents a <see cref="Entities.Person"/> and it's associated <see cref="Entities.PhoneNumber"/>
+    /// </summary>
     public class PhoneNumber : BaseEntity
     {
         private PhoneNumber() { }
+        /// <summary>
+        /// Creates a new instance of the class.
+        /// </summary>
+        /// <param name="number">A <see cref="Entities.PhoneNumber"/></param>
         public PhoneNumber(string number, int phoneTypeId)
         {
             UpdateNumber(number);
@@ -18,11 +24,11 @@ namespace CaseCore.Domain.Entities
         /// Returns a string containing the phone number digits with no punctucation.
         /// </summary>
         public string Number => _number;
-        private int _phoneTypeId;
+        public int PhoneNumberTypeId { get; private set; }
         /// <summary>
         /// The <see cref="PhoneType"/> of the number.
         /// </summary>
-        public PhoneType Type { get; private set; }
+        public PhoneNumberType PhoneNumberType { get; private set; }
         /// <summary>
         /// Returns the phone number formatted as (123) 456-7890. 
         /// </summary>
@@ -33,12 +39,12 @@ namespace CaseCore.Domain.Entities
             get {
                 if (_number.Length == 10)
                 {
-                    return $"({_number.Substring(0,3)}) {_number.Substring(3, 3)}-{_number.Substring(6, 4)}";
+                    return $"({_number.Substring(0, 3)}) {_number.Substring(3, 3)}-{_number.Substring(6, 4)}";
                 }
                 else
                 {
                     return _number;
-                }                
+                }
             }
         }
         public void UpdateNumber(string newNumber)
@@ -56,7 +62,7 @@ namespace CaseCore.Domain.Entities
             {
                 throw new PhoneNumberArgumentException("Cannot Update Phone Number Type: provided parameter is not a valid type.", nameof(newTypeId));
             }
-            _phoneTypeId = newTypeId;
+            PhoneNumberTypeId = newTypeId;
         }
     }
 }

@@ -3,14 +3,15 @@ using CaseCore.Domain.Exceptions.Types;
 
 namespace CaseCore.Domain.Types
 {
-    public class PhoneType : BaseEntity
+    public class PhoneNumberType : BaseEntity
     {
+        private PhoneNumberType() { }
         /// <summary>
         /// Creates a new Instance of the Class
         /// </summary>
         /// <param name="fullName">A string containing at least 2 but less than 50 characters representing the full name of the Phone Type.</param>
         /// <param name="Abbreviation">A string containing no more than 5 characters representing an abbreviation for the Phone Type.</param>
-        public PhoneType(string fullName, string Abbreviation)
+        public PhoneNumberType(string fullName, string Abbreviation)
         {
             UpdateFullName(fullName);
             UpdateAbbreviation(Abbreviation);
@@ -29,16 +30,16 @@ namespace CaseCore.Domain.Types
         /// Updates the Full Name of the Phone Type
         /// </summary>
         /// <param name="newFullName"></param>
-        /// <exception cref="PhoneTypeArgumentException">Thrown when the newFullName parameter is empty/whitespace or less than 2 characters or greater than 50 characters.</exception>
+        /// <exception cref="PhoneNumberTypeArgumentException">Thrown when the newFullName parameter is empty/whitespace or less than 2 characters or greater than 50 characters.</exception>
         public void UpdateFullName(string newFullName)
         {
             if (string.IsNullOrWhiteSpace(newFullName))
             {
-                throw new PhoneTypeArgumentException("Cannot update Phone Type Full Name: parameter cannot be null/empty string.", nameof(newFullName));
+                throw new PhoneNumberTypeArgumentException("Cannot update Phone Type Full Name: parameter cannot be null/empty string.", nameof(newFullName));
             }
             else if (newFullName.Length < 2 || newFullName.Length > 50)
             {
-                throw new PhoneTypeArgumentException("Cannot update Phone Type Full Name: parameter must be more than 2 characters or fewer than 50 characters.", nameof(newFullName));
+                throw new PhoneNumberTypeArgumentException("Cannot update Phone Type Full Name: parameter must be more than 2 characters or fewer than 50 characters.", nameof(newFullName));
             }
             else
             {
@@ -49,16 +50,16 @@ namespace CaseCore.Domain.Types
         /// Updates the Abbreviation of the Phone Type
         /// </summary>
         /// <param name="newAbbreviation"></param>
-        /// <exception cref="PhoneTypeArgumentException">Thrown when the newAbbreviation parameter is empty/whitespace or greater than 5 characters.</exception>
+        /// <exception cref="PhoneNumberTypeArgumentException">Thrown when the newAbbreviation parameter is empty/whitespace or greater than 5 characters.</exception>
         public void UpdateAbbreviation(string newAbbreviation)
         {
             if (string.IsNullOrWhiteSpace(newAbbreviation))
             {
-                throw new PhoneTypeArgumentException("Cannot update Phone Type Abbreviation: parameter cannot be null/empty string.", nameof(newAbbreviation));
+                throw new PhoneNumberTypeArgumentException("Cannot update Phone Type Abbreviation: parameter cannot be null/empty string.", nameof(newAbbreviation));
             }
             else if (newAbbreviation.Length > 5)
             {
-                throw new PhoneTypeArgumentException("Cannot update Phone Type Abbreviation: parameter cannot be more than 5 characters.", nameof(newAbbreviation));
+                throw new PhoneNumberTypeArgumentException("Cannot update Phone Type Abbreviation: parameter cannot be more than 5 characters.", nameof(newAbbreviation));
             }
             else
             {

@@ -5,6 +5,11 @@
     <RootNamespace>CaseCore.Persistence</RootNamespace>
     <AssemblyName>CaseCore.Persistence</AssemblyName>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20210804060517_initial.cs" />
+    <Compile Remove="Migrations\20210804060517_initial.Designer.cs" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.0.0">

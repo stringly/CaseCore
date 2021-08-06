@@ -19,7 +19,7 @@ namespace CaseCore.Domain.Common
         /// <summary>
         /// The username of the User who last modified the Entity.
         /// </summary>
-        public string LastModifiedBy { get; set; }
+        public string ModifiedBy { get; set; }
 
     }
 }

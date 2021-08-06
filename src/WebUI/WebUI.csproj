@@ -4,6 +4,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>CaseCore.WebUI</RootNamespace>
     <AssemblyName>CaseCore.WebUI</AssemblyName>
+    <UserSecretsId>09a2475a-e232-4c3e-bd85-24df4e90c35b</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
     <_ContentIncludedByDefault Remove="wwwroot\css\site.min.css" />

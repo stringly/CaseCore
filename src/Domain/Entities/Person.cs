@@ -6,23 +6,27 @@ using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-namespace CaseCore.Domain.Entities.Persons
+namespace CaseCore.Domain.Entities
 
 {
     public class Person : AuditableEntity
     {
         private Person() { }
-        public Person(int personTypeId, string honorific, string firstName, string middleName, string lastName, string suffix, string gender, string race, DateTime dob, string ssn)
+        public Person(PersonType type, string honorific, string firstName, string middleName, string lastName, string suffix, string gender, string race, DateTime dob, string ssn)
         {
-            UpdatePersonType(personTypeId);
+            UpdatePersonType(type);
             UpdateHonorific(honorific);
             UpdateFirstName(firstName);
             UpdateMiddleName(middleName);
             UpdateLastName(lastName);
             UpdateSuffix(suffix);
             UpdateGender(gender);
+            UpdateRace(race);
             UpdateDOB(dob);
             UpdateSSN(ssn);
+            _addresses = new List<PersonAddress>();
+            _phoneNumbers = new List<PersonPhoneNumber>();
+            _emailAddresses = new List<PersonEmailAddress>();
         }
 
         
@@ -30,7 +34,11 @@ namespace CaseCore.Domain.Entities.Persons
         /// <summary>
         /// Person's prefix.
         /// </summary>
-        public string Prefix => _prefix.GetDescription(); 
+        public Honorific Prefix => _prefix;
+        /// <summary>
+        /// Returns the Prefix title as a string.
+        /// </summary>
+        public string TitleOfCourtesy => _prefix.GetDescription(); 
         private string _firstName;        
         /// <summary>
         /// Person's First/Given Name
@@ -60,39 +68,57 @@ namespace CaseCore.Domain.Entities.Persons
         /// </summary>
         public string FullNameReverse => $"{_lastName}, {_firstName}";
         public string FormalName => $"{Prefix} {_firstName} {_lastName}{(!string.IsNullOrEmpty(_suffix) ? $", {_suffix}" :"")}";
-        private int _personTypeId;
         /// <summary>
-        /// The Id of the <see cref="PersonType"/> associated with the person.
+        /// The Id of the <see cref="Types.PersonType"/> associated with the person.
         /// </summary>
-        public int PersonTypeId => _personTypeId;
+        public int PersonTypeId {get; private set; }
         /// <summary>
-        /// Navigation property for the <see cref="PersonType"/> associated with the Person.
+        /// Navigation property for the <see cref="Types.PersonType"/> associated with the Person.
         /// </summary>
-        public virtual PersonType Type { get; private set; }
+        public PersonType PersonType { get; private set; }
         private readonly List<PersonAddress> _addresses;
         /// <summary>
-        /// Returns a readonly list of <see cref="PersonAddress"/> containing <see cref="Address"/> associated with this person.
+        /// Returns a readonly collection of <see cref="PersonAddress"/> associated with the person.
         /// </summary>
-        public IEnumerable<PersonAddress> Addresses => _addresses.AsReadOnly();
-        private readonly List<PersonPhone> _phoneNumbers;
+        public virtual IEnumerable<PersonAddress> Addresses => _addresses.AsReadOnly();
         /// <summary>
-        /// Returns a readonly list of <see cref="PersonPhone"/> containing links to <see cref="PhoneNumber"/> associated with this person.
+        /// Returns a readonly list of <see cref="Entities.PersonPhoneNumber"/> associated with this person.
         /// </summary>
-        public IEnumerable<PersonPhone> PhoneNumbers => _phoneNumbers.AsReadOnly();
+        private readonly List<PersonPhoneNumber> _phoneNumbers;
+        /// <summary>
+        /// Returns a readonly list of <see cref="Entities.PersonPhoneNumber"/> associated with this person.
+        /// </summary>
+        public virtual IEnumerable<PersonPhoneNumber> PhoneNumbers => _phoneNumbers.AsReadOnly();
+        /// <summary>
+        /// Returns a readonly list of <see cref="PersonEmailAddress"/> associated with this person.
+        /// </summary>
+        private readonly List<PersonEmailAddress> _emailAddresses;
+        /// <summary>
+        /// Returns a readonlyt list of <see cref="PersonEmailAddress"/> associated with this person.
+        /// </summary>
+        public virtual IEnumerable<PersonEmailAddress> EmailAddresses => _emailAddresses.AsReadOnly();
         private Gender _gender;
         /// <summary>
         /// Returns a string of the Person's <see cref="Enums.Gender"/>
         /// </summary>
-        public string Gender => _gender.GetDescription();
+        public Gender Gender => _gender;
+        /// <summary>
+        /// Returns the Gender enum as a string.
+        /// </summary>
+        public string GenderName => _gender.GetDescription();
         /// <summary>
         /// Returns a string with the abbreviation for the person's gender.
         /// </summary>
         public string GenderAbbreviation => _gender.ToString();
         private Race _race;
         /// <summary>
-        /// Returns a string containing Person's <see cref="Enums.Race"/>
+        /// Returns the Race as a <see cref="Race"/> enum.
         /// </summary>
-        public string Race => _race.GetDescription();
+        public Race Race => _race;
+        /// <summary>
+        /// Returns a string containing Person's <see cref="Enums.Race"/>
+        /// </summary>        
+        public string RaceName => _race.GetDescription();
         public string RaceAbbreviation => _race.ToString();
         private DateTime _dob;
         /// <summary>
@@ -200,19 +226,12 @@ namespace CaseCore.Domain.Entities.Persons
             _suffix = newSuffix;
         }
         /// <summary>
-        /// Updates the PersonTypeId of the Person.
+        /// Updates the <see cref="Types.PersonType"/>.
         /// </summary>
-        /// <param name="newTypeId">An integer that is a valid Id for a <see cref="PersonType"/>.</param>
-        /// <exception cref="PersonArgumentException">
-        /// Thrown when the provided parameter is less than 1.
-        /// </exception>
-        public void UpdatePersonType(int newTypeId)
+        /// <param name="newTypeId">An integer that is a valid Id for a <see cref="Types.PersonType"/>.</param>
+        public void UpdatePersonType(PersonType newType)
         {
-            if (newTypeId < 1)
-            {
-                throw new PersonArgumentException("Cannot update Person Type: parameter is not a valid PersonType Id.", nameof(newTypeId));
-            }
-            _personTypeId = newTypeId;
+            PersonType = newType;
         }
         /// <summary>
         /// Updates the Person's Gender.
@@ -291,21 +310,23 @@ namespace CaseCore.Domain.Entities.Persons
             _ssn = newSSN;
         }
         /// <summary>
-        /// Adds an Address to the Person's address collection.
+        /// Adds a <see cref="PhoneNumber"/> to the Person's <see cref="PersonPhoneNumber"/> collection.
         /// </summary>
-        /// <param name="newAddress">An <see cref="Address"/> object.</param>
-        public void AddAddress(Address newAddress)
+        /// <param name="phoneNumber">The <see cref="PhoneNumber"/> to add.</param>
+        public void AddPhoneNumber(PhoneNumber phoneNumber)
         {
-            _addresses.Add(new PersonAddress(newAddress));
+            _phoneNumbers.Add(new PersonPhoneNumber(this, phoneNumber));
         }
-        /// <summary>
-        /// Adds a phone number to the Person's phone number collection.
-        /// </summary>
-        /// <param name="newNumber">The <see cref="Entities.PhoneNumber"/> object to add to the collection.</param>
-        public void AddPhoneNumber(PhoneNumber newNumber)
+        public void RemovePhoneNumber(PhoneNumber phoneNumber)
         {
-            _phoneNumbers.Add(new PersonPhone(newNumber));
+            PersonPhoneNumber toRemove = _phoneNumbers?.Find(x => x.PhoneNumber == phoneNumber);
+            if (phoneNumber == null)
+            {
+                throw new PersonArgumentException("Cannot remove phone number from person: phone number not found in Phone Number collection.", nameof(phoneNumber));
+            }
+            _phoneNumbers.Remove(toRemove);
         }
+
         private bool IsValidSSN(string ssn)
         {
             var _withDashRegEx = @"^(?!219-09-9999|078-05-1120)(?!666|000|9\d{2})\d{3}-(?!00)\d{2}-(?!0{4})\d{4}$";
@@ -317,6 +338,49 @@ namespace CaseCore.Domain.Entities.Persons
             }
             return validSSN;
         }
-
+        /// <summary>
+        /// Adds an address to the Person's Address collection.
+        /// </summary>
+        /// <param name="address">A <see cref="Address"/> object.</param>
+        public void AddAddress(Address address)
+        {
+            _addresses.Add(new PersonAddress(this, address));
+        }
+        /// <summary>
+        /// Removes an address from the Person's Address collection.
+        /// </summary>
+        /// <param name="address"></param>
+        /// <exception cref="PersonArgumentException">Thrown when the provided address parameter is not found in the Person's address collection.</exception>
+        public void RemoveAddress(Address address)
+        {
+            PersonAddress toRemove = _addresses?.Find(x => x.Address == address);
+            if (toRemove == null)
+            {
+                throw new PersonArgumentException("Cannot remove Address from Person: Address not found in Addresses Collection.", nameof(address));
+            }
+            _addresses.Remove(toRemove);
+        }
+        /// <summary>
+        /// Adds an email address to the Person's Email Address collection.
+        /// </summary>
+        /// <param name="emailAddress">A <see cref="EmailAddress"/> object.</param>
+        public void AddEmailAddress(EmailAddress emailAddress)
+        {
+            _emailAddresses.Add(new PersonEmailAddress(this, emailAddress));
+        }
+        /// <summary>
+        /// Removes an email address from the Person's Email Address collection.
+        /// </summary>
+        /// <param name="emailAddress"></param>
+        /// <exception cref="PersonArgumentException">Thrown when the provided email address parameter is not found in the Person's address collection.</exception>
+        public void RemoveEmailAddress(EmailAddress emailAddress)
+        {
+            PersonEmailAddress toRemove = _emailAddresses?.Find(x => x.EmailAddress == emailAddress);
+            if (toRemove == null)
+            {
+                throw new PersonArgumentException("Cannot remove Email Address from Person: Email Address not found in Email Addresses Collection.", nameof(emailAddress));
+            }
+            _emailAddresses.Remove(toRemove);
+        }
     }
 }
