@@ -67,7 +67,7 @@ namespace CaseCore.Domain.Entities
         /// Returns the person's full name in the format "Last, First"
         /// </summary>
         public string FullNameReverse => $"{_lastName}, {_firstName}";
-        public string FormalName => $"{Prefix} {_firstName} {_lastName}{(!string.IsNullOrEmpty(_suffix) ? $", {_suffix}" :"")}";
+        public string FormalName => $"{TitleOfCourtesy} {_firstName} {_lastName}{(!string.IsNullOrEmpty(_suffix) ? $", {_suffix}" :"")}";
         /// <summary>
         /// The Id of the <see cref="Types.PersonType"/> associated with the person.
         /// </summary>
