@@ -1,0 +1,1389 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/jcs30/source/repos/CaseCore/docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.Common.Interfaces.ICaseCoreDbContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.Common.Interfaces.ICaseCoreDbContext.html",
+          "hash": "4Hq92P2eisFjC1wnbFH5ThdzZT0gYHvR2tRO2DJmMRI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.Common.Interfaces.ICurrentUserService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.Common.Interfaces.ICurrentUserService.html",
+          "hash": "2j7K1aAv/hEg8mOnQBKo8xnzn1vvta0J/FJnI3Azm2E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.Common.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.Common.Interfaces.html",
+          "hash": "yOclT/WIsCaDhDsucQ6x2YsqaxgXo9bWqoniZel5J/8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.DependencyInjection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.DependencyInjection.html",
+          "hash": "myRpLW5oOsD4VsmaThuyr1219qAP2l6xQgEH3u4Z/ow="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.html",
+          "hash": "6acH9MvMfyEaA7yOlULXTFNNDPbI+HXZoGhvcQq37zo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/Application/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/index.html",
+          "hash": "eArgAwjAs3/nW98w900ZcFsXb57Zx1/5oiV3hRYpiec="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/Application/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/toc.html",
+          "hash": "HTf79xnz+6n/3FMpEBK2TS6I2mlvN3zDU8kaJk7+LPk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Common/CaseCore.Common.Attributes.IgnoreCodeCoverageAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Common/CaseCore.Common.Attributes.IgnoreCodeCoverageAttribute.html",
+          "hash": "QrFB+17wb8jrzfhxNNqvwCspSQ6T654SNYaMNTnEVkw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Common/CaseCore.Common.Attributes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Common/CaseCore.Common.Attributes.html",
+          "hash": "77cq0RkeecJ5xRxGcZqgkEiEokoU8dbDKOdR+ne2bM0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Common/CaseCore.Common.IDateTime.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Common/CaseCore.Common.IDateTime.html",
+          "hash": "34ViZGmSolflv699tEQrGSzOJ/hgrvOFFle7oOlN6i4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Common/CaseCore.Common.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Common/CaseCore.Common.html",
+          "hash": "ZwtuI8ZJwtX9C7kxXEa+oOiE9R9oC45Hhs7lkYsgdoI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/Common/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Common/toc.html",
+          "hash": "EDSP7cz+U37Az+rFVrEEZ19euUpvp67IjGjx1+7XRq4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Common.AuditableEntity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Common.AuditableEntity.html",
+          "hash": "G513c54w+QGGOds/zSeq8v1PHdFs7wLYMc/t9EApplo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Common.BaseEntity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Common.BaseEntity.html",
+          "hash": "7fecUDT54bDaXKBkOlTm7ufLJ9znHDHyaUGeCNxpWhY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Common.ExtensionMethods.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Common.ExtensionMethods.html",
+          "hash": "kSaV71S+qbMp6Y/gQngy4917IFekWoVDj1cAWEjG+2U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Common.ValueObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Common.ValueObject.html",
+          "hash": "LMN4DbckAvwaGd45YpQiBih+/tIKbHOCjlLFsAaVe+4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Common.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Common.html",
+          "hash": "j5D+OHIi4gwOt/fE9DfmBGwzPlidZPcvp0LEXnyRhcs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Entities.Address.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Entities.Address.html",
+          "hash": "bRgHIqGB+f6eeD8OBLODILCjw3shLuhuVJE+FWHc/MQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Entities.Case.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Entities.Case.html",
+          "hash": "8CWMUYL0Ces1RD1/yXLcRsWOwUDCilbI7q2KlDE0C9A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Entities.CaseAddress.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Entities.CaseAddress.html",
+          "hash": "Kk0AgpM1cLtsFN4TnSVUDnAvtgfmzkVCulFM7Bh0Zzc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Entities.CaseAssignment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Entities.CaseAssignment.html",
+          "hash": "YQcTS6QITeZEPy2mhMbc76PdJZ31cTtNi62PHmsE9tU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Entities.CaseOffense.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Entities.CaseOffense.html",
+          "hash": "0hvFmwMFECd+zIsPFTPqVtVb9VmHmuWSW2DnlgJ/TnA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Entities.CasePerson.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Entities.CasePerson.html",
+          "hash": "cmgJX2VlqyFxEKy3F++AQhckgICZzZTRMpJVFekMbc4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Entities.CaseStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Entities.CaseStatus.html",
+          "hash": "g03GHF32qcCTbd/+6moGxh5A15EAzld6he7aKsmmywg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Entities.EmailAddress.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Entities.EmailAddress.html",
+          "hash": "9QTw3D+jtHe+V7sI3UFwGJX1MXn7Pagi9n443j29C2M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Entities.Person.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Entities.Person.html",
+          "hash": "vvjAThF3A7pmrTRfC/SfmigIg9REDk5UaLulzu5epRc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Entities.PersonAddress.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Entities.PersonAddress.html",
+          "hash": "+0czwOs7QxPM5Mq4odssX2uLqXNmXKJFwvWr1VL4cd8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Entities.PersonEmailAddress.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Entities.PersonEmailAddress.html",
+          "hash": "ooXAnRbQLwuWrNhDmRlmjZhaZrt6M2JzpggsDsBHwB4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Entities.PersonPhoneNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Entities.PersonPhoneNumber.html",
+          "hash": "4TW1B2EKqGL3zB5X5bNLNPFeMPAsyFitXxhABwsP8yo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Entities.PhoneNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Entities.PhoneNumber.html",
+          "hash": "KSzqHQFVjxyOmUVcPa4M0UJBwhz/J6e7eZ9xwL8fTcs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Entities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Entities.html",
+          "hash": "PUBn5EjdYSRQxVBZudh1CmeaIs86xnColh0MKwq61+0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Enums.Gender.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Enums.Gender.html",
+          "hash": "6j1azRv47niFekFNn/WwiAtTUjgN01wKLhhio4MoHb8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Enums.Honorific.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Enums.Honorific.html",
+          "hash": "x2riwD4oW/dj4gb916QVKFTyivpGQkdeA2v+PlVS480="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Enums.Race.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Enums.Race.html",
+          "hash": "K7/JHt8zOCzLUiIDyhlt0fuVe2arDrhA9LIfiqmMGyI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Enums.State.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Enums.State.html",
+          "hash": "4GY2U0hbxVccirRleKG9QuhEmsDS052ZTgb4CtFSlJE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Enums.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Enums.html",
+          "hash": "v7Kv2niTw2d/s1mByIjMYpjf3j4GpszIAuB3Mbvkq4k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Exceptions.Entities.Address.AddressArgumentException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Exceptions.Entities.Address.AddressArgumentException.html",
+          "hash": "AGnmV+wIq9qz+MZv7K7jN4kIFJgp2T/0fVvs2g4tnJk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Exceptions.Entities.Address.AddressInvalidOperationException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Exceptions.Entities.Address.AddressInvalidOperationException.html",
+          "hash": "7+R1wesAVnz9wI6Zu88psjIDht/AeULKwDowvZhTtXU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Exceptions.Entities.Address.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Exceptions.Entities.Address.html",
+          "hash": "UKu2xR60Va1PVEj/uK6UyAB7cmKrmBDEYUgvjD+WAK0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Exceptions.Entities.CaseArgumentException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Exceptions.Entities.CaseArgumentException.html",
+          "hash": "P1E66F2A4qW5PwfL497nDNR6Ab3ZKw+waK5OBqfEDmk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Exceptions.Entities.CaseAssignmentArgumentException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Exceptions.Entities.CaseAssignmentArgumentException.html",
+          "hash": "1Y/MgklveDiCDbibWdeEPsW10aSaRKjqkKMIBP4KOkw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Exceptions.Entities.CaseStatusArgumentException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Exceptions.Entities.CaseStatusArgumentException.html",
+          "hash": "QAwI2V77dPWAqVTQPjr3W24Cr05ghFeybVU26K+eWNU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Exceptions.Entities.EmailAddressArgumentException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Exceptions.Entities.EmailAddressArgumentException.html",
+          "hash": "siKy2qd3sGh5G4x2B5ccQpsO7d6+v44R0evFonX6vcs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Exceptions.Entities.PersonArgumentException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Exceptions.Entities.PersonArgumentException.html",
+          "hash": "YsMuCmVM/NH/bcW8FMyjZZWHhePLvEUs1iHFDQUTu1M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Exceptions.Entities.PhoneNumberArgumentException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Exceptions.Entities.PhoneNumberArgumentException.html",
+          "hash": "MFqUGL0mrlb7xS8llY6xsuJ6XHtBY7LAb0r69xR9yLA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Exceptions.Entities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Exceptions.Entities.html",
+          "hash": "Va7ktlTAlfLd/pYiMz5iuO56nCKxvqvLp4btf+XE9Hw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Exceptions.Types.AddressTypeArgumentException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Exceptions.Types.AddressTypeArgumentException.html",
+          "hash": "9KsTYye9FjgmPuLG2ie9j1peZ8Q3afgGgTqlpKh2mnc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Exceptions.Types.CaseAssignmentTypeArgumentException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Exceptions.Types.CaseAssignmentTypeArgumentException.html",
+          "hash": "/y2O/is3HP6qMzrvt6v/1Ab4EVkF6QYDYxaBXphkLE8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Exceptions.Types.CaseStatusTypeArgumentException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Exceptions.Types.CaseStatusTypeArgumentException.html",
+          "hash": "2sbdGQRbCuhq8hJS+ZocLClTngEe0MZ/SIhfgm7kN2o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Exceptions.Types.OffenseTypeArgumentException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Exceptions.Types.OffenseTypeArgumentException.html",
+          "hash": "0HpcuN/hQUQPoPteVgJZQnbodYIzIxNzfXpTgn5+1Q0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Exceptions.Types.PersonTypeArgumentException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Exceptions.Types.PersonTypeArgumentException.html",
+          "hash": "Kdx0i6pqxNsMB/AvNuG5z+KunKYRA02jNuAE5XyAQgM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Exceptions.Types.PhoneNumberTypeArgumentException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Exceptions.Types.PhoneNumberTypeArgumentException.html",
+          "hash": "d+6EwJrDsEQeFnPmGRUaYoVRR+tsmu93CGXqHYLJLhY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Exceptions.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Exceptions.Types.html",
+          "hash": "GGpe2AenQa3qV4N9KYu/1Vx1aXAZo2SM+n4t6HUjPPg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Types.AddressType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Types.AddressType.html",
+          "hash": "MgybZ7XrVhwE3/1O/9MJ56TfDGU0aGMH9K19cBE/K/k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Types.CaseAssignmentType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Types.CaseAssignmentType.html",
+          "hash": "4AjuYXRnUfiEuQ/Fz557+BjVWGZa+ZIOvp+mfHbdxEU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Types.CaseStatusType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Types.CaseStatusType.html",
+          "hash": "GEXynkFyL84MRXnY1UdPW7YtVnXZF3gMlmyhc8himOY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Types.OffenseType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Types.OffenseType.html",
+          "hash": "m80S3hjznXRheqRQIUIXQ0Z1kpHJ4zK2/xyU6DFTaMw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Types.PersonType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Types.PersonType.html",
+          "hash": "Y7EXrhI7yYN0rP4KxoCAnqreVKaCkqp/fLtx7iWe1GE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Types.PhoneNumberType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Types.PhoneNumberType.html",
+          "hash": "/3002b/XiOrZ/d+wUMzhQgqQXx4Pe3sZ5p565N8ZP7E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Domain/CaseCore.Domain.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/CaseCore.Domain.Types.html",
+          "hash": "CW1HjRIamYssStqiusCnio57WnRWnJQT9y+SZLM9y0c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/Domain/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Domain/toc.html",
+          "hash": "IbD5fEWzAG236hnLw3z75ry2dH2g7ejwEaEQlFsAevg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Infrastructure/CaseCore.Infrastructure.DependencyInjection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Infrastructure/CaseCore.Infrastructure.DependencyInjection.html",
+          "hash": "UUXOa9rd4T7haOwkyW57CbGkJ7L2qV69pGpMv0yxmdo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Infrastructure/CaseCore.Infrastructure.MachineDateTime.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Infrastructure/CaseCore.Infrastructure.MachineDateTime.html",
+          "hash": "oFZ+4nb16t/39MEpp2mctLVNA3VIjSMj4hSqfwLUuFo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Infrastructure/CaseCore.Infrastructure.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Infrastructure/CaseCore.Infrastructure.html",
+          "hash": "6jHCUpS6ULaBtLLAYOIolALGgWB375HuruK8bW49ft0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/Infrastructure/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Infrastructure/toc.html",
+          "hash": "1noZZF2cumSoi5wVJRVD3X5MuYtvclQCa5KCbJf37/Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Persistence/CaseCore.Persistence.CaseCoreDbContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Persistence/CaseCore.Persistence.CaseCoreDbContext.html",
+          "hash": "U6No7WXFB3dkYBhJBLf9LA7gE+dXXj9HQmvOCqaT+YU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Persistence/CaseCore.Persistence.CaseCoreDbContextFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Persistence/CaseCore.Persistence.CaseCoreDbContextFactory.html",
+          "hash": "xWLnouz8yw9+iUySit1ERtUkaMSiakoUXFA+SlGiQgo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Persistence/CaseCore.Persistence.Configurations.AddressConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Persistence/CaseCore.Persistence.Configurations.AddressConfiguration.html",
+          "hash": "xVbVaGjzehxnIwz85kemXAjN1UbQ51AFVkzC3jC+r4Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Persistence/CaseCore.Persistence.Configurations.AddressTypeConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Persistence/CaseCore.Persistence.Configurations.AddressTypeConfiguration.html",
+          "hash": "ynQEcy1q+o6zJ3LellaHaNbCujDyP4ccXkOFJNPit+Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Persistence/CaseCore.Persistence.Configurations.CaseAddressConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Persistence/CaseCore.Persistence.Configurations.CaseAddressConfiguration.html",
+          "hash": "N++4oMGHpU2IlQgKUo98pTtY1iBcGlJgcWuE4SsEWmM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Persistence/CaseCore.Persistence.Configurations.CaseAssignmentConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Persistence/CaseCore.Persistence.Configurations.CaseAssignmentConfiguration.html",
+          "hash": "Yy0V+inoKDl4MjBE8luUOqXM5e+GBTljVPne2jPkj3Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Persistence/CaseCore.Persistence.Configurations.CaseAssignmentTypeConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Persistence/CaseCore.Persistence.Configurations.CaseAssignmentTypeConfiguration.html",
+          "hash": "FLOk3sWiSS+ZDWkhaQdw7nHnSPQdqKaqxCr/GF5ReGs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Persistence/CaseCore.Persistence.Configurations.CaseConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Persistence/CaseCore.Persistence.Configurations.CaseConfiguration.html",
+          "hash": "wyQbTfUTi/IGG/fZrQ5IB4eD4lwrnxahk//ksimS9Wg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Persistence/CaseCore.Persistence.Configurations.CaseOffenseConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Persistence/CaseCore.Persistence.Configurations.CaseOffenseConfiguration.html",
+          "hash": "HhBJFxI2ZMXa4xwhn8zvB8FnAhUqNFItXm55xRdB0OM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Persistence/CaseCore.Persistence.Configurations.CasePersonConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Persistence/CaseCore.Persistence.Configurations.CasePersonConfiguration.html",
+          "hash": "bPUqtAoXFvWQGgE3JSAKyS8IVrOc1xCFZYbHb4oxrGQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Persistence/CaseCore.Persistence.Configurations.CaseStatusConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Persistence/CaseCore.Persistence.Configurations.CaseStatusConfiguration.html",
+          "hash": "SCebrJ2MEoNS6faBMbCSMfbfNmdjZDIwlG2wIOECFPo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Persistence/CaseCore.Persistence.Configurations.CaseStatusTypeConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Persistence/CaseCore.Persistence.Configurations.CaseStatusTypeConfiguration.html",
+          "hash": "gZ4fsASZYX+UfxaZ0IytvhPMHgXuKUmGIZRjuUErbv0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Persistence/CaseCore.Persistence.Configurations.EmailAddressConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Persistence/CaseCore.Persistence.Configurations.EmailAddressConfiguration.html",
+          "hash": "fBYlGQkihclVv3Etl9iPJNP/1FSogPBsH5dnvsEgzcs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Persistence/CaseCore.Persistence.Configurations.OffenseTypeConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Persistence/CaseCore.Persistence.Configurations.OffenseTypeConfiguration.html",
+          "hash": "AXUnNoUfphmBSZEfjWLquXMTD/dSG03fWDPced2GjnM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Persistence/CaseCore.Persistence.Configurations.PersonAddressConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Persistence/CaseCore.Persistence.Configurations.PersonAddressConfiguration.html",
+          "hash": "wB3m9AeyOb4yNv7nH4Vu9BQohrxpdYL43b1a/c93NQU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Persistence/CaseCore.Persistence.Configurations.PersonConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Persistence/CaseCore.Persistence.Configurations.PersonConfiguration.html",
+          "hash": "5+1g1K52Lmky67t/G4PpBUDWJxZFHU3VWqy+2f2pkhI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Persistence/CaseCore.Persistence.Configurations.PersonEmailAddressesConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Persistence/CaseCore.Persistence.Configurations.PersonEmailAddressesConfiguration.html",
+          "hash": "y/1GJ9gGuU6EfRo4txQMhe+CT4DcPZw4bjwVvFT7oaM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Persistence/CaseCore.Persistence.Configurations.PersonPhoneConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Persistence/CaseCore.Persistence.Configurations.PersonPhoneConfiguration.html",
+          "hash": "Rr+d/N8e+g1EKAwCaAAQ5CFzy2kR2AldxUGdG70a1gI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Persistence/CaseCore.Persistence.Configurations.PersonTypeConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Persistence/CaseCore.Persistence.Configurations.PersonTypeConfiguration.html",
+          "hash": "pnAVuJS6zozPXbGuBhFZvTs8LC+FzdryhUt9BWfd4OA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Persistence/CaseCore.Persistence.Configurations.PhoneNumberConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Persistence/CaseCore.Persistence.Configurations.PhoneNumberConfiguration.html",
+          "hash": "42s0jMSHTiB0R/c0g1Yh699yD+o3vgxb2c7TlnJHRHM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Persistence/CaseCore.Persistence.Configurations.PhoneNumberTypeConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Persistence/CaseCore.Persistence.Configurations.PhoneNumberTypeConfiguration.html",
+          "hash": "MGDel7KUkTat2E2m0ExkeX/QT3tDaOtKjItYz98PZRw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Persistence/CaseCore.Persistence.Configurations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Persistence/CaseCore.Persistence.Configurations.html",
+          "hash": "kmIamANiLanyrZmOmMI7FTqs5xJimi7matPGgfWDFlg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Persistence/CaseCore.Persistence.DependencyInjection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Persistence/CaseCore.Persistence.DependencyInjection.html",
+          "hash": "mCpAJoUVEe+un6at2qsmU1UnjCfmp409X06ZyG76Pcw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Persistence/CaseCore.Persistence.DesignTimeDbContextFactoryBase-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Persistence/CaseCore.Persistence.DesignTimeDbContextFactoryBase-1.html",
+          "hash": "HFHtFsmBsuQbC5Xs3RmjyYbOn38mGwuSIZkXz9viJuo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Persistence/CaseCore.Persistence.Migrations.initial.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Persistence/CaseCore.Persistence.Migrations.initial.html",
+          "hash": "8Lr/lSHkUVpHVb+7QFvmBBlQNCi7zV1V+U5n2Zk4X+8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Persistence/CaseCore.Persistence.Migrations.overhaul.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Persistence/CaseCore.Persistence.Migrations.overhaul.html",
+          "hash": "TFjGmu87UlX1IKIl6H6HjIJMAZJaHo2jB0VoghOO+jc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Persistence/CaseCore.Persistence.Migrations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Persistence/CaseCore.Persistence.Migrations.html",
+          "hash": "MhPb4uKoia7KsP4GkPV92shANNojXmtByoUs2G8iu2g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Persistence/CaseCore.Persistence.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Persistence/CaseCore.Persistence.html",
+          "hash": "BbSdqBKr25wCp4p6tmuAQfGrrh+rBYbgRfe02GvkgMA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/Persistence/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Persistence/toc.html",
+          "hash": "/3DNzwWIafe9co9gSK1JhLiEbPydJq0YrpHjob2jgaE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebUI/CaseCore.WebUI.Services.CurrentUserService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebUI/CaseCore.WebUI.Services.CurrentUserService.html",
+          "hash": "fQuPEekATJHKTZT/t1oqVAwyzHVSVERNftamfuM5CnU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebUI/CaseCore.WebUI.Services.DateTimeProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebUI/CaseCore.WebUI.Services.DateTimeProvider.html",
+          "hash": "+VqfmjR+ZfewGDV2B6XK+OrJdsyHy/pXzTUy9kY6BVA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebUI/CaseCore.WebUI.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebUI/CaseCore.WebUI.Services.html",
+          "hash": "w26o0z9UiOjDahkOiklDu4io7krOMA2KnCYu2s2PE5Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebUI/WebUI.Controllers.HomeController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebUI/WebUI.Controllers.HomeController.html",
+          "hash": "EOg6XAqB6AHXlQqSZXgoo9csjnHwbhdAImQqrKRDqAA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebUI/WebUI.Controllers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebUI/WebUI.Controllers.html",
+          "hash": "cdyuro5qwgN8QgThzRV/DPT8gA7/iO2HE4wjH1ZkZiM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebUI/WebUI.Models.ErrorViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebUI/WebUI.Models.ErrorViewModel.html",
+          "hash": "jaXAH3saBizuohp1NySWQfo9TNFGzctpxSQxnCJQk0A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebUI/WebUI.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebUI/WebUI.Models.html",
+          "hash": "RLGRYJW7ScZAzn4ZODlPVyHuuSYywMgEQqHXvHZmmjQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebUI/WebUI.Program.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebUI/WebUI.Program.html",
+          "hash": "zOcNeHm/zh2bdQWOXi1ozH09xjxArjy1FFx4gwJ+Fdo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebUI/WebUI.Startup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebUI/WebUI.Startup.html",
+          "hash": "RpEjbru+72hX3jMfkqpFA9rO/0SkTsBtSttn91rPwYk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebUI/WebUI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebUI/WebUI.html",
+          "hash": "vczNBXOYBdIf3nJIRbuokioc2oF5gjS8+8imCRWhvUc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/WebUI/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebUI/toc.html",
+          "hash": "2Xv6zuHeXiNzz0UQyXVe2fsPW2GgbEba0x57CMGlvX8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "y0MOD8wwH+pz2afktlVs8nke5/YXWLY6HZNzWiVce4A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "vwgkorinRdvWfzI2mwdvN1PoECLNHAEvhpAXeUX4RAM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "+XslWjzZSz9SXo55h8t2T62JLtHmF9dqLvRzEmw9wOQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "BlPxk5mtl2kgfcZUgkEguqiSAR/EUyUTT4EdebwkQvs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "IEhHityuAh+vg77Rj1SzXyXQuJyA9diT86tUYPciUY0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "Si1vxZ0U9xrBQ2tpvoGpd7QuKqF7VFDqZ3UMg5wP9kI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 4,
+          "skipped_file_count": 3
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 98,
+          "skipped_file_count": 53
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
