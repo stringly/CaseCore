@@ -14,6 +14,7 @@ namespace CaseCore.Domain.Entities
         /// Creates a new instance of the class.
         /// </summary>
         /// <param name="number">A <see cref="Entities.PhoneNumber"/></param>
+        /// <param name="type">A <see cref="Types.PhoneNumberType"/></param>
         public PhoneNumber(string number, PhoneNumberType type)
         {
             UpdateNumber(number);
@@ -24,9 +25,12 @@ namespace CaseCore.Domain.Entities
         /// Returns a string containing the phone number digits with no punctucation.
         /// </summary>
         public string Number => _number;
+        /// <summary>
+        /// The Id of the <see cref="Types.PhoneNumberType"/>
+        /// </summary>
         public int PhoneNumberTypeId { get; private set; }
         /// <summary>
-        /// The <see cref="PhoneType"/> of the number.
+        /// The <see cref="Types.PhoneNumberType"/> of the number.
         /// </summary>
         public PhoneNumberType PhoneNumberType { get; private set; }
         /// <summary>

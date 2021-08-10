@@ -3,6 +3,12 @@ using CaseCore.Domain.Exceptions.Entities;
 
 namespace CaseCore.Domain.Entities
 {
+    /// <summary>
+    /// Entity class that represents an Email Address.
+    /// </summary>
+    /// <remarks>
+    /// Inherits from the <see cref="BaseEntity"/> class.
+    /// </remarks>
     public class EmailAddress : BaseEntity
     {
         private EmailAddress() { }
@@ -15,6 +21,9 @@ namespace CaseCore.Domain.Entities
             UpdateEmail(address);
         }
         private string _emailAddress;
+        /// <summary>
+        /// A string that represents the email address, i.e. "test@mail.com"
+        /// </summary>
         public string Address => _emailAddress;
         /// <summary>
         /// Updates the email address.

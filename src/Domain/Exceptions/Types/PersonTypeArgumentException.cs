@@ -3,7 +3,7 @@
 namespace CaseCore.Domain.Exceptions.Types
 {
     /// <summary>
-    /// Exception class used in the <see cref="PersonType"></see> class.
+    /// Exception class used in the <see cref="Domain.Types.PersonType"></see> class.
     /// </summary>
     public class PersonTypeArgumentException : ArgumentException
     {

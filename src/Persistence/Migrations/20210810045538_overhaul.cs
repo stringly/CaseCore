@@ -3,7 +3,9 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace CaseCore.Persistence.Migrations
 {
+#pragma warning disable IDE1006 // Naming Styles
     public partial class overhaul : Migration
+#pragma warning restore IDE1006 // Naming Styles
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

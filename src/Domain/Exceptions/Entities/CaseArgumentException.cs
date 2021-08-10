@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CaseCore.Domain.Exceptions.Entities
 {
     /// <summary>
-    /// Exception class used in the <see cref="Case"></see> class.
+    /// Exception class used in the <see cref="Domain.Entities.Case"></see> class.
     /// </summary>
     public class CaseArgumentException : ArgumentException
     {

@@ -8,6 +8,11 @@ namespace CaseCore.Domain.Entities
     public class CasePerson : BaseEntity
     {
         private CasePerson() { }
+        /// <summary>
+        /// Creates a new Instance of the Class.
+        /// </summary>
+        /// <param name="_case">A <see cref="Entities.Case"/> object.</param>
+        /// <param name="person">A <see cref="Entities.Person"/> object.</param>
         public CasePerson(Case _case, Person person)
         {
             Case = _case;

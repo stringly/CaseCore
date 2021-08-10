@@ -21,6 +21,7 @@ namespace CaseCore.Domain.Entities
         /// <param name="_case">A <see cref="Entities.Case"/> object.</param>
         /// <param name="caseStatusType">A <see cref="CaseStatusTypeId"/> object.</param>
         /// <param name="statusDate">A <see cref="DateTime"/> representing the effective date of the status entry.</param>
+        /// <param name="remarks">A string containing remarks.</param>
         public CaseStatus(Case _case, CaseStatusType caseStatusType, DateTime statusDate, string remarks = "")
         {
             Case = _case;
@@ -50,6 +51,9 @@ namespace CaseCore.Domain.Entities
         /// </summary>
         public DateTime StatusDate => _statusDate;        
         private string _remarks;
+        /// <summary>
+        /// Returns a string containing remarks.
+        /// </summary>
         public string Remarks => _remarks;
         /// <summary>
         /// Updates the Remarks field for the Status entry.
@@ -68,6 +72,5 @@ namespace CaseCore.Domain.Entities
             }
             _remarks = newRemarks;
         }
-
     }
 }

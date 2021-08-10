@@ -11,6 +11,11 @@ namespace CaseCore.Domain.Entities
     {
         
         private CaseAddress() { }
+        /// <summary>
+        /// Creates a new instance of the class.
+        /// </summary>
+        /// <param name="_case">A <see cref="Entities.Case"/> object.</param>
+        /// <param name="address">A <see cref="Entities.Address"/> object.</param>
         public CaseAddress(Case _case, Address address)
         {
             Case = _case;

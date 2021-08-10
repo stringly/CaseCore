@@ -10,10 +10,30 @@ using System.Text.RegularExpressions;
 namespace CaseCore.Domain.Entities
 
 {
+    /// <summary>
+    /// Class that represents a Person record.
+    /// </summary>
+    /// <remarks>
+    /// Inherits from <seealso cref="AuditableEntity"/>
+    /// </remarks>
     public class Person : AuditableEntity
     {
         [IgnoreCodeCoverage]
         private Person() { }
+        /// <summary>
+        /// Creates a new instance of the class.
+        /// </summary>
+        /// <param name="type">A <see cref="Types.PersonType"/></param>
+        /// <param name="honorific">A string that can be converted to a <see cref="Enums.Honorific"/></param>
+        /// <param name="firstName">A string containing the person's first name.</param>
+        /// <param name="middleName">A string containing the person's middle name.</param>
+        /// <param name="lastName">A string containing the person's last name.</param>
+        /// <param name="suffix">A string representing the person's suffix, i.e. "Jr."</param>
+        /// <param name="gender">A string that can be converted to a <see cref="Enums.Gender"/></param>
+        /// <param name="race">A string that can be converted to a <see cref="Enums.Race"/></param>
+        /// <param name="dob">A <see cref="DateTime"/> representing the Person's Date of Birth.</param>
+        /// <param name="ssn">A string containing the person's SSN.</param>
+        /// <param name="heightInInches">An integer representing the person's height in inches.</param>
         public Person(PersonType type, string honorific, string firstName, string middleName, string lastName, string suffix, string gender, string race, DateTime dob, string ssn, int? heightInInches = null)
         {
             UpdatePersonType(type);
@@ -73,6 +93,9 @@ namespace CaseCore.Domain.Entities
         /// Returns the person's full name in the format "Last, First"
         /// </summary>
         public string FullNameReverse => $"{_lastName}, {_firstName}";
+        /// <summary>
+        /// Returns a string with the formal address for the person in the format "Mr. John Q. Public, Jr."
+        /// </summary>
         public string FormalName => $"{TitleOfCourtesy} {_firstName} {_lastName}{(!string.IsNullOrEmpty(_suffix) ? $", {_suffix}" :"")}";
         /// <summary>
         /// The Id of the <see cref="Types.PersonType"/> associated with the person.
@@ -126,6 +149,9 @@ namespace CaseCore.Domain.Entities
         /// Returns a string containing Person's <see cref="Enums.Race"/>
         /// </summary>        
         public string RaceName => _race.GetDescription();
+        /// <summary>
+        /// Returns a string containing the abbreviation for the Race associated with the person.
+        /// </summary>
         public string RaceAbbreviation => _race.ToString();
         private DateTime _dob;
         /// <summary>
@@ -137,7 +163,13 @@ namespace CaseCore.Domain.Entities
         /// </summary>
         public string DOBFormatted => _dob.ToShortDateString();
         private int? _heightInInches;
+        /// <summary>
+        /// Returns an integer of the Person's height in inches.
+        /// </summary>
         public int? HeightInInches => _heightInInches;
+        /// <summary>
+        /// Returns a string with the Person's height in the format: F"I'
+        /// </summary>
         public string Height {
             get {
                 if (_heightInInches == null) { return "Unk"; }
@@ -245,7 +277,7 @@ namespace CaseCore.Domain.Entities
         /// <summary>
         /// Updates the <see cref="Types.PersonType"/>.
         /// </summary>
-        /// <param name="newTypeId">An integer that is a valid Id for a <see cref="Types.PersonType"/>.</param>
+        /// <param name="newType">A <see cref="Types.PersonType"/>.</param>
         public void UpdatePersonType(PersonType newType)
         {
             PersonType = newType;
@@ -253,12 +285,13 @@ namespace CaseCore.Domain.Entities
         /// <summary>
         /// Updates the Person's Gender.
         /// </summary>
+        /// <remarks>
         /// Valid values for gender are:
         /// <list type="bullet">
         /// <item>'M' for male</item>
         /// <item>'F' for female</item>
         /// <item>'N' for Non-binary</item>        
-        /// <item?'O' for Other/Not Listed</item>
+        /// <item>'O' for Other/Not Listed</item>
         /// </list>
         /// </remarks>
         /// <param name="newGender">A string containing the Person's gender.</param>
@@ -284,7 +317,7 @@ namespace CaseCore.Domain.Entities
         /// <item>'B' for Black</item>
         /// <item>'H' for Hispanic</item>
         /// <item>'A' for Asian/Pacific Islander</item>
-        /// <item?'O' for Other/Not Listed</item>
+        /// <item>'O' for Other/Not Listed</item>
         /// </list>
         /// </remarks>
         /// <param name="newRace">A string containing the new Race.</param>
@@ -313,6 +346,10 @@ namespace CaseCore.Domain.Entities
             }
             _dob = newDOB;
         }
+        /// <summary>
+        /// Updates the Person's Height.
+        /// </summary>
+        /// <param name="inches">An integer representing the person's height in inches.</param>
         public void UpdateHeight(int inches)
         {
             if (inches < 0 || inches > 150)
@@ -342,6 +379,11 @@ namespace CaseCore.Domain.Entities
         {            
             _phoneNumbers.Add(new PersonPhoneNumber(this, phoneNumber));
         }
+        /// <summary>
+        /// Removes a <see cref="PhoneNumber"/> from the Person's phone number collection.
+        /// </summary>
+        /// <param name="phoneNumber">The <see cref="PhoneNumber"/></param>
+        /// <exception cref="PersonArgumentException">Thrown when the <see cref="PhoneNumber"/> parameter is not in the phone number collection.</exception>
         public void RemovePhoneNumber(PhoneNumber phoneNumber)
         {
             PersonPhoneNumber toRemove = _phoneNumbers?.Find(x => x.PhoneNumber == phoneNumber);

@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CaseCore.Domain.Exceptions.Types
 {
     /// <summary>
-    /// Exception class used in the <see cref="OffenseType"></see> class.
+    /// Exception class used in the <see cref="Domain.Types.OffenseType"></see> class.
     /// </summary>
     public class OffenseTypeArgumentException : ArgumentException
     {

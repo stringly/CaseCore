@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CaseCore.Domain.Exceptions.Types
 {
     /// <summary>
-    /// Exception class used in the <see cref="PhoneType"></see> class.
+    /// Exception class used in the <see cref="Domain.Types.PhoneNumberType"></see> class.
     /// </summary>
     public class PhoneNumberTypeArgumentException : ArgumentException
     {

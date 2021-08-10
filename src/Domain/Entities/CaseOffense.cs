@@ -1,12 +1,11 @@
 ﻿using CaseCore.Common.Attributes;
 using CaseCore.Domain.Common;
 using CaseCore.Domain.Types;
-using System;
 
 namespace CaseCore.Domain.Entities
 {
     /// <summary>
-    /// Class that represents the relationship between a <see cref="Entities.Case"/> object and it's associated <see cref="Type.OffenseType"/>
+    /// Class that represents the relationship between a <see cref="Entities.Case"/> object and it's associated <see cref="Types.OffenseType"/>
     /// </summary>
     public class CaseOffense : BaseEntity
     {

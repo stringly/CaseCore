@@ -3,6 +3,12 @@ using CaseCore.Domain.Exceptions.Types;
 
 namespace CaseCore.Domain.Types
 {
+    /// <summary>
+    /// Entity class that represents a Type of <see cref="Entities.Person"/>
+    /// </summary>
+    /// <remarks>
+    /// Inherits from the <see cref="BaseEntity"/> class.
+    /// </remarks>
     public class PersonType : BaseEntity
     {
         private PersonType() { }

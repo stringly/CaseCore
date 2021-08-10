@@ -4,6 +4,12 @@ using CaseCore.Domain.Exceptions.Types;
 
 namespace CaseCore.Domain.Types
 {
+    /// <summary>
+    /// Entity class that represents an Offense Type.
+    /// </summary>
+    /// <remarks>
+    /// Inherits from the <see cref="BaseEntity"/> class.
+    /// </remarks>
     public class OffenseType : BaseEntity
     {
         [IgnoreCodeCoverage]

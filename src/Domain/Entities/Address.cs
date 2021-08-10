@@ -128,6 +128,9 @@ namespace CaseCore.Domain.Entities
         /// </summary>
         public string City => _city;
         private State _state;
+        /// <summary>
+        /// Represents the <see cref="Enums.State"/> associated with the address.
+        /// </summary>
         public State State => _state;
         /// <summary>
         /// Returns the State enum as as string.
@@ -155,7 +158,13 @@ namespace CaseCore.Domain.Entities
         /// </summary>
         public double? Longitude => _longitude;
         private double? _latitude;
+        /// <summary>
+        /// Returns a double containing the Address's Latitude.
+        /// </summary>
         public double? Latitude => _latitude;
+        /// <summary>
+        /// Returns the Address as a string containing the full mailing address.
+        /// </summary>
         public string FullAddressText => $"{Street}{(!string.IsNullOrEmpty(Suite) ? $" {Suite}" : "")}, {City}, {State} {Zip}";
         /// <summary>
         /// Updates the <see cref="AddressType"/> associated with the Address.

@@ -1,0 +1,1967 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CaseCore.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:CaseCore.Domain.Common.AuditableEntity">
+            <summary>
+            Abstract class for an Entity that needs audit information
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Common.AuditableEntity.CreatedBy">
+            <summary>
+            The username of the User who created the Entity.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Common.AuditableEntity.Created">
+            <summary>
+            The Timestamp for when the Entity was created.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Common.AuditableEntity.ModifiedBy">
+            <summary>
+            The username of the User who last modified the Entity.
+            </summary>
+        </member>
+        <member name="T:CaseCore.Domain.Common.BaseEntity">
+            <summary>
+            Abstract base class for Entity classes
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Common.BaseEntity.Id">
+            <summary>
+            The Id for the Entity
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Common.BaseEntity.Modified">
+            <summary>
+            The Timestamp for when the Entity was last modified.
+            </summary>
+        </member>
+        <member name="T:CaseCore.Domain.Common.ExtensionMethods">
+            <summary>
+            Class containing extension methods used in the Domain.
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Common.ExtensionMethods.GetDescription``1(``0)">
+            <summary>
+            Returns the description of an Enum as a string.
+            </summary>
+            <typeparam name="T">An Enum</typeparam>
+            <param name="e"></param>
+            <returns>A string containing the Enum's description.</returns>
+        </member>
+        <member name="M:CaseCore.Domain.Common.ExtensionMethods.RemoveNonNumericCharacters(System.String)">
+            <summary>
+            Removes non-numeric characters from a string.
+            </summary>
+            <param name="str">A string.</param>
+            <returns>A new string with the non-numeric characters removed.</returns>
+        </member>
+        <member name="M:CaseCore.Domain.Common.ExtensionMethods.RemoveNonAlphanumericCharacters(System.String)">
+            <summary>
+            Removes non-alphanumeric characters from a string.
+            </summary>
+            <param name="str">The string to scrub.</param>
+            <returns>A new string with non-alphanumeric characters removed.</returns>
+        </member>
+        <member name="T:CaseCore.Domain.Common.ValueObject">
+            <summary>
+            Abstract base class for a ValueObject object
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Common.ValueObject.EqualOperator(CaseCore.Domain.Common.ValueObject,CaseCore.Domain.Common.ValueObject)">
+            <summary>
+            Determines if two ValueObjects are equal
+            </summary>
+            <param name="left">The left ValueObject in the comparison</param>
+            <param name="right">The right ValueObject in the comparison</param>
+            <returns></returns>
+        </member>
+        <member name="M:CaseCore.Domain.Common.ValueObject.NotEqualOperator(CaseCore.Domain.Common.ValueObject,CaseCore.Domain.Common.ValueObject)">
+            <summary>
+            Determines if two ValueObjects are unequal
+            </summary>
+            <param name="left">The left ValueObject in the comparison</param>
+            <param name="right">The right ValueObject in the comparison</param>
+            <returns></returns>
+        </member>
+        <member name="M:CaseCore.Domain.Common.ValueObject.GetAtomicValues">
+            <summary>
+            Enumerates the ValueObject's properties as a collection.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CaseCore.Domain.Common.ValueObject.Equals(System.Object)">
+            <summary>
+            Determines equality
+            </summary>
+            <param name="obj">The object being compared.</param>
+            <returns></returns>
+        </member>
+        <member name="M:CaseCore.Domain.Common.ValueObject.GetHashCode">
+            <summary>
+            Gets the Hash Code.
+            </summary>
+            <returns>An integer HashCode.</returns>
+        </member>
+        <member name="T:CaseCore.Domain.Entities.Address">
+            <summary>
+            Domain Entity that represents a physical or mailing address.
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Address.#ctor(CaseCore.Domain.Types.AddressType,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Creates a new Address instance from the provided parameters.
+            </summary>
+            <param name="type">The <see cref="P:CaseCore.Domain.Entities.Address.AddressType"/> of the address being created.</param>
+            <param name="street">The street address, e.g. "123 Anywhere St." Required, cannot be null/whitespace/empty string.</param>
+            <param name="suite">The suite/apartment/room number. This is an optional field.</param>
+            <param name="city">The name of the city in which the address is located. Required, cannot be null/whitespace/empty string.</param>
+            <param name="state">The 2-digit Postal Abbreviation for the state in which the address is located. Required, cannot be null/whitespace/empty string.</param>        
+            <param name="zipCode">The 5-digit ZIP code for the address. Required, cannot be null/whitespace/empty string.</param>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Address.#ctor(CaseCore.Domain.Types.AddressType,System.String,System.String,System.String,System.String,System.String,System.Double,System.Double)">
+            <summary>
+            Creates a new Address instance from the provided parameters.
+            </summary>
+            <param name="type">The <see cref="P:CaseCore.Domain.Entities.Address.AddressType"/> of the address being created.</param>
+            <param name="street">The street address, e.g. "123 Anywhere St." Required, cannot be null/whitespace/empty string.</param>
+            <param name="suite">The suite/apartment/room number. This is an optional field.</param>
+            <param name="city">The name of the city in which the address is located. Required, cannot be null/whitespace/empty string.</param>
+            <param name="state">The 2-digit Postal Abbreviation for the state in which the address is located. Required, cannot be null/whitespace/empty string.</param>        
+            <param name="zipCode">The 5-digit ZIP code for the address. Required, cannot be null/whitespace/empty string.</param>
+            <param name="latitude">A double in the range of -90.0 to 90.0 that represents the latitude coordinate of the address. Defaults to 0.0.</param>
+            <param name="longitude">A double in the range of -180.0 to 180.0 that represents the longitude coordinate of the address. Defaults to 0.0.</param>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Address.#ctor(CaseCore.Domain.Types.AddressType,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Creates a new Address instance from the provided parameters.
+            </summary>
+            <param name="type">The <see cref="P:CaseCore.Domain.Entities.Address.AddressType"/> of the address being created.</param>
+            <param name="street">The street address, e.g. "123 Anywhere St." Required, cannot be null/whitespace/empty string.</param>
+            <param name="suite">The suite/apartment/room number. This is an optional field.</param>
+            <param name="city">The name of the city in which the address is located. Required, cannot be null/whitespace/empty string.</param>
+            <param name="state">The 2-digit Postal Abbreviation for the state in which the address is located. Required, cannot be null/whitespace/empty string.</param>        
+            <param name="zipCode">The 5-digit ZIP code for the address. Required, cannot be null/whitespace/empty string.</param>
+            <param name="beat">A string of 5 characters or fewer representing the beat associated with the address.</param>
+            <param name="reportingArea">A string of 10 characters or fewer representing the Reporting Area associated with the address.</param>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Address.#ctor(CaseCore.Domain.Types.AddressType,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Double,System.Double)">
+            <summary>
+            Creates a new Address instance from the provided parameters.
+            </summary>
+            <param name="type">The <see cref="P:CaseCore.Domain.Entities.Address.AddressType"/> of the address being created.</param>
+            <param name="street">The street address, e.g. "123 Anywhere St." Required, cannot be null/whitespace/empty string.</param>
+            <param name="suite">The suite/apartment/room number. This is an optional field.</param>
+            <param name="city">The name of the city in which the address is located. Required, cannot be null/whitespace/empty string.</param>
+            <param name="state">The 2-digit Postal Abbreviation for the state in which the address is located. Required, cannot be null/whitespace/empty string.</param>        
+            <param name="zipCode">The 5-digit ZIP code for the address. Required, cannot be null/whitespace/empty string.</param>
+            <param name="beat">A string of 5 characters or fewer representing the beat associated with the address.</param>
+            <param name="reportingArea">A string of 10 characters or fewer representing the Reporting Area associated with the address.</param>
+            <param name="latitude">A double in the range of -90.0 to 90.0 that represents the latitude coordinate of the address. Defaults to 0.0.</param>
+            <param name="longitude">A double in the range of -180.0 to 180.0 that represents the longitude coordinate of the address. Defaults to 0.0.</param>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Address.AddressType">
+            <summary>
+            The <see cref="P:CaseCore.Domain.Entities.Address.AddressType"/> of the Address.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Address.AddressTypeId">
+            <summary>
+            The ID of the <see cref="P:CaseCore.Domain.Entities.Address.AddressType"/> of the Address.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Address.Street">
+            <summary>
+            Returns a string with the Address's Street Address.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Address.Suite">
+            <summary>
+            Returns a string containing the Address's secondary field, i.e. Apartment #, Suite #, etc.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Address.City">
+            <summary>
+            Returns a string containing the Address's City.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Address.State">
+            <summary>
+            Represents the <see cref="T:CaseCore.Domain.Enums.State"/> associated with the address.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Address.StatePostalCode">
+            <summary>
+            Returns the State enum as as string.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Address.Zip">
+            <summary>
+            Returns a string containing the Address's 5-digit ZIP Code.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Address.Beat">
+            <summary>
+            Returns a string containing the Beat associated with the address.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Address.ReportingArea">
+            <summary>
+            Returns a string containing the reporting area associated with the address.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Address.Longitude">
+            <summary>
+            Returns a double containing the Longitude coordinate for the address.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Address.Latitude">
+            <summary>
+            Returns a double containing the Address's Latitude.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Address.FullAddressText">
+            <summary>
+            Returns the Address as a string containing the full mailing address.
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Address.UpdateType(CaseCore.Domain.Types.AddressType)">
+            <summary>
+            Updates the <see cref="P:CaseCore.Domain.Entities.Address.AddressType"/> associated with the Address.
+            </summary>
+            <param name="newType">The new <see cref="P:CaseCore.Domain.Entities.Address.AddressType"/></param>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Address.UpdateStreet(System.String)">
+            <summary>
+            Updates the Street of the Address.
+            </summary>
+            <param name="newStreet">A string containing the street address portion of the address, i.e. "123 Anywhere St." Max 500 characters.</param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Entities.Address.AddressArgumentException">
+            Thrown when the parameter is null, whitespace, or more than 500 characters.
+            </exception>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Address.UpdateSuite(System.String)">
+            <summary>
+            Updates the Suite of the Address.
+            </summary>
+            <param name="newSuite">A string containing the suite address portion of the address, i.e. "Room #3." Max 500 characters.</param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Entities.Address.AddressArgumentException">
+            Thrown when the parameter is more than 500 characters.
+            </exception>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Address.UpdateCity(System.String)">
+            <summary>
+            Updates the City of the Address.
+            </summary>
+            <param name="newCity">A string containing the city address portion of the address, i.e. "Yourtown." Max 500 characters.</param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Entities.Address.AddressArgumentException">
+            Thrown when the parameter is null, whitespace, or more than 500 characters.
+            </exception>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Address.UpdateState(System.String)">
+            <summary>
+            Updates the State of the Address.
+            </summary>
+            <param name="newState">A string containing a valid 2-digit state postal code.</param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Entities.Address.AddressArgumentException">
+            Thrown when the parameter cannot be converted to a valid <see cref="P:CaseCore.Domain.Entities.Address.State"/>
+            </exception>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Address.UpdateZip(System.String)">
+            <summary>
+            Updates the Zip Code of the Address.
+            </summary>
+            <param name="newZip">A string containing a valid US/CA zip code.</param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Entities.Address.AddressArgumentException">
+            Thrown when the parameter is not a valid US/CA Zip code.
+            </exception>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Address.UpdateBeat(System.String)">
+            <summary>
+            Updates the Beat associated with the Address's meta information.
+            </summary>
+            <param name="newBeat">A string of 5 characters or fewer representing the beat associated with the address.</param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Entities.Address.AddressArgumentException">
+            Thrown when the provided parameter is null, whitespace, or more than 5 characters.
+            </exception>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Address.UpdateReportingArea(System.String)">
+            <summary>
+            Updates the Reporting Area associated with the Address's meta information.
+            </summary>
+            <param name="newReportingArea">A string of 10 characters or fewer representing the Reporting Area associated with the address.</param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Entities.Address.AddressArgumentException">
+            Thrown when the provided parameter is null, whitespace, or more than 10 characters.
+            </exception>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Address.UpdateCoordinates(System.Nullable{System.Double},System.Nullable{System.Double})">
+            <summary>
+            Updates the GPS coordinates associated with the address.
+            </summary>
+            <param name="latitude">A double in the range of -90.0 to 90.0.</param>
+            <param name="longitude">A double in the range of -180.0 to 180.0.</param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Entities.Address.AddressArgumentException">
+            Thrown when the latitude paramater is not within the range of -90.0 to 90.0 or the longitude parameter is not within the range of -180.0 to 180.0.
+            </exception>
+        </member>
+        <member name="T:CaseCore.Domain.Entities.Case">
+            <summary>
+            Entity Class representing a Case record.
+            </summary>
+            <remarks>
+            Inherits from <see cref="T:CaseCore.Domain.Common.AuditableEntity"/>
+            </remarks>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Case.#ctor(System.String,CaseCore.Domain.Entities.Address,System.DateTime,System.DateTime)">
+            <summary>
+            Creates a new instance of the class.
+            </summary>
+            <param name="caseNumber">A string containing the Case Number associated with the case.</param>
+            <param name="locationOfIncident">An <see cref="T:CaseCore.Domain.Entities.Address"/> representing the Location of Incident for the case.</param>
+            <param name="occurredOnExactDate">A <see cref="T:System.DateTime"/> representing the exact time the incident is known to have occurred.</param>
+            <param name="reportedOnDate">A <see cref="T:System.DateTime"/> representing the Date/Time the incident was reported.</param>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Case.#ctor(System.String,CaseCore.Domain.Entities.Address,System.DateTime,System.DateTime,System.DateTime)">
+            <summary>
+            Creates a new instance of the class.
+            </summary>
+            <param name="caseNumber">A string containing the Case Number associated with the case.</param>
+            <param name="locationOfIncident">An <see cref="T:CaseCore.Domain.Entities.Address"/> representing the Location of Incident for the case.</param>
+            <param name="occurredBetweenStartDate">A <see cref="T:System.DateTime"/> representing the start time of the timeframe during which the incident occurred.</param>
+            <param name="occurredBetweenEndDate">A <see cref="T:System.DateTime"/> representing the end date/time of the timeframe during which the incident occurred.</param>
+            <param name="reportedOnDate">A <see cref="T:System.DateTime"/> representing the Date/Time the incident was reported.</param>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Case.CaseNumber">
+            <summary>
+            A string representing the Case Number for the incident.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Case.OccurredBetweenStartDate">
+            <summary>
+            Represents the start date/time of the datetime range during which the incident occurred.
+            </summary>
+            <remarks>
+            A Case should have either:
+            1. A Start/End Date representing a Timeframe during which the incident occurred, or
+            2. An exact time the incident occurred, if known.
+            </remarks>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Case.OccurredBetweenEndDate">
+            <summary>
+            Represents the end date/time of the datetime range during which the incident occurred.
+            </summary>
+            <remarks>
+            A Case should have either:
+            1. A Start/End Date representing a Timeframe during which the incident occurred, or
+            2. An exact time the incident occurred, if known.
+            </remarks>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Case.OccurredOnExactDate">
+            <summary>
+            Represents the exact date/time that an incident occurred.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Case.ReportedOnDate">
+            <summary>
+            Returns the date/time the incident was reported.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Case.CaseOffenses">
+            <summary>
+            Returns a readonly list of <see cref="T:CaseCore.Domain.Entities.CaseOffense"/> associated with the case.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Case.Persons">
+            <summary>
+            Returns a readonly list of <see cref="T:CaseCore.Domain.Entities.CasePerson"/> entities associated with this case.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Case.Addresses">
+            <summary>
+            Returns a readonly list of <see cref="T:CaseCore.Domain.Entities.CaseAddress"/> entities associated with this case.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Case.CaseStatuses">
+            <summary>
+            Returns a readonly list of <see cref="T:CaseCore.Domain.Entities.CaseStatus"/> entities associated with this case.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Case.CurrentStatus">
+            <summary>
+            Attempts to return the most recent entry in the Case Statuses collection, which should represent the Case's Current Status.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Case.CaseAssignments">
+            <summary>
+            Returns a readonly list of <see cref="T:CaseCore.Domain.Entities.CaseAssignment"/> entities associated with the case.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Case.CurrentAssignment">
+            <summary>
+            Attempts to return the most recent entry in the Case Assignments collection, which should represent the Case's Current Assignment.
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Case.UpdateCaseNumber(System.String)">
+            <summary>
+            Updates the Case Number associated with the incident.
+            </summary>
+            <param name="newCaseNumber">A string containing the new case number.</param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Entities.CaseArgumentException">Thrown when the provided parameter is null or whitespace.</exception>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Case.AddAddress(CaseCore.Domain.Entities.Address)">
+            <summary>
+            Adds an address to the Case's Address collection.
+            </summary>
+            <param name="address">A <see cref="T:CaseCore.Domain.Entities.Address"/> object.</param>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Case.RemoveAddress(CaseCore.Domain.Entities.Address)">
+            <summary>
+            Removes an address from the Case's Address collection.
+            </summary>
+            <param name="address"></param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Entities.CaseArgumentException">Thrown when the provided address parameter is not found in the Case's address collection.</exception>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Case.AddPerson(CaseCore.Domain.Entities.Person)">
+            <summary>
+            Adds a <see cref="T:CaseCore.Domain.Entities.Person"/> to the Case's Persons Collection.
+            </summary>
+            <param name="person">The <see cref="T:CaseCore.Domain.Entities.Person"/> object to add.</param>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Case.RemovePerson(CaseCore.Domain.Entities.Person)">
+            <summary>
+            Removes a <see cref="T:CaseCore.Domain.Entities.Person"/> from the Case's Persons Collection
+            </summary>
+            <param name="person">The <see cref="T:CaseCore.Domain.Entities.Person"/> to remove.</param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Entities.CaseArgumentException">Thrown if the person provided in the parameter was not found in the Case's Persons Collection.</exception>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Case.UpdateCaseStatus(CaseCore.Domain.Types.CaseStatusType,System.DateTime,System.String)">
+            <summary>
+            Updates the <see cref="T:CaseCore.Domain.Entities.CaseStatus"/> of the Case by creating a new <see cref="T:CaseCore.Domain.Entities.CaseStatus"/> record.
+            </summary>
+            <param name="caseStatusType">The <see cref="T:CaseCore.Domain.Types.CaseStatusType"/> of the new Status.</param>
+            <param name="caseStatusEffectiveDate">A <see cref="T:System.DateTime"/> representing the effective date of the status.</param>
+            <param name="remarks">A string containing optional remarks for the status entry.</param>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Case.UpdateCaseAssignment(CaseCore.Domain.Types.CaseAssignmentType,System.String,System.DateTime,System.String)">
+            <summary>
+            Updates the <see cref="T:CaseCore.Domain.Entities.CaseAssignment"/> of the Case by creating a new <see cref="T:CaseCore.Domain.Entities.CaseAssignment"/> record.
+            </summary>
+            <param name="assignmentType">A <see cref="T:CaseCore.Domain.Types.CaseAssignmentType"/> object.</param>
+            <param name="assignedToUserName">A string containing the username of the assignee.</param>
+            <param name="assignmentDate">A <see cref="T:System.DateTime"/> representing the assignment effective date.</param>
+            <param name="remarks">An optional string containing remarks about the assignment.</param>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Case.UpdateOccurredOnExactDate(System.DateTime)">
+            <summary>
+            Updates the Occurred on Exact Date.
+            </summary>
+            <param name="newDate">A DateTime representing the exact Date/Time the Case incident occurred.</param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Entities.CaseArgumentException">Thrown if the provided parameter date is greater than the Case's Reported On date.</exception>        
+            <remarks>Calling this method will clear any values in the Cases's Occurred Between Start/End Date fields. A Case should have either an exact occurred on date, or an occurred between start/end date.</remarks>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Case.UpdateReportedOnDate(System.DateTime)">
+            <summary>
+            Update the reported on date.
+            </summary>
+            <param name="newDate">A <see cref="T:System.DateTime"/> representing the new reporting time.</param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Entities.CaseArgumentException">Thrown when the date provided is before the OccurredOnExactDate or before the OccurredBetweenEndDate.</exception>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Case.UpdateOccurredBetweenDates(System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+            Updates the Date Range during which the incident occurred.
+            </summary>
+            <param name="startDate">A <see cref="T:System.DateTime"/> object representing the Start Date/Time of the period in which the incident occurred.</param>
+            <param name="endDate">A <see cref="T:System.DateTime"/> object representing the End Date/Time of the period in which the incident occurrred.</param>
+            <remarks>A successfull call to set the Date Range using this method will clear any value in the OccurredOnExactDate field.</remarks>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Case.AddOffense(CaseCore.Domain.Types.OffenseType)">
+            <summary>
+            Adds an offense to the Case's offense type list.
+            </summary>
+            <param name="offenseType">A <see cref="T:CaseCore.Domain.Types.OffenseType"/></param>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Case.RemoveOffense(CaseCore.Domain.Types.OffenseType)">
+            <summary>
+            Removes an offense from the Case's offenses list.
+            </summary>
+            <param name="offenseType">The <see cref="T:CaseCore.Domain.Types.OffenseType"/> to remove.</param>
+        </member>
+        <member name="T:CaseCore.Domain.Entities.CaseAddress">
+            <summary>
+            Class that represents the relationship between a <see cref="T:CaseCore.Domain.Entities.Case"/> object and it's associated <see cref="T:CaseCore.Domain.Entities.Address"/>
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.CaseAddress.#ctor(CaseCore.Domain.Entities.Case,CaseCore.Domain.Entities.Address)">
+            <summary>
+            Creates a new instance of the class.
+            </summary>
+            <param name="_case">A <see cref="T:CaseCore.Domain.Entities.Case"/> object.</param>
+            <param name="address">A <see cref="T:CaseCore.Domain.Entities.Address"/> object.</param>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.CaseAddress.CaseId">
+            <summary>
+            Integer ID of the <see cref="T:CaseCore.Domain.Entities.Case"/> entity associated with this Case.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.CaseAddress.Case">
+            <summary>
+            Navigation property for the associated <see cref="T:CaseCore.Domain.Entities.Case"/>
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.CaseAddress.AddressId">
+            <summary>
+            Integer ID of the <see cref="T:CaseCore.Domain.Entities.Address"/> entity associated with this Case.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.CaseAddress.Address">
+            <summary>
+            Navigation property for the associated <see cref="T:CaseCore.Domain.Entities.Address"/>
+            </summary>
+        </member>
+        <member name="T:CaseCore.Domain.Entities.CaseAssignment">
+            <summary>
+            Entity Type that represents a <see cref="T:CaseCore.Domain.Entities.CaseAssignment"/> entry associated with a <see cref="P:CaseCore.Domain.Entities.CaseAssignment.Case"></see>
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.CaseAssignment.#ctor(CaseCore.Domain.Entities.Case,CaseCore.Domain.Types.CaseAssignmentType,System.String,System.DateTime,System.String)">
+            <summary>
+            Creates a new instance of the class.
+            </summary>
+            <param name="_case">A <see cref="T:CaseCore.Domain.Entities.Case"/> object.</param>
+            <param name="assignmentType">A <see cref="T:CaseCore.Domain.Types.CaseAssignmentType"/> object.</param>
+            <param name="assignedToName">A string containing the username of the user to assign to the case.</param>
+            <param name="assignmentDate">A <see cref="T:System.DateTime"/> representing the date of the assignment.</param>
+            <param name="remarks">An optional string containing remarks.</param>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.CaseAssignment.CaseId">
+            <summary>
+            The integer Id of the <see cref="T:CaseCore.Domain.Entities.Case"/> associated with the entry.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.CaseAssignment.Case">
+            <summary>
+            Navigation property to the <see cref="T:CaseCore.Domain.Entities.Case"/> associated with the entry.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.CaseAssignment.CaseAssignmentTypeId">
+            <summary>
+            The integer Id of the <see cref="T:CaseCore.Domain.Types.CaseAssignmentType"/> associated with the entry.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.CaseAssignment.CaseAssignmentType">
+            <summary>
+            Navigation property to the <see cref="T:CaseCore.Domain.Types.CaseAssignmentType"/> associated with the entry.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.CaseAssignment.AssignedToName">
+            <summary>
+            Returns a string containing the username of the user assigned to the case.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.CaseAssignment.AssignmentDate">
+            <summary>
+            Returns a <see cref="T:System.DateTime"/> that represents the date of the assignment.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.CaseAssignment.Remarks">
+            <summary>
+            A string containing the remarks.
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.CaseAssignment.UpdateRemarks(System.String)">
+            <summary>
+            Updates the remarks associated with the record.
+            </summary>
+            <param name="newRemarks">A string containing the new remarks.</param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Entities.CaseAssignmentArgumentException">Thrown if the provided parameter is null/whitespace or more than 1000 characters.</exception>
+        </member>
+        <member name="T:CaseCore.Domain.Entities.CaseOffense">
+            <summary>
+            Class that represents the relationship between a <see cref="T:CaseCore.Domain.Entities.Case"/> object and it's associated <see cref="T:CaseCore.Domain.Types.OffenseType"/>
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.CaseOffense.#ctor(CaseCore.Domain.Entities.Case,CaseCore.Domain.Types.OffenseType)">
+            <summary>
+            Creates a new instance of the class
+            </summary>
+            <param name="_case">The <see cref="P:CaseCore.Domain.Entities.CaseOffense.Case"/> associated with the entry.</param>
+            <param name="offenseType">The <see cref="P:CaseCore.Domain.Entities.CaseOffense.OffenseType"/> associated with the entry.</param>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.CaseOffense.CaseId">
+            <summary>
+            The Id of the <see cref="T:CaseCore.Domain.Entities.Case"/> associated with the record.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.CaseOffense.Case">
+            <summary>
+            Navigation Property to the <see cref="T:CaseCore.Domain.Entities.Case"/> associated with the record.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.CaseOffense.OffenseTypeId">
+            <summary>
+            The Id of the <see cref="T:CaseCore.Domain.Types.OffenseType"/> associated with the record.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.CaseOffense.OffenseType">
+            <summary>
+            Navigation property to the <see cref="T:CaseCore.Domain.Types.OffenseType"/> associated with the record.
+            </summary>
+        </member>
+        <member name="T:CaseCore.Domain.Entities.CasePerson">
+            <summary>
+            Entity class that represents a relationship between a <see cref="T:CaseCore.Domain.Entities.Case"></see> and its associated <see cref="T:CaseCore.Domain.Entities.Person"/> records.
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.CasePerson.#ctor(CaseCore.Domain.Entities.Case,CaseCore.Domain.Entities.Person)">
+            <summary>
+            Creates a new Instance of the Class.
+            </summary>
+            <param name="_case">A <see cref="T:CaseCore.Domain.Entities.Case"/> object.</param>
+            <param name="person">A <see cref="T:CaseCore.Domain.Entities.Person"/> object.</param>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.CasePerson.CaseId">
+            <summary>
+            The integer Id of the <see cref="T:CaseCore.Domain.Entities.Case"/> associated with the record.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.CasePerson.Case">
+            <summary>
+            Navigation property to the <see cref="T:CaseCore.Domain.Entities.Case"/> associated with the record.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.CasePerson.PersonId">
+            <summary>
+            The integer Id of the <see cref="T:CaseCore.Domain.Entities.Person"/> associated with the record.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.CasePerson.Person">
+            <summary>
+            Navigation property to the <see cref="T:CaseCore.Domain.Entities.Person"/> associated with the record.
+            </summary>
+        </member>
+        <member name="T:CaseCore.Domain.Entities.CaseStatus">
+            <summary>
+            Entity Type that represents a <see cref="T:CaseCore.Domain.Entities.CaseStatus"/> entry associated with a <see cref="T:CaseCore.Domain.Entities.Case"></see>
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.CaseStatus.#ctor(CaseCore.Domain.Entities.Case,CaseCore.Domain.Types.CaseStatusType,System.DateTime,System.String)">
+            <summary>
+            Creates a new instance of the class.
+            </summary>
+            <param name="_case">A <see cref="T:CaseCore.Domain.Entities.Case"/> object.</param>
+            <param name="caseStatusType">A <see cref="P:CaseCore.Domain.Entities.CaseStatus.CaseStatusTypeId"/> object.</param>
+            <param name="statusDate">A <see cref="T:System.DateTime"/> representing the effective date of the status entry.</param>
+            <param name="remarks">A string containing remarks.</param>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.CaseStatus.CaseId">
+            <summary>
+            The integer Id of the <see cref="T:CaseCore.Domain.Entities.Case"/> associated with the entry.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.CaseStatus.Case">
+            <summary>
+            Navigation property to the associated <see cref="T:CaseCore.Domain.Entities.Case"/>
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.CaseStatus.CaseStatusTypeId">
+            <summary>
+            Integer Id of the <see cref="T:CaseCore.Domain.Types.CaseStatusType"/> associated with the entry.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.CaseStatus.CaseStatusType">
+            <summary>
+            Navigation property to the <see cref="T:CaseCore.Domain.Types.CaseStatusType"/> associated with the entry.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.CaseStatus.StatusDate">
+            <summary>
+            Returns a <see cref="T:System.DateTime"/> object representing the effective date of the entry.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.CaseStatus.Remarks">
+            <summary>
+            Returns a string containing remarks.
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.CaseStatus.UpdateRemarks(System.String)">
+            <summary>
+            Updates the Remarks field for the Status entry.
+            </summary>
+            <param name="newRemarks">A string containing the new remarks.</param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Entities.CaseStatusArgumentException">Thrown when the provided parameter is null, whitespace, or greater than 1000 characters.</exception>
+        </member>
+        <member name="T:CaseCore.Domain.Entities.EmailAddress">
+            <summary>
+            Entity class that represents an Email Address.
+            </summary>
+            <remarks>
+            Inherits from the <see cref="T:CaseCore.Domain.Common.BaseEntity"/> class.
+            </remarks>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.EmailAddress.#ctor(System.String)">
+            <summary>
+            Creates a new instance of the class.
+            </summary>
+            <param name="address">A string containing an email address. Must be 50 characters or fewer.</param>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.EmailAddress.Address">
+            <summary>
+            A string that represents the email address, i.e. "test@mail.com"
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.EmailAddress.UpdateEmail(System.String)">
+            <summary>
+            Updates the email address.
+            </summary>
+            <param name="newEmail">A string containing an email address. Must be 50 characters or fewer.</param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Entities.EmailAddressArgumentException">
+            Thrown when the provided parameter is null, whitespace, or contains more than 50 characters.
+            </exception>
+        </member>
+        <member name="T:CaseCore.Domain.Entities.Person">
+            <summary>
+            Class that represents a Person record.
+            </summary>
+            <remarks>
+            Inherits from <seealso cref="T:CaseCore.Domain.Common.AuditableEntity"/>
+            </remarks>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Person.#ctor(CaseCore.Domain.Types.PersonType,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.DateTime,System.String,System.Nullable{System.Int32})">
+            <summary>
+            Creates a new instance of the class.
+            </summary>
+            <param name="type">A <see cref="T:CaseCore.Domain.Types.PersonType"/></param>
+            <param name="honorific">A string that can be converted to a <see cref="T:CaseCore.Domain.Enums.Honorific"/></param>
+            <param name="firstName">A string containing the person's first name.</param>
+            <param name="middleName">A string containing the person's middle name.</param>
+            <param name="lastName">A string containing the person's last name.</param>
+            <param name="suffix">A string representing the person's suffix, i.e. "Jr."</param>
+            <param name="gender">A string that can be converted to a <see cref="T:CaseCore.Domain.Enums.Gender"/></param>
+            <param name="race">A string that can be converted to a <see cref="T:CaseCore.Domain.Enums.Race"/></param>
+            <param name="dob">A <see cref="T:System.DateTime"/> representing the Person's Date of Birth.</param>
+            <param name="ssn">A string containing the person's SSN.</param>
+            <param name="heightInInches">An integer representing the person's height in inches.</param>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Person.Prefix">
+            <summary>
+            Person's prefix.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Person.TitleOfCourtesy">
+            <summary>
+            Returns the Prefix title as a string.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Person.FirstName">
+            <summary>
+            Person's First/Given Name
+            </summary>        
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Person.MiddleName">
+            <summary>
+            Person's Middle Name
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Person.LastName">
+            <summary>
+            Person's Last/Surname
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Person.Suffix">
+            <summary>
+            Person's suffix, i.e. "Jr.", "Sr.", etc.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Person.FullName">
+            <summary>
+            Returns the person's full name in the format "First Last"
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Person.FullNameReverse">
+            <summary>
+            Returns the person's full name in the format "Last, First"
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Person.FormalName">
+            <summary>
+            Returns a string with the formal address for the person in the format "Mr. John Q. Public, Jr."
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Person.PersonTypeId">
+            <summary>
+            The Id of the <see cref="T:CaseCore.Domain.Types.PersonType"/> associated with the person.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Person.PersonType">
+            <summary>
+            Navigation property for the <see cref="T:CaseCore.Domain.Types.PersonType"/> associated with the Person.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Person.Addresses">
+            <summary>
+            Returns a readonly collection of <see cref="T:CaseCore.Domain.Entities.PersonAddress"/> associated with the person.
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Entities.Person._phoneNumbers">
+            <summary>
+            Returns a readonly list of <see cref="T:CaseCore.Domain.Entities.PersonPhoneNumber"/> associated with this person.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Person.PhoneNumbers">
+            <summary>
+            Returns a readonly list of <see cref="T:CaseCore.Domain.Entities.PersonPhoneNumber"/> associated with this person.
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Entities.Person._emailAddresses">
+            <summary>
+            Returns a readonly list of <see cref="T:CaseCore.Domain.Entities.PersonEmailAddress"/> associated with this person.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Person.EmailAddresses">
+            <summary>
+            Returns a readonlyt list of <see cref="T:CaseCore.Domain.Entities.PersonEmailAddress"/> associated with this person.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Person.Gender">
+            <summary>
+            Returns a string of the Person's <see cref="T:CaseCore.Domain.Enums.Gender"/>
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Person.GenderName">
+            <summary>
+            Returns the Gender enum as a string.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Person.GenderAbbreviation">
+            <summary>
+            Returns a string with the abbreviation for the person's gender.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Person.Race">
+            <summary>
+            Returns the Race as a <see cref="P:CaseCore.Domain.Entities.Person.Race"/> enum.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Person.RaceName">
+            <summary>
+            Returns a string containing Person's <see cref="T:CaseCore.Domain.Enums.Race"/>
+            </summary>        
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Person.RaceAbbreviation">
+            <summary>
+            Returns a string containing the abbreviation for the Race associated with the person.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Person.DOB">
+            <summary>
+            Returns a <see cref="T:System.DateTime"/> of the Person's Date of Birth
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Person.DOBFormatted">
+            <summary>
+            Returns the Person's date of birth as a MM/DD/YY string.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Person.HeightInInches">
+            <summary>
+            Returns an integer of the Person's height in inches.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Person.Height">
+            <summary>
+            Returns a string with the Person's height in the format: F"I'
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.Person.SSN">
+            <summary>
+            Returns a string containing the person's SSN.
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Person.UpdateHonorific(System.String)">
+            <summary>
+            Updates the Honorific of the Person.
+            </summary>
+            <remarks>
+            Valid values for Honorific are:
+            <list type="bullet">
+            <item>'Mr' for "Mr."/Caucasian</item>
+            <item>'Ms' for "Ms."</item>
+            <item>'Mrs' for "Mrs."</item>
+            <item>'Mx' for "Mx."</item>        
+            </list>
+            </remarks>
+            <param name="newHonorific">A string that can be converted to a <see cref="T:CaseCore.Domain.Enums.Honorific"/>.</param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Entities.PersonArgumentException">
+            Thrown when the provided parameter cannot be converted to a <see cref="T:CaseCore.Domain.Enums.Honorific"/>.
+            </exception>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Person.UpdateFirstName(System.String)">
+            <summary>
+            Updates the Person's First Name
+            </summary>
+            <param name="newFirstName">A string containing the Person's first name.</param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Entities.PersonArgumentException">Thrown when the provided parameter is null/empty or longer than 50 characters.</exception>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Person.UpdateMiddleName(System.String)">
+            <summary>
+            Updates the Person's Last Name
+            </summary>
+            <param name="newMiddleName">A string containing the Person's middle name.</param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Entities.PersonArgumentException">Thrown when the provided parameter is null/empty or longer than 50 characters.</exception>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Person.UpdateLastName(System.String)">
+            <summary>
+            Updates the Person's Last Name
+            </summary>
+            <param name="newLastName">A string containing the Person's Last name.</param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Entities.PersonArgumentException">Thrown when the provided parameter is null/empty or longer than 50 characters.</exception>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Person.UpdateSuffix(System.String)">
+            <summary>
+            Updates the Person's Suffix.
+            </summary>
+            <param name="newSuffix">A string containing the new suffix.</param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Entities.PersonArgumentException">Thrown if the parameter provided is more than 10 characters in length.</exception>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Person.UpdatePersonType(CaseCore.Domain.Types.PersonType)">
+            <summary>
+            Updates the <see cref="T:CaseCore.Domain.Types.PersonType"/>.
+            </summary>
+            <param name="newType">A <see cref="T:CaseCore.Domain.Types.PersonType"/>.</param>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Person.UpdateGender(System.String)">
+            <summary>
+            Updates the Person's Gender.
+            </summary>
+            <remarks>
+            Valid values for gender are:
+            <list type="bullet">
+            <item>'M' for male</item>
+            <item>'F' for female</item>
+            <item>'N' for Non-binary</item>        
+            <item>'O' for Other/Not Listed</item>
+            </list>
+            </remarks>
+            <param name="newGender">A string containing the Person's gender.</param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Entities.PersonArgumentException">Thrown if the parameter provided cannot be converted to a <see cref="T:CaseCore.Domain.Enums.Gender"/></exception>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Person.UpdateRace(System.String)">
+            <summary>
+            Updates the Person's Race
+            </summary>
+            <remarks>
+            Valid values for Race are:
+            <list type="bullet">
+            <item>'W' for White/Caucasian</item>
+            <item>'B' for Black</item>
+            <item>'H' for Hispanic</item>
+            <item>'A' for Asian/Pacific Islander</item>
+            <item>'O' for Other/Not Listed</item>
+            </list>
+            </remarks>
+            <param name="newRace">A string containing the new Race.</param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Entities.PersonArgumentException">Thrown when the provided </exception>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Person.UpdateDOB(System.DateTime)">
+            <summary>
+            Updates the Person's Date of Birth.
+            </summary>
+            <param name="newDOB">The Person's Date of Birth.</param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Entities.PersonArgumentException">Thrown if the parameter provided is equal to the DateTime object's minimum value.</exception>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Person.UpdateHeight(System.Int32)">
+            <summary>
+            Updates the Person's Height.
+            </summary>
+            <param name="inches">An integer representing the person's height in inches.</param>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Person.UpdateSSN(System.String)">
+            <summary>
+            Updates the Person's Social Security Number.
+            </summary>
+            <param name="newSSN">A string containing a valid SSN.</param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Entities.PersonArgumentException">Thrown when the provided parameter is not a valid SSN.</exception>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Person.AddPhoneNumber(CaseCore.Domain.Entities.PhoneNumber)">
+            <summary>
+            Adds a <see cref="T:CaseCore.Domain.Entities.PhoneNumber"/> to the Person's <see cref="T:CaseCore.Domain.Entities.PersonPhoneNumber"/> collection.
+            </summary>
+            <param name="phoneNumber">The <see cref="T:CaseCore.Domain.Entities.PhoneNumber"/> to add.</param>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Person.RemovePhoneNumber(CaseCore.Domain.Entities.PhoneNumber)">
+            <summary>
+            Removes a <see cref="T:CaseCore.Domain.Entities.PhoneNumber"/> from the Person's phone number collection.
+            </summary>
+            <param name="phoneNumber">The <see cref="T:CaseCore.Domain.Entities.PhoneNumber"/></param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Entities.PersonArgumentException">Thrown when the <see cref="T:CaseCore.Domain.Entities.PhoneNumber"/> parameter is not in the phone number collection.</exception>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Person.AddAddress(CaseCore.Domain.Entities.Address)">
+            <summary>
+            Adds an address to the Person's Address collection.
+            </summary>
+            <param name="address">A <see cref="T:CaseCore.Domain.Entities.Address"/> object.</param>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Person.RemoveAddress(CaseCore.Domain.Entities.Address)">
+            <summary>
+            Removes an address from the Person's Address collection.
+            </summary>
+            <param name="address"></param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Entities.PersonArgumentException">Thrown when the provided address parameter is not found in the Person's address collection.</exception>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Person.AddEmailAddress(CaseCore.Domain.Entities.EmailAddress)">
+            <summary>
+            Adds an email address to the Person's Email Address collection.
+            </summary>
+            <param name="emailAddress">A <see cref="T:CaseCore.Domain.Entities.EmailAddress"/> object.</param>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.Person.RemoveEmailAddress(CaseCore.Domain.Entities.EmailAddress)">
+            <summary>
+            Removes an email address from the Person's Email Address collection.
+            </summary>
+            <param name="emailAddress"></param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Entities.PersonArgumentException">Thrown when the provided email address parameter is not found in the Person's address collection.</exception>
+        </member>
+        <member name="T:CaseCore.Domain.Entities.PersonAddress">
+            <summary>
+            Class that represents a junction between a <see cref="T:CaseCore.Domain.Entities.Person"/> object and it's associated <see cref="T:CaseCore.Domain.Entities.Address"/> objects.
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.PersonAddress.#ctor(CaseCore.Domain.Entities.Person,CaseCore.Domain.Entities.Address)">
+            <summary>
+            Creates a new Instance
+            </summary>
+            <param name="person">The <see cref="T:CaseCore.Domain.Entities.Person"/> object that owns the Address</param>
+            <param name="address">The <see cref="T:CaseCore.Domain.Entities.Address"></see> object to add.</param>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.PersonAddress.PersonId">
+            <summary>
+            The Id of the <see cref="T:CaseCore.Domain.Entities.Person"/> associated with the PersonAddress entry.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.PersonAddress.Person">
+            <summary>
+            Navigation property to the <see cref="T:CaseCore.Domain.Entities.Person"/> associated with the PersonAddress entry.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.PersonAddress.AddressId">
+            <summary>
+            The Id of the <see cref="T:CaseCore.Domain.Entities.Address"></see> associated with the PersonAddress entry.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.PersonAddress.Address">
+            <summary>
+            Navigation property to the <see cref="T:CaseCore.Domain.Entities.Address"/> associated with the entry.
+            </summary>
+        </member>
+        <member name="T:CaseCore.Domain.Entities.PersonEmailAddress">
+            <summary>
+            Class that represents a relationship between a <see cref="T:CaseCore.Domain.Entities.Person"/> and it's associated <see cref="T:CaseCore.Domain.Entities.EmailAddress"/>
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.PersonEmailAddress.#ctor(CaseCore.Domain.Entities.Person,CaseCore.Domain.Entities.EmailAddress)">
+            <summary>
+            Creates a new instance of the class.
+            </summary>
+            <param name="person">A <see cref="T:CaseCore.Domain.Entities.Person"/> object.</param>
+            <param name="emailAddress">A <see cref="T:CaseCore.Domain.Entities.EmailAddress"/> object.</param>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.PersonEmailAddress.PersonId">
+            <summary>
+            The Id of the <see cref="T:CaseCore.Domain.Entities.Person"></see> associated with this entry.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.PersonEmailAddress.Person">
+            <summary>
+            Navigation property to the <see cref="T:CaseCore.Domain.Entities.Person"/> associated with this entry.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.PersonEmailAddress.EmailAddressId">
+            <summary>
+            The Id of the <see cref="T:CaseCore.Domain.Entities.EmailAddress"/> associated with this entry.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.PersonEmailAddress.EmailAddress">
+            <summary>
+            Navigation property to the <see cref="T:CaseCore.Domain.Entities.EmailAddress"/> associated with this entry.
+            </summary>
+        </member>
+        <member name="T:CaseCore.Domain.Entities.PersonPhoneNumber">
+            <summary>
+            Class that represents the relationship between a <see cref="T:CaseCore.Domain.Entities.Person"/> object and it's associated <see cref="T:CaseCore.Domain.Entities.PhoneNumber"/>
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.PersonPhoneNumber.#ctor(CaseCore.Domain.Entities.Person,CaseCore.Domain.Entities.PhoneNumber)">
+            <summary>
+            Creates a new instance of the class.
+            </summary>
+            <param name="person">A <see cref="T:CaseCore.Domain.Entities.Person"/> object.</param>
+            <param name="phoneNumber">A <see cref="T:CaseCore.Domain.Entities.PhoneNumber"/> object.</param>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.PersonPhoneNumber.PersonId">
+            <summary>
+            The integer Id of the <see cref="T:CaseCore.Domain.Entities.Person"/> associated with the entry.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.PersonPhoneNumber.Person">
+            <summary>
+            Navigation property to the <see cref="T:CaseCore.Domain.Entities.Person"/> associated with the entry.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.PersonPhoneNumber.PhoneNumberId">
+            <summary>
+            The integer Id of the <see cref="T:CaseCore.Domain.Entities.PhoneNumber"/> associated with the entry.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.PersonPhoneNumber.PhoneNumber">
+            <summary>
+            Navigation property to the <see cref="T:CaseCore.Domain.Entities.PhoneNumber"/> associated with the entry.
+            </summary>
+        </member>
+        <member name="T:CaseCore.Domain.Entities.PhoneNumber">
+            <summary>
+            Class that represents a PhoneNumber
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.PhoneNumber.#ctor(System.String,CaseCore.Domain.Types.PhoneNumberType)">
+            <summary>
+            Creates a new instance of the class.
+            </summary>
+            <param name="number">A <see cref="T:CaseCore.Domain.Entities.PhoneNumber"/></param>
+            <param name="type">A <see cref="T:CaseCore.Domain.Types.PhoneNumberType"/></param>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.PhoneNumber.Number">
+            <summary>
+            Returns a string containing the phone number digits with no punctucation.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.PhoneNumber.PhoneNumberTypeId">
+            <summary>
+            The Id of the <see cref="T:CaseCore.Domain.Types.PhoneNumberType"/>
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.PhoneNumber.PhoneNumberType">
+            <summary>
+            The <see cref="T:CaseCore.Domain.Types.PhoneNumberType"/> of the number.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Entities.PhoneNumber.PhoneNumberFormatted">
+            <summary>
+            Returns the phone number formatted as (123) 456-7890. 
+            </summary>
+            <remarks>
+            This will only format the number if it is 10 digits. More or less will return the unformatted number.
+            </remarks>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.PhoneNumber.UpdateNumber(System.String)">
+            <summary>
+            Updates the phone number of the object.
+            </summary>
+            <param name="newNumber">A string containing a new phone number</param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Entities.PhoneNumberArgumentException">Thrown when the provided parameter contains non-numeric characters or is more than 10 characters in length.</exception>
+        </member>
+        <member name="M:CaseCore.Domain.Entities.PhoneNumber.UpdateType(CaseCore.Domain.Types.PhoneNumberType)">
+            <summary>
+            Updates the <see cref="T:CaseCore.Domain.Types.PhoneNumberType"/> of the phone number.
+            </summary>
+            <param name="newType">A <see cref="T:CaseCore.Domain.Types.PhoneNumberType"/></param>
+        </member>
+        <member name="T:CaseCore.Domain.Enums.Gender">
+            <summary>
+            Enumeration that represents a gender.
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.Gender.M">
+            <summary>
+            Male
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.Gender.F">
+            <summary>
+            Female
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.Gender.N">
+            <summary>
+            Non-binary
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.Gender.O">
+            <summary>
+            Other
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.Gender.U">
+            <summary>
+            Unknown
+            </summary>
+        </member>
+        <member name="T:CaseCore.Domain.Enums.Honorific">
+            <summary>
+            Enumeration that represents a formal title prefix for a person.
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.Honorific.Mr">
+            <summary>
+            Mr.
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.Honorific.Ms">
+            <summary>
+            Ms.
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.Honorific.Mrs">
+            <summary>
+            Mrs.
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.Honorific.Dr">
+            <summary>
+            Dr.
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.Honorific.Mx">
+            <summary>
+            Mx.
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.Honorific.Unk">
+            <summary>
+            Unknown
+            </summary>
+        </member>
+        <member name="T:CaseCore.Domain.Enums.Race">
+            <summary>
+            Enumeration that represents a person's race.
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.Race.W">
+            <summary>
+            White/Caucasian
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.Race.B">
+            <summary>
+            Black
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.Race.H">
+            <summary>
+            Hispanic
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.Race.A">
+            <summary>
+            Asian
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.Race.O">
+            <summary>
+            Other
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.Race.U">
+            <summary>
+            Unknown
+            </summary>
+        </member>
+        <member name="T:CaseCore.Domain.Enums.State">
+            <summary>
+            Enumeration that represents a State
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.AL">
+            <summary>
+            Alabama
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.AK">
+            <summary>
+            Alaska
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.AR">
+            <summary>
+            Arkansas
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.AZ">
+            <summary>
+            Arizona
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.CA">
+            <summary>
+            California
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.CO">
+            <summary>
+            Colorado
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.CT">
+            <summary>
+            Connecticut
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.DC">
+            <summary>
+            Washington, DC.
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.DE">
+            <summary>
+            Delaware
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.FL">
+            <summary>
+            Florida
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.GA">
+            <summary>
+            Georgia
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.HI">
+            <summary>
+            Hawaii
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.IA">
+            <summary>
+            Iowa
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.ID">
+            <summary>
+            Idaho
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.IL">
+            <summary>
+            Illinois
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.IN">
+            <summary>
+            Indiana
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.KS">
+            <summary>
+            Kansas
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.KY">
+            <summary>
+            Kentucky
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.LA">
+            <summary>
+            Louisiana
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.MA">
+            <summary>
+            Massachusetts
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.MD">
+            <summary>
+            Maryland
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.ME">
+            <summary>
+            Maine
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.MI">
+            <summary>
+            Michigan
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.MN">
+            <summary>
+            Minnesota
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.MO">
+            <summary>
+            Missouri
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.MS">
+            <summary>
+            Mississippi
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.MT">
+            <summary>
+            Montana
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.NC">
+            <summary>
+            North Carolina
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.ND">
+            <summary>
+            North Dakota
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.NE">
+            <summary>
+            Nebraska
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.NH">
+            <summary>
+            New Hampshire
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.NJ">
+            <summary>
+            New Jersey
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.NM">
+            <summary>
+            New Mexico
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.NV">
+            <summary>
+            Nevada
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.NY">
+            <summary>
+            New York
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.OK">
+            <summary>
+            Oklahoma
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.OH">
+            <summary>
+            Ohio
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.OR">
+            <summary>
+            Oregon
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.PA">
+            <summary>
+            Pennsylvania
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.RI">
+            <summary>
+            Rhode Island
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.SC">
+            <summary>
+            South Carolina
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.SD">
+            <summary>
+            South Dakota
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.TN">
+            <summary>
+            Tennessee
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.TX">
+            <summary>
+            Texas
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.UT">
+            <summary>
+            Utah
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.VA">
+            <summary>
+            Virginia
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.VT">
+            <summary>
+            Vermont
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.WA">
+            <summary>
+            Washington
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.WI">
+            <summary>
+            Wisconsin
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.WV">
+            <summary>
+            West Virginia
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.WY">
+            <summary>
+            Wyoming
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.AB">
+            <summary>
+            Alberta
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.BC">
+            <summary>
+            British Columbia
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.MB">
+            <summary>
+            Manitoba
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.NB">
+            <summary>
+            New Brunswick
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.NL">
+            <summary>
+            Newfoundland and Labrador
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.NT">
+            <summary>
+            Northwest Territories
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.NS">
+            <summary>
+            Nova Scotia
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.NU">
+            <summary>
+            Nunavut
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.ON">
+            <summary>
+            Ontario
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.PE">
+            <summary>
+            Prince Edward Island
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.QC">
+            <summary>
+            Quebec
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.SK">
+            <summary>
+            Saskatchewan
+            </summary>
+        </member>
+        <member name="F:CaseCore.Domain.Enums.State.YT">
+            <summary>
+            Yukon
+            </summary>
+        </member>
+        <member name="T:CaseCore.Domain.Exceptions.Entities.Address.AddressArgumentException">
+            <summary>
+            Exception class used in the <see cref="T:CaseCore.Domain.Types.AddressType"></see> class.
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Exceptions.Entities.Address.AddressArgumentException.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new instance of the exception.
+            </summary>
+            <param name="message">A string containing the message.</param>
+            <param name="paramName">A string containing the name of the parameter that threw the exception.</param>
+        </member>
+        <member name="T:CaseCore.Domain.Exceptions.Entities.Address.AddressInvalidOperationException">
+            <summary>
+            Implementation of <see cref="T:System.InvalidOperationException"/> used in the <see cref="T:CaseCore.Domain.Entities.Address"/> class.
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Exceptions.Entities.Address.AddressInvalidOperationException.#ctor(System.String)">
+            <summary>
+            Creates a new Instance of the exception.
+            </summary>
+            <param name="message">A string message.</param>
+        </member>
+        <member name="T:CaseCore.Domain.Exceptions.Entities.CaseArgumentException">
+            <summary>
+            Exception class used in the <see cref="T:CaseCore.Domain.Entities.Case"></see> class.
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Exceptions.Entities.CaseArgumentException.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new instance of the exception.
+            </summary>
+            <param name="message">A string containing the message.</param>
+            <param name="paramName">A string containing the name of the parameter that threw the exception.</param>
+        </member>
+        <member name="T:CaseCore.Domain.Exceptions.Entities.CaseAssignmentArgumentException">
+            <summary>
+            Exception class used in the <see cref="T:CaseCore.Domain.Entities.CaseAssignment"></see> class.
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Exceptions.Entities.CaseAssignmentArgumentException.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new instance of the exception.
+            </summary>
+            <param name="message">A string containing the message.</param>
+            <param name="paramName">A string containing the name of the parameter that threw the exception.</param>
+        </member>
+        <member name="T:CaseCore.Domain.Exceptions.Entities.CaseStatusArgumentException">
+            <summary>
+            Implementation of <see cref="T:System.ArgumentException"/> used in the <see cref="T:CaseCore.Domain.Entities.CaseStatus"/> class.
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Exceptions.Entities.CaseStatusArgumentException.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new instance of the exception.
+            </summary>
+            <param name="message">A string containing the message.</param>
+            <param name="paramName">A string containing the name of the parameter that threw the exception.</param>
+        </member>
+        <member name="T:CaseCore.Domain.Exceptions.Entities.EmailAddressArgumentException">
+            <summary>
+            Exception class used in the <see cref="T:CaseCore.Domain.Entities.EmailAddress"></see> class.
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Exceptions.Entities.EmailAddressArgumentException.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new instance of the exception.
+            </summary>
+            <param name="message">A string containing the message.</param>
+            <param name="paramName">A string containing the name of the parameter that threw the exception.</param>
+        </member>
+        <member name="T:CaseCore.Domain.Exceptions.Entities.PersonArgumentException">
+            <summary>
+            Exception class used in the <see cref="T:CaseCore.Domain.Entities.Person"></see> class.
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Exceptions.Entities.PersonArgumentException.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new instance of the exception.
+            </summary>
+            <param name="message">A string containing the message.</param>
+            <param name="paramName">A string containing the name of the parameter that threw the exception.</param>
+        </member>
+        <member name="T:CaseCore.Domain.Exceptions.Entities.PhoneNumberArgumentException">
+            <summary>
+            Exception class used in the <see cref="T:CaseCore.Domain.Entities.PhoneNumber"></see> class.
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Exceptions.Entities.PhoneNumberArgumentException.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new instance of the exception.
+            </summary>
+            <param name="message">A string containing the message.</param>
+            <param name="paramName">A string containing the name of the parameter that threw the exception.</param>
+        </member>
+        <member name="T:CaseCore.Domain.Exceptions.Types.AddressTypeArgumentException">
+            <summary>
+            Exception class used in the <see cref="T:CaseCore.Domain.Types.AddressType"></see> class.
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Exceptions.Types.AddressTypeArgumentException.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new instance of the exception.
+            </summary>
+            <param name="message">A string containing the message.</param>
+            <param name="paramName">A string containing the name of the parameter that threw the exception.</param>
+        </member>
+        <member name="T:CaseCore.Domain.Exceptions.Types.CaseAssignmentTypeArgumentException">
+            <summary>
+            Exception class used in the <see cref="T:CaseCore.Domain.Types.CaseAssignmentType"></see> class.
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Exceptions.Types.CaseAssignmentTypeArgumentException.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new instance of the exception.
+            </summary>
+            <param name="message">A string containing the message.</param>
+            <param name="paramName">A string containing the name of the parameter that threw the exception.</param>
+        </member>
+        <member name="T:CaseCore.Domain.Exceptions.Types.CaseStatusTypeArgumentException">
+            <summary>
+            Exception class used in the <see cref="T:CaseCore.Domain.Types.AddressType"></see> class.
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Exceptions.Types.CaseStatusTypeArgumentException.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new instance of the exception.
+            </summary>
+            <param name="message">A string containing the message.</param>
+            <param name="paramName">A string containing the name of the parameter that threw the exception.</param>
+        </member>
+        <member name="T:CaseCore.Domain.Exceptions.Types.OffenseTypeArgumentException">
+            <summary>
+            Exception class used in the <see cref="T:CaseCore.Domain.Types.OffenseType"></see> class.
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Exceptions.Types.OffenseTypeArgumentException.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new instance of the exception.
+            </summary>
+            <param name="message">A string containing the message.</param>
+            <param name="paramName">A string containing the name of the parameter that threw the exception.</param>
+        </member>
+        <member name="T:CaseCore.Domain.Exceptions.Types.PersonTypeArgumentException">
+            <summary>
+            Exception class used in the <see cref="T:CaseCore.Domain.Types.PersonType"></see> class.
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Exceptions.Types.PersonTypeArgumentException.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new instance of the exception.
+            </summary>
+            <param name="message">A string containing the message.</param>
+            <param name="paramName">A string containing the name of the parameter that threw the exception.</param>
+        </member>
+        <member name="T:CaseCore.Domain.Exceptions.Types.PhoneNumberTypeArgumentException">
+            <summary>
+            Exception class used in the <see cref="T:CaseCore.Domain.Types.PhoneNumberType"></see> class.
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Exceptions.Types.PhoneNumberTypeArgumentException.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new instance of the exception.
+            </summary>
+            <param name="message">A string containing the message.</param>
+            <param name="paramName">A string containing the name of the parameter that threw the exception.</param>
+        </member>
+        <member name="T:CaseCore.Domain.Types.AddressType">
+            <summary>
+            Represents a Type of Address
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Types.AddressType.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new Instance of the Class
+            </summary>
+            <param name="fullName">A string containing at least 2 but less than 50 characters representing the full name of the Address Type.</param>
+            <param name="Abbreviation">A string containing no more than 5 characters representing an abbreviation for the Address Type.</param>
+        </member>
+        <member name="P:CaseCore.Domain.Types.AddressType.Name">
+            <summary>
+            Returns the Full Name of the Address Type.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Types.AddressType.Abbreviation">
+            <summary>
+            Returns the Abbreviation for the address.
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Types.AddressType.UpdateFullName(System.String)">
+            <summary>
+            Updates the Full Name of the Address Type
+            </summary>
+            <param name="newFullName"></param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Types.AddressTypeArgumentException">Thrown when the newFullName parameter is empty/whitespace or less than 2 characters or greater than 50 characters.</exception>
+        </member>
+        <member name="M:CaseCore.Domain.Types.AddressType.UpdateAbbreviation(System.String)">
+            <summary>
+            Updates the Abbreviation of the Address Type
+            </summary>
+            <param name="newAbbreviation"></param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Types.AddressTypeArgumentException">Thrown when the newAbbreviation parameter is empty/whitespace or greater than 5 characters.</exception>
+        </member>
+        <member name="T:CaseCore.Domain.Types.CaseAssignmentType">
+            <summary>
+            Class that represents a type of assignment entry associated with a <see cref="T:CaseCore.Domain.Entities.CaseAssignment"/>
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Types.CaseAssignmentType.#ctor(System.String)">
+            <summary>
+            Creates a new instance of the class.
+            </summary>
+            <param name="assignmentTypeName">A string representing the type name.</param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Types.CaseAssignmentTypeArgumentException">Thrown when the provided parameter is null, whitespace, or more than 25 characters.</exception>
+        </member>
+        <member name="P:CaseCore.Domain.Types.CaseAssignmentType.Name">
+            <summary>
+            Returns a string representing the name of the Type.
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Types.CaseAssignmentType.UpdateName(System.String)">
+            <summary>
+            Updates the name of the type.
+            </summary>
+            <param name="newName">A string representing the new name.</param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Types.CaseAssignmentTypeArgumentException">Thrown when the provided parameter is null, whitespace, or greater than 25 characters.</exception>
+        </member>
+        <member name="T:CaseCore.Domain.Types.CaseStatusType">
+            <summary>
+            Entity class that represents a Status used in a <see cref="T:CaseCore.Domain.Entities.Case"/>
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Types.CaseStatusType.#ctor(System.String)">
+            <summary>
+            Creates a new instance of the class.
+            </summary>
+            <param name="statusName">A string containing the status name.</param>
+        </member>
+        <member name="P:CaseCore.Domain.Types.CaseStatusType.Name">
+            <summary>
+            A string representing the Name of the <see cref="T:CaseCore.Domain.Types.CaseStatusType"/>
+            </summary>
+            <remarks>
+            Field is limited to 25 characters or fewer.
+            </remarks>
+        </member>
+        <member name="M:CaseCore.Domain.Types.CaseStatusType.UpdateName(System.String)">
+            <summary>
+            Updates the name of the status.
+            </summary>
+            <param name="newName">A string containing a new Name.</param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Types.CaseStatusTypeArgumentException">Thrown when the provided parameter is null, whitespace, or greater than 25 characters.</exception>
+        </member>
+        <member name="T:CaseCore.Domain.Types.OffenseType">
+            <summary>
+            Entity class that represents an Offense Type.
+            </summary>
+            <remarks>
+            Inherits from the <see cref="T:CaseCore.Domain.Common.BaseEntity"/> class.
+            </remarks>
+        </member>
+        <member name="M:CaseCore.Domain.Types.OffenseType.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new Instance of the Class
+            </summary>
+            <param name="fullName">A string containing at least 2 but less than 50 characters representing the full name of the Offense Type.</param>
+            <param name="Abbreviation">A string containing no more than 5 characters representing an abbreviation for the Offense Type.</param>
+        </member>
+        <member name="P:CaseCore.Domain.Types.OffenseType.Name">
+            <summary>
+            Returns the Full Name of the Offense Type.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Types.OffenseType.Abbreviation">
+            <summary>
+            Returns the Abbreviation for the Offense Type.
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Types.OffenseType.UpdateFullName(System.String)">
+            <summary>
+            Updates the Full Name of the Offense Type
+            </summary>
+            <param name="newFullName"></param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Types.OffenseTypeArgumentException">Thrown when the newFullName parameter is empty/whitespace or less than 2 characters or greater than 50 characters.</exception>
+        </member>
+        <member name="M:CaseCore.Domain.Types.OffenseType.UpdateAbbreviation(System.String)">
+            <summary>
+            Updates the Abbreviation of the Offense Type
+            </summary>
+            <param name="newAbbreviation"></param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Types.OffenseTypeArgumentException">Thrown when the newAbbreviation parameter is empty/whitespace or greater than 5 characters.</exception>
+        </member>
+        <member name="T:CaseCore.Domain.Types.PersonType">
+            <summary>
+            Entity class that represents a Type of <see cref="T:CaseCore.Domain.Entities.Person"/>
+            </summary>
+            <remarks>
+            Inherits from the <see cref="T:CaseCore.Domain.Common.BaseEntity"/> class.
+            </remarks>
+        </member>
+        <member name="M:CaseCore.Domain.Types.PersonType.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new Instance of the Class
+            </summary>
+            <param name="fullName">A string containing at least 2 but less than 50 characters representing the full name of the Person Type.</param>
+            <param name="Abbreviation">A string containing no more than 5 characters representing an abbreviation for the Person Type.</param>
+        </member>
+        <member name="P:CaseCore.Domain.Types.PersonType.Name">
+            <summary>
+            Returns the Full Name of the Person Type.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Types.PersonType.Abbreviation">
+            <summary>
+            Returns the Abbreviation for the Person Type.
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Types.PersonType.UpdateFullName(System.String)">
+            <summary>
+            Updates the Full Name of the Person Type
+            </summary>
+            <param name="newFullName"></param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Types.PersonTypeArgumentException">Thrown when the newFullName parameter is empty/whitespace or less than 2 characters or greater than 50 characters.</exception>
+        </member>
+        <member name="M:CaseCore.Domain.Types.PersonType.UpdateAbbreviation(System.String)">
+            <summary>
+            Updates the Abbreviation of the Person Type
+            </summary>
+            <param name="newAbbreviation"></param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Types.PersonTypeArgumentException">Thrown when the newAbbreviation parameter is empty/whitespace or greater than 5 characters.</exception>
+        </member>
+        <member name="T:CaseCore.Domain.Types.PhoneNumberType">
+            <summary>
+            Entity class that represents a type of <see cref="T:CaseCore.Domain.Entities.PhoneNumber"/>
+            </summary>
+            <remarks>
+            Inherits <see cref="T:CaseCore.Domain.Common.BaseEntity"/>
+            </remarks>
+        </member>
+        <member name="M:CaseCore.Domain.Types.PhoneNumberType.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new Instance of the Class
+            </summary>
+            <param name="fullName">A string containing at least 2 but less than 50 characters representing the full name of the Phone Type.</param>
+            <param name="Abbreviation">A string containing no more than 5 characters representing an abbreviation for the Phone Type.</param>
+        </member>
+        <member name="P:CaseCore.Domain.Types.PhoneNumberType.Name">
+            <summary>
+            Returns the Full Name of the Phone Type.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Domain.Types.PhoneNumberType.Abbreviation">
+            <summary>
+            Returns the Abbreviation for the Phone Type.
+            </summary>
+        </member>
+        <member name="M:CaseCore.Domain.Types.PhoneNumberType.UpdateFullName(System.String)">
+            <summary>
+            Updates the Full Name of the Phone Type
+            </summary>
+            <param name="newFullName"></param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Types.PhoneNumberTypeArgumentException">Thrown when the newFullName parameter is empty/whitespace or less than 2 characters or greater than 50 characters.</exception>
+        </member>
+        <member name="M:CaseCore.Domain.Types.PhoneNumberType.UpdateAbbreviation(System.String)">
+            <summary>
+            Updates the Abbreviation of the Phone Type
+            </summary>
+            <param name="newAbbreviation"></param>
+            <exception cref="T:CaseCore.Domain.Exceptions.Types.PhoneNumberTypeArgumentException">Thrown when the newAbbreviation parameter is empty/whitespace or greater than 5 characters.</exception>
+        </member>
+    </members>
+</doc>

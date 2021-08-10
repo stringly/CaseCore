@@ -13,6 +13,14 @@ namespace CaseCore.Domain.Entities
     {
         [IgnoreCodeCoverage]
         private CaseAssignment() { }
+        /// <summary>
+        /// Creates a new instance of the class.
+        /// </summary>
+        /// <param name="_case">A <see cref="Entities.Case"/> object.</param>
+        /// <param name="assignmentType">A <see cref="Types.CaseAssignmentType"/> object.</param>
+        /// <param name="assignedToName">A string containing the username of the user to assign to the case.</param>
+        /// <param name="assignmentDate">A <see cref="DateTime"/> representing the date of the assignment.</param>
+        /// <param name="remarks">An optional string containing remarks.</param>
         public CaseAssignment(Case _case, CaseAssignmentType assignmentType, string assignedToName, DateTime assignmentDate, string remarks = "")
         {
             Case = _case;
@@ -38,10 +46,19 @@ namespace CaseCore.Domain.Entities
         /// </summary>
         public virtual CaseAssignmentType CaseAssignmentType { get; private set; }
         private readonly string _assignedToName;
+        /// <summary>
+        /// Returns a string containing the username of the user assigned to the case.
+        /// </summary>
         public string AssignedToName => _assignedToName;
         private readonly DateTime _assignmentDate;
+        /// <summary>
+        /// Returns a <see cref="DateTime"/> that represents the date of the assignment.
+        /// </summary>
         public DateTime AssignmentDate => _assignmentDate;
         private string _remarks;
+        /// <summary>
+        /// A string containing the remarks.
+        /// </summary>
         public string Remarks => _remarks;
         /// <summary>
         /// Updates the remarks associated with the record.

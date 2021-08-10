@@ -4,6 +4,12 @@ using CaseCore.Domain.Exceptions.Types;
 
 namespace CaseCore.Domain.Types
 {
+    /// <summary>
+    /// Entity class that represents a type of <see cref="Entities.PhoneNumber"/>
+    /// </summary>
+    /// <remarks>
+    /// Inherits <see cref="BaseEntity"/>
+    /// </remarks>
     public class PhoneNumberType : BaseEntity
     {
         [IgnoreCodeCoverage]

@@ -27,6 +27,19 @@ namespace CaseCore.Domain.UnitTests.Entities
             Assert.Equal(newDate, newStatus.StatusDate);
             Assert.Equal(newRemarks, newStatus.Remarks);
         }
+        [Fact]
+        public void Can_Update_Remarks()
+        {
+            // Arrange
+            CaseStatus newStatus = _factory.CreateCaseStatus();
+            string newRemarks = "These are new remarks.";
+
+            // Act
+            newStatus.UpdateRemarks(newRemarks);
+
+            // Assert 
+            Assert.Equal(newRemarks, newStatus.Remarks);
+        }
         [Theory]
         [InlineData("")]
         [InlineData("            ")]

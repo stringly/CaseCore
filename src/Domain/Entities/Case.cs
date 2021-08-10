@@ -8,6 +8,12 @@ using System.Linq;
 
 namespace CaseCore.Domain.Entities
 {
+    /// <summary>
+    /// Entity Class representing a Case record.
+    /// </summary>
+    /// <remarks>
+    /// Inherits from <see cref="AuditableEntity"/>
+    /// </remarks>
     public class Case : AuditableEntity
     {
         [IgnoreCodeCoverage]
@@ -85,7 +91,10 @@ namespace CaseCore.Domain.Entities
         /// Represents the exact date/time that an incident occurred.
         /// </summary>
         public DateTime? OccurredOnExactDate => _occurredOnExactDate;
-        private DateTime? _reportedOnDate;
+        private DateTime ? _reportedOnDate;
+        /// <summary>
+        /// Returns the date/time the incident was reported.
+        /// </summary>
         public DateTime? ReportedOnDate => _reportedOnDate;
         private readonly List<CaseOffense> _caseOffenses;
         /// <summary>
@@ -121,6 +130,11 @@ namespace CaseCore.Domain.Entities
         /// Attempts to return the most recent entry in the Case Assignments collection, which should represent the Case's Current Assignment.
         /// </summary>
         public CaseAssignment CurrentAssignment => _caseAssignments?.OrderByDescending(x => x.AssignmentDate).FirstOrDefault();
+        /// <summary>
+        /// Updates the Case Number associated with the incident.
+        /// </summary>
+        /// <param name="newCaseNumber">A string containing the new case number.</param>
+        /// <exception cref="CaseArgumentException">Thrown when the provided parameter is null or whitespace.</exception>
         public void UpdateCaseNumber(string newCaseNumber)
         {
             if (string.IsNullOrWhiteSpace(newCaseNumber))
@@ -210,6 +224,11 @@ namespace CaseCore.Domain.Entities
             _occurredBetweenStartDate = null;
             _occurredBetweenEndDate = null;
         }
+        /// <summary>
+        /// Update the reported on date.
+        /// </summary>
+        /// <param name="newDate">A <see cref="DateTime"/> representing the new reporting time.</param>
+        /// <exception cref="CaseArgumentException">Thrown when the date provided is before the OccurredOnExactDate or before the OccurredBetweenEndDate.</exception>
         public void UpdateReportedOnDate(DateTime newDate)
         {
             if (_occurredOnExactDate != null && _occurredOnExactDate > newDate)
@@ -225,8 +244,8 @@ namespace CaseCore.Domain.Entities
         /// <summary>
         /// Updates the Date Range during which the incident occurred.
         /// </summary>
-        /// <param name="startDate">A <see cref="DateTime?"/> object representing the Start Date/Time of the period in which the incident occurred.</param>
-        /// <param name="endDate">A <see cref="DateTime?"/> object representing the End Date/Time of the period in which the incident occurrred.</param>
+        /// <param name="startDate">A <see cref="DateTime"/> object representing the Start Date/Time of the period in which the incident occurred.</param>
+        /// <param name="endDate">A <see cref="DateTime"/> object representing the End Date/Time of the period in which the incident occurrred.</param>
         /// <remarks>A successfull call to set the Date Range using this method will clear any value in the OccurredOnExactDate field.</remarks>
         public void UpdateOccurredBetweenDates(DateTime? startDate = null, DateTime? endDate = null)
         {

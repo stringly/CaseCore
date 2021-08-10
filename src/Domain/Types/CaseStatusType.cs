@@ -4,10 +4,16 @@ using System;
 
 namespace CaseCore.Domain.Types
 {
+    /// <summary>
+    /// Entity class that represents a Status used in a <see cref="Entities.Case"/>
+    /// </summary>
     public class CaseStatusType : BaseEntity
     {
         private CaseStatusType() { }
-
+        /// <summary>
+        /// Creates a new instance of the class.
+        /// </summary>
+        /// <param name="statusName">A string containing the status name.</param>
         public CaseStatusType(string statusName)
         {
             UpdateName(statusName);
@@ -20,6 +26,11 @@ namespace CaseCore.Domain.Types
         /// Field is limited to 25 characters or fewer.
         /// </remarks>
         public string Name => _name;
+        /// <summary>
+        /// Updates the name of the status.
+        /// </summary>
+        /// <param name="newName">A string containing a new Name.</param>
+        /// <exception cref="CaseStatusTypeArgumentException">Thrown when the provided parameter is null, whitespace, or greater than 25 characters.</exception>
 
         public void UpdateName(string newName)
         {

@@ -12,6 +12,11 @@ namespace CaseCore.Domain.Entities
         private PersonEmailAddress()
         {
         }
+        /// <summary>
+        /// Creates a new instance of the class.
+        /// </summary>
+        /// <param name="person">A <see cref="Entities.Person"/> object.</param>
+        /// <param name="emailAddress">A <see cref="Entities.EmailAddress"/> object.</param>
         public PersonEmailAddress(Person person, EmailAddress emailAddress)
         {
             Person = person;
