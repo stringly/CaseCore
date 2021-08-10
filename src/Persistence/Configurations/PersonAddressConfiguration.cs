@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 namespace CaseCore.Persistence.Configurations
 {
     /// <summary>
-    /// Implements <see cref="IEntityTypeConfiguration{TEntity}"></see> to configure the <see cref="Domain.Entities.Address"></see> entity
+    /// Implements <see cref="IEntityTypeConfiguration{TEntity}"></see> to configure the <see cref="Domain.Entities.PersonAddress"></see> entity
     /// </summary>
     public class PersonAddressConfiguration : IEntityTypeConfiguration<PersonAddress>
     {

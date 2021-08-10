@@ -1,23 +1,26 @@
 ﻿using CaseCore.Domain.Entities;
 using CaseCore.Domain.Exceptions.Entities;
+using CaseCore.Domain.Types;
+using CaseCore.Domain.UnitTests.Common;
 using Xunit;
 
 namespace CaseCore.Domain.UnitTests.Entities
 {
-    public class PhoneNumberTests
-    {
+    public class PhoneNumberTests : EntityTestBase
+    {        
         [Fact]
         public void Given_Valid_Values_PhoneNumber_Is_Valid()
         {
             // Arrange
             string number = "1234567890";
-            int type = 1;
+            PhoneNumberType testType = _factory.CreatePhoneNumberType();
 
             // Act
-            PhoneNumber newNumber = new PhoneNumber(number, type);
+            PhoneNumber newNumber = new PhoneNumber(number, testType);
 
             // Assert
             Assert.Equal(number, newNumber.Number);
+            Assert.Equal(testType, newNumber.PhoneNumberType);
             Assert.Equal("(123) 456-7890", newNumber.PhoneNumberFormatted);            
         }
         [Theory]
@@ -28,13 +31,14 @@ namespace CaseCore.Domain.UnitTests.Entities
         {
             // Arrange
             string number = value;
-            int type = 1;
+            PhoneNumberType testType = _factory.CreatePhoneNumberType();
 
             // Act
-            PhoneNumber newNumber = new PhoneNumber(number, type);
+            PhoneNumber newNumber = new PhoneNumber(number, testType);
 
             // Assert
             Assert.Equal("1234567890", newNumber.Number);
+            Assert.Equal(testType, newNumber.PhoneNumberType);
             Assert.Equal("(123) 456-7890", newNumber.PhoneNumberFormatted);
         }
         [Theory]
@@ -45,10 +49,10 @@ namespace CaseCore.Domain.UnitTests.Entities
         {
             // Arrange
             string number = value;
-            int type = 1;
+            PhoneNumberType testType = _factory.CreatePhoneNumberType();
 
             // Act/Assert
-            Assert.Throws<PhoneNumberArgumentException>(() => new PhoneNumber(number, type));
+            Assert.Throws<PhoneNumberArgumentException>(() => new PhoneNumber(number, testType));
             
         }
     }

@@ -151,6 +151,23 @@ namespace CaseCore.Persistence
                 new { Id = 6, Name = "Arrestee", Abbreviation = "A" },
                 new { Id = 7, Name = "Other", Abbreviation = "O" }                
                 );
+            modelBuilder.Entity<OffenseType>().HasData(
+                new { Id = 1, Name = "Homicide", Abbreviation = "HOMI"},
+                new { Id = 2, Name = "Rape", Abbreviation = "RAPE"},
+                new { Id = 3, Name = "Robbery", Abbreviation = "ROBB"}
+                );
+            modelBuilder.Entity<CaseAssignmentType>().HasData(
+                new { Id = 1, Name = "Initial" },
+                new { Id = 2, Name = "Reassigned" }
+                );
+            modelBuilder.Entity<CaseStatusType>().HasData(
+                new { Id = 1, Name = "Open" },
+                new { Id = 2, Name = "InActive"},
+                new { Id = 3, Name = "Closed (Arrest)" },
+                new { Id = 4, Name = "Closed (Admin)" },
+                new { Id = 5, Name = "Closed (Exception)" }
+                );
+
         }
     }
 }

@@ -1,7 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using CaseCore.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using CaseCore.Domain.Entities;
-using CaseCore.Domain.Types;
 
 
 namespace CaseCore.Persistence.Configurations

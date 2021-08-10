@@ -13,6 +13,8 @@ namespace CaseCore.Domain.Enums
         [Description("Asian")]
         A,
         [Description("Other")]
-        O
+        O,
+        [Description("Unknown")]
+        U
     }
 }

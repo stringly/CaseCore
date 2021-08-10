@@ -1,7 +1,5 @@
-﻿using CaseCore.Domain.Common;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using CaseCore.Common.Attributes;
+using CaseCore.Domain.Common;
 
 namespace CaseCore.Domain.Entities
 {
@@ -10,6 +8,7 @@ namespace CaseCore.Domain.Entities
     /// </summary>
     public class PersonPhoneNumber : BaseEntity
     {
+        [IgnoreCodeCoverage]
         private PersonPhoneNumber()
         {
         }

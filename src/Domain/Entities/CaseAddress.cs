@@ -1,12 +1,15 @@
-﻿using CaseCore.Domain.Common;
+﻿using CaseCore.Common.Attributes;
+using CaseCore.Domain.Common;
 
 namespace CaseCore.Domain.Entities
 {
     /// <summary>
     /// Class that represents the relationship between a <see cref="Entities.Case"/> object and it's associated <see cref="Entities.Address"/>
     /// </summary>
+    [IgnoreCodeCoverage]
     public class CaseAddress : BaseEntity
     {
+        
         private CaseAddress() { }
         public CaseAddress(Case _case, Address address)
         {

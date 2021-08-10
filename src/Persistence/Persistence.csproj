@@ -9,6 +9,8 @@
   <ItemGroup>
     <Compile Remove="Migrations\20210804060517_initial.cs" />
     <Compile Remove="Migrations\20210804060517_initial.Designer.cs" />
+    <Compile Remove="Migrations\20210810044724_overhaul.cs" />
+    <Compile Remove="Migrations\20210810044724_overhaul.Designer.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.0.0" />

@@ -1,4 +1,5 @@
-﻿using CaseCore.Domain.Common;
+﻿using CaseCore.Common.Attributes;
+using CaseCore.Domain.Common;
 using CaseCore.Domain.Enums;
 using CaseCore.Domain.Exceptions.Entities;
 using CaseCore.Domain.Types;
@@ -11,8 +12,9 @@ namespace CaseCore.Domain.Entities
 {
     public class Person : AuditableEntity
     {
+        [IgnoreCodeCoverage]
         private Person() { }
-        public Person(PersonType type, string honorific, string firstName, string middleName, string lastName, string suffix, string gender, string race, DateTime dob, string ssn)
+        public Person(PersonType type, string honorific, string firstName, string middleName, string lastName, string suffix, string gender, string race, DateTime dob, string ssn, int? heightInInches = null)
         {
             UpdatePersonType(type);
             UpdateHonorific(honorific);
@@ -24,6 +26,10 @@ namespace CaseCore.Domain.Entities
             UpdateRace(race);
             UpdateDOB(dob);
             UpdateSSN(ssn);
+            if (heightInInches != null)
+            {
+                UpdateHeight(Convert.ToInt32(heightInInches));
+            }
             _addresses = new List<PersonAddress>();
             _phoneNumbers = new List<PersonPhoneNumber>();
             _emailAddresses = new List<PersonEmailAddress>();
@@ -49,7 +55,7 @@ namespace CaseCore.Domain.Entities
         /// Person's Middle Name
         /// </summary>
         public string MiddleName => _middleName;
-        public string _lastName;
+        private string _lastName;
         /// <summary>
         /// Person's Last/Surname
         /// </summary>
@@ -71,6 +77,7 @@ namespace CaseCore.Domain.Entities
         /// <summary>
         /// The Id of the <see cref="Types.PersonType"/> associated with the person.
         /// </summary>
+        [IgnoreCodeCoverage]
         public int PersonTypeId {get; private set; }
         /// <summary>
         /// Navigation property for the <see cref="Types.PersonType"/> associated with the Person.
@@ -129,6 +136,16 @@ namespace CaseCore.Domain.Entities
         /// Returns the Person's date of birth as a MM/DD/YY string.
         /// </summary>
         public string DOBFormatted => _dob.ToShortDateString();
+        private int? _heightInInches;
+        public int? HeightInInches => _heightInInches;
+        public string Height {
+            get {
+                if (_heightInInches == null) { return "Unk"; }
+                int feet = Convert.ToInt32(_heightInInches) / 12;
+                int inches = Convert.ToInt32(_heightInInches) % 12;
+                return $"{feet}'{inches}\"";
+            }
+        }
         private string _ssn;
         /// <summary>
         /// Returns a string containing the person's SSN.
@@ -296,6 +313,14 @@ namespace CaseCore.Domain.Entities
             }
             _dob = newDOB;
         }
+        public void UpdateHeight(int inches)
+        {
+            if (inches < 0 || inches > 150)
+            {
+                throw new PersonArgumentException("Cannot update Person's Height: parameter must be between 0' and 150'.", nameof(inches));
+            }
+            _heightInInches = inches;
+        }
         /// <summary>
         /// Updates the Person's Social Security Number.
         /// </summary>
@@ -314,13 +339,13 @@ namespace CaseCore.Domain.Entities
         /// </summary>
         /// <param name="phoneNumber">The <see cref="PhoneNumber"/> to add.</param>
         public void AddPhoneNumber(PhoneNumber phoneNumber)
-        {
+        {            
             _phoneNumbers.Add(new PersonPhoneNumber(this, phoneNumber));
         }
         public void RemovePhoneNumber(PhoneNumber phoneNumber)
         {
             PersonPhoneNumber toRemove = _phoneNumbers?.Find(x => x.PhoneNumber == phoneNumber);
-            if (phoneNumber == null)
+            if (toRemove == null)
             {
                 throw new PersonArgumentException("Cannot remove phone number from person: phone number not found in Phone Number collection.", nameof(phoneNumber));
             }

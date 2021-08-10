@@ -1,10 +1,11 @@
 ﻿using CaseCore.Domain.Entities;
 using CaseCore.Domain.Exceptions.Entities;
+using CaseCore.Domain.UnitTests.Common;
 using Xunit;
 
 namespace CaseCore.Domain.UnitTests.Entities
 {
-    public class EmailAddressTests
+    public class EmailAddressTests : EntityTestBase
     {
         [Fact]
         public void Given_Valid_Values_EmailAddress_Is_Valid()

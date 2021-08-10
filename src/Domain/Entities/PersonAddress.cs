@@ -1,4 +1,5 @@
-﻿using CaseCore.Domain.Common;
+﻿using CaseCore.Common.Attributes;
+using CaseCore.Domain.Common;
 
 namespace CaseCore.Domain.Entities
 {
@@ -7,6 +8,7 @@ namespace CaseCore.Domain.Entities
     /// </summary>
     public class PersonAddress : BaseEntity
     {
+        [IgnoreCodeCoverage]
         private PersonAddress()
         {
         }

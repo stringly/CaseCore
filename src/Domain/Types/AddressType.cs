@@ -1,4 +1,5 @@
-﻿using CaseCore.Domain.Common;
+﻿using CaseCore.Common.Attributes;
+using CaseCore.Domain.Common;
 using CaseCore.Domain.Exceptions.Types;
 
 namespace CaseCore.Domain.Types
@@ -8,6 +9,7 @@ namespace CaseCore.Domain.Types
     /// </summary>
     public class AddressType : BaseEntity
     {
+        [IgnoreCodeCoverage]
         private AddressType() { }
         /// <summary>
         /// Creates a new Instance of the Class

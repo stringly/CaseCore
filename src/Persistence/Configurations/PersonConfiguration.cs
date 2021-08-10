@@ -51,6 +51,8 @@ namespace CaseCore.Persistence.Configurations
                 .HasField("_dob");
             builder.Property(p => p.SSN)
                 .HasField("_ssn");
+            builder.Property(p => p.HeightInInches)
+                .HasField("_heightInInches");
 
         }
     }

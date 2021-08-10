@@ -11,6 +11,8 @@ namespace CaseCore.Domain.Enums
         [Description("Non-Binary")]
         N,
         [Description("Other")]
-        O
+        O,
+        [Description("Unknown")]
+        U
     }
 }

@@ -1,51 +1,18 @@
 ﻿using CaseCore.Domain.Entities;
-using CaseCore.Domain.Exceptions.Entities;
 using CaseCore.Domain.Exceptions.Entities.Address;
 using CaseCore.Domain.Types;
+using CaseCore.Domain.UnitTests.Common;
 using Xunit;
 
 namespace CaseCore.Domain.UnitTests.Entities
 {
-    public class AddressTests
+    public class AddressTests : EntityTestBase
     {
-        /// <summary>
-        /// Factory method that creates a basic address for test methods.
-        /// </summary>
-        /// <oaram name="constructor">Integer that determines which constructor to call on the Address object. Valid values are:
-        /// <list type="bullet">
-        /// <item>1 (Default)>Will invoke constructor 1, which will populate AddressType, street, suite, city, state, and zip.</description></item>
-        /// <item>2<description>Will invoke constructor 2, which will populate AddressType, street, suite, city, state, zip, latitide and longitude.</description></item>
-        /// <item>3<description>Will invoke constructor 3, which will populate AddressType, street, suite, city, state, zip, beat, and reportingArea.</description></item>
-        /// <item>4<description>Will invoke constructor 4, which will populate AddressType, street, suite, city, state, zip, beat, reportingArea, latitude and longitude.</description></item>
-        /// </list>
-        /// </oaram>
-        /// <returns>A <see cref="Address"/> object.</returns>
-        private Address CreateAddress(int constructor = 1)
-        {            
-            AddressType testType = new AddressType("Test", "X");
-            string street = "123 Anywhere St.";
-            string suite = "Apartment #3";
-            string city = "Yourtown";
-            string state = "MD";
-            string zip = "12345";
-            string beat = "B3";
-            string reportingArea = "118";
-            double latitude = 89.0;
-            double longitude =  179.0;
-            return constructor switch
-            {
-                1 => new Address(testType, street, suite, city, state, zip),
-                2 => new Address(testType, street, suite, city, state, zip, latitude, longitude),
-                3 => new Address(testType, street, suite, city, state, zip, beat, reportingArea),
-                4 => new Address(testType, street, suite, city, state, zip, beat, reportingArea, latitude, longitude),
-                _ => new Address(testType, street, suite, city, state, zip),
-            };
-        }
         [Fact]
         public void Can_Create_Address_Via_Constructor_1()
         {
             // Arrange/Act
-            Address newAddress = CreateAddress();
+            Address newAddress = _factory.CreateAddress();
 
             // Assert
             Assert.Equal("123 Anywhere St.", newAddress.Street);
@@ -60,7 +27,7 @@ namespace CaseCore.Domain.UnitTests.Entities
         public void Can_Create_Address_Via_Constructor_2()
         {
             // Arrange/Act
-            Address newAddress = CreateAddress(2);
+            Address newAddress = _factory.CreateAddress(2);
 
             // Assert
             Assert.Equal("123 Anywhere St.", newAddress.Street);
@@ -76,7 +43,7 @@ namespace CaseCore.Domain.UnitTests.Entities
         public void Can_Create_Address_Via_Constructor_3()
         {
             // Arrange/Act
-            Address newAddress = CreateAddress(3);
+            Address newAddress = _factory.CreateAddress(3);
 
             // Assert
             Assert.Equal("123 Anywhere St.", newAddress.Street);
@@ -93,7 +60,7 @@ namespace CaseCore.Domain.UnitTests.Entities
         public void Can_Create_Address_Via_Constructor_4()
         {
             // Arrange/Act
-            Address newAddress = CreateAddress(4);
+            Address newAddress = _factory.CreateAddress(4);
 
             // Assert
             Assert.Equal("123 Anywhere St.", newAddress.Street);
@@ -112,7 +79,7 @@ namespace CaseCore.Domain.UnitTests.Entities
         public void Can_Update_Street()
         {
             // Arrange
-            Address newAddress = CreateAddress();
+            Address newAddress = _factory.CreateAddress();
             string newStreet = "999 Main St.";
 
             // Act
@@ -125,7 +92,7 @@ namespace CaseCore.Domain.UnitTests.Entities
         public void Can_Update_Suite()
         {
             // Arrange
-            Address newAddress = CreateAddress();
+            Address newAddress = _factory.CreateAddress();
             string newSuite = "Suite #10";
             
             // Act
@@ -138,7 +105,7 @@ namespace CaseCore.Domain.UnitTests.Entities
         public void Can_Update_City()
         {
             // Arrange
-            Address newAddress = CreateAddress();
+            Address newAddress = _factory.CreateAddress();
             string newCity = "Anytown";
 
             // Act
@@ -151,7 +118,7 @@ namespace CaseCore.Domain.UnitTests.Entities
         public void Can_Update_State()
         {
             // Arrange
-            Address newAddress = CreateAddress();
+            Address newAddress = _factory.CreateAddress();
             string newState = "AK";
 
             // Act
@@ -164,7 +131,7 @@ namespace CaseCore.Domain.UnitTests.Entities
         public void Can_Update_Zip()
         {
             // Arrange
-            Address newAddress = CreateAddress();
+            Address newAddress = _factory.CreateAddress();
             string newZip = "55555";
 
             // Act
@@ -178,7 +145,7 @@ namespace CaseCore.Domain.UnitTests.Entities
         public void Can_Update_Beat()
         {
             // Arrange
-            Address newAddress = CreateAddress();
+            Address newAddress = _factory.CreateAddress();
             string newBeat = "A4";
 
             // Act
@@ -191,7 +158,7 @@ namespace CaseCore.Domain.UnitTests.Entities
         public void Can_Update_ReportingArea()
         {
             // Arrange
-            Address newAddress = CreateAddress();
+            Address newAddress = _factory.CreateAddress();
             string newReportingArea = "120";
 
             // Act
@@ -204,7 +171,7 @@ namespace CaseCore.Domain.UnitTests.Entities
         public void Can_Update_Coordinate_Latitude()
         {
             // Arrange
-            Address newAddress = CreateAddress(2);
+            Address newAddress = _factory.CreateAddress(2);
             double? newLatitude = 10.0;
             
             // Act
@@ -219,7 +186,7 @@ namespace CaseCore.Domain.UnitTests.Entities
         public void Can_Update_Coordinate_Longitude()
         {
             // Arrange
-            Address newAddress = CreateAddress(2);
+            Address newAddress = _factory.CreateAddress(2);
             double? newLongitude = 150.0;
 
             // Act
@@ -231,10 +198,23 @@ namespace CaseCore.Domain.UnitTests.Entities
 
         }
         [Fact]
+        public void Can_Update_AddressType()
+        {
+            // Arrange
+            Address newAddress = _factory.CreateAddress();
+            AddressType newType = new AddressType("New Address Type", "N");
+
+            // Act
+            newAddress.UpdateType(newType);
+
+            // Assert
+            Assert.Equal(newType.Name, newAddress.AddressType.Name);
+        }
+        [Fact]
         public void Can_Update_Coordinates_On_Address_With_Null_Coordinate_Properties()
         {
             // Arrange
-            Address newAddress = CreateAddress(); // Constructor 1 will not populate the Lat/Long properties.
+            Address newAddress = _factory.CreateAddress(); // Constructor 1 will not populate the Lat/Long properties.
             double? newLatitude = 80.0;
             double? newLongitude = 170.0;
 
@@ -251,7 +231,7 @@ namespace CaseCore.Domain.UnitTests.Entities
         public void Should_Throw_AddressArgumentException_For_Invalid_Street(int length)
         {
             // Arrange
-            Address newAddress = CreateAddress();
+            Address newAddress = _factory.CreateAddress();
             string street = new string('*', length);
 
             // Act/Assert
@@ -262,7 +242,7 @@ namespace CaseCore.Domain.UnitTests.Entities
         public void Should_Throw_AddressArgumentException_For_Invalid_Suite()
         {
             // Arrange
-            Address newAddress = CreateAddress();
+            Address newAddress = _factory.CreateAddress();
             string suite = new string('*', 501);
 
 
@@ -275,11 +255,21 @@ namespace CaseCore.Domain.UnitTests.Entities
         public void Should_Throw_AddressArgumentException_For_Invalid_City(int length)
         {
             // Arrange
-            Address newAddress = CreateAddress();
+            Address newAddress = _factory.CreateAddress();
             string city = new string('*', length);
             
             // Act/Assert
             Assert.Throws<AddressArgumentException>(() => newAddress.UpdateCity(city));
+        }
+        [Fact]
+        public void Should_Throw_AddressArgumentException_For_Invalid_State()
+        {
+            // Arrange
+            Address newAddress = _factory.CreateAddress();
+            string invalidState = "XX";
+
+            // Act/Assert
+            Assert.Throws<AddressArgumentException>(() => newAddress.UpdateState(invalidState));
         }
         [Theory]
         [InlineData("XX")]
@@ -288,7 +278,7 @@ namespace CaseCore.Domain.UnitTests.Entities
         public void Should_Throw_AddressArgumentException_For_Invalid_Zip(string value)
         {
             // Arrange
-            Address newAddress = CreateAddress();
+            Address newAddress = _factory.CreateAddress();
             string zip = value;
 
             // Act/Assert
@@ -301,7 +291,7 @@ namespace CaseCore.Domain.UnitTests.Entities
         public void Should_Throw_AddressArgumentException_For_Invalid_Beat(string value)
         {
             // Arrange
-            Address newAddress = CreateAddress();
+            Address newAddress = _factory.CreateAddress();
             string beat = value;
 
             // Act/Assert
@@ -314,7 +304,7 @@ namespace CaseCore.Domain.UnitTests.Entities
         public void Should_Throw_AddressArgumentException_For_Invalid_ReportingArea(string value)
         {
             // Arrange
-            Address newAddress = CreateAddress();
+            Address newAddress = _factory.CreateAddress();
             string reportingArea = value;
 
             // Act/Assert
@@ -326,12 +316,11 @@ namespace CaseCore.Domain.UnitTests.Entities
         public void Should_Throw_AddressArgumentException_For_Invalid_Coordinate_Latitude(double value)
         {
             // Arrange
-            Address newAddress = CreateAddress();
-            double latitude = value;
-            double longitude = 180.0;
+            Address newAddress = _factory.CreateAddress(2);
+            double latitude = value;            
             
             // Act/Assert
-            Assert.Throws<AddressArgumentException>(() => newAddress.UpdateCoordinates(latitude, longitude));
+            Assert.Throws<AddressArgumentException>(() => newAddress.UpdateCoordinates(latitude));
         }
         [Theory]
         [InlineData(191.0)]
@@ -339,18 +328,17 @@ namespace CaseCore.Domain.UnitTests.Entities
         public void Should_Throw_AddressArgumentException_For_Invalid_Coordinate_Longitude(double value)
         {
             // Arrange
-            Address newAddress = CreateAddress();
-            double latitude = 90.0;
+            Address newAddress = _factory.CreateAddress(2);
             double longitude = value;
 
             // Act/Assert
-            Assert.Throws<AddressArgumentException>(() => newAddress.UpdateCoordinates(latitude, longitude));
+            Assert.Throws<AddressArgumentException>(() => newAddress.UpdateCoordinates(null, longitude));
         }
         [Fact]
         public void Should_Throw_AddressInvalidOperationException_For_Updated_Latitude_With_Null_Longitude_Property()
         {
             // Arrange
-            Address newAddress = CreateAddress(); // Constructor 1 will leave the lat/long properties null
+            Address newAddress = _factory.CreateAddress(); // Constructor 1 will leave the lat/long properties null
             double? newLatitude = 10.0;
 
             // Act/Assert
@@ -360,11 +348,33 @@ namespace CaseCore.Domain.UnitTests.Entities
         public void Should_Throw_AddressInvalidOperationException_For_Updated_Longitude_With_Null_Latitude_Property()
         {
             // Arrange
-            Address newAddress = CreateAddress(); // Constructor 1 will leave the lat/long properties null
+            Address newAddress = _factory.CreateAddress(); // Constructor 1 will leave the lat/long properties null
             double? newLongitude = 150.0;
 
             // Act/Assert
             Assert.Throws<AddressInvalidOperationException>(() => newAddress.UpdateCoordinates(longitude: newLongitude));
+        }
+        [Fact]
+        public void Should_Throw_AddressArgumentException_For_Invalid_Latitude_When_Both_Parameters_Provided()
+        {
+            // Arrange
+            Address newAddress = _factory.CreateAddress();
+            double? newLatitude = 91.0;
+            double? newLongitude = 90.0;
+
+            // Act/Assert
+            Assert.Throws<AddressArgumentException>(() => newAddress.UpdateCoordinates(newLatitude, newLongitude));
+        }
+        [Fact]
+        public void Should_Throw_AddressArgumentException_For_Invalid_Longitude_When_Both_Parameters_Provided()
+        {
+            // Arrange
+            Address newAddress = _factory.CreateAddress();
+            double? newLatitude = 80.0;
+            double? newLongitude = 190.0;
+
+            // Act/Assert
+            Assert.Throws<AddressArgumentException>(() => newAddress.UpdateCoordinates(newLatitude, newLongitude));
         }
     }
 }

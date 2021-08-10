@@ -1,24 +1,22 @@
 ﻿using CaseCore.Domain.Types;
 using CaseCore.Domain.Exceptions.Types;
 using Xunit;
+using CaseCore.Domain.UnitTests.Common;
 
 namespace CaseCore.Domain.UnitTests.Types
 {
-    public class AddressTypeTests
+    public class AddressTypeTests : EntityTestBase
     {
+        
         [Fact]
         public void Given_Valid_Values_AddressType_Is_Valid()
         {
-            // Arrange
-            string name = "Home";
-            string abbreviation = "H";
-
-            // Act
-            var type = new AddressType(name, abbreviation);
+            // Arrange/Act
+            AddressType newType = _factory.CreateAddressType();
 
             // Assert
-            Assert.Equal("Home", type.Name);
-            Assert.Equal("H", type.Abbreviation);
+            Assert.Equal("Test", newType.Name);
+            Assert.Equal("X", newType.Abbreviation);
         }
         [Theory]
         [InlineData("")]
@@ -49,7 +47,7 @@ namespace CaseCore.Domain.UnitTests.Types
         public void Can_Update_FullName()
         {
             // Arrange
-            var newType = new AddressType("Home", "H");
+            var newType = _factory.CreateAddressType();
             var newName = "Work";
 
             // Act
@@ -62,7 +60,7 @@ namespace CaseCore.Domain.UnitTests.Types
         public void Can_Update_Abbreviation()
         {
             // Arrange
-            var newType = new AddressType("Home", "H");
+            var newType = _factory.CreateAddressType();
             var newAbbreviation = "W";
 
             // Act

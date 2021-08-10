@@ -1,4 +1,5 @@
-﻿using CaseCore.Domain.Common;
+﻿using CaseCore.Common.Attributes;
+using CaseCore.Domain.Common;
 using CaseCore.Domain.Enums;
 using CaseCore.Domain.Exceptions.Entities.Address;
 using CaseCore.Domain.Types;
@@ -11,7 +12,8 @@ namespace CaseCore.Domain.Entities
     /// Domain Entity that represents a physical or mailing address.
     /// </summary>
     public class Address : AuditableEntity
-    {
+    {   
+        [IgnoreCodeCoverage]
         private Address()
         {
         }
@@ -108,6 +110,7 @@ namespace CaseCore.Domain.Entities
         /// <summary>
         /// The ID of the <see cref="AddressType"/> of the Address.
         /// </summary>
+        [IgnoreCodeCoverage]
         public int AddressTypeId { get; private set; }
         private string _street;
         /// <summary>

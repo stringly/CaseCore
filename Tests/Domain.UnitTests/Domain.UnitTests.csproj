@@ -6,7 +6,28 @@
     <AssemblyName>CaseCore.Domain.UnitTests</AssemblyName>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
-
+  <PropertyGroup Label="FineCodeCoverage">
+    <Enabled>
+      True
+    </Enabled>
+    <Exclude>
+      [ThirdParty.*]*
+      [FourthParty]*
+    </Exclude>
+    <Include>
+      [*]*
+    </Include>
+    <ExcludeByFile>
+      **/Migrations/*
+      **/Hacks/*.cs
+    </ExcludeByFile>
+    <ExcludeByAttribute>
+      [IgnoreCodeCoverage]
+    </ExcludeByAttribute>
+    <IncludeTestAssembly>
+      True
+    </IncludeTestAssembly>
+  </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
     <PackageReference Include="xunit" Version="2.4.0" />

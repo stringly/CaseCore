@@ -5,7 +5,7 @@ using CaseCore.Domain.Types;
 namespace CaseCore.Domain.Entities
 {
     /// <summary>
-    /// Class that represents a <see cref="Entities.Person"/> and it's associated <see cref="Entities.PhoneNumber"/>
+    /// Class that represents a PhoneNumber
     /// </summary>
     public class PhoneNumber : BaseEntity
     {
@@ -14,10 +14,10 @@ namespace CaseCore.Domain.Entities
         /// Creates a new instance of the class.
         /// </summary>
         /// <param name="number">A <see cref="Entities.PhoneNumber"/></param>
-        public PhoneNumber(string number, int phoneTypeId)
+        public PhoneNumber(string number, PhoneNumberType type)
         {
             UpdateNumber(number);
-            UpdateType(phoneTypeId);
+            UpdateType(type);
         }
         private string _number;
         /// <summary>
@@ -47,6 +47,11 @@ namespace CaseCore.Domain.Entities
                 }
             }
         }
+        /// <summary>
+        /// Updates the phone number of the object.
+        /// </summary>
+        /// <param name="newNumber">A string containing a new phone number</param>
+        /// <exception cref="PhoneNumberArgumentException">Thrown when the provided parameter contains non-numeric characters or is more than 10 characters in length.</exception>
         public void UpdateNumber(string newNumber)
         {
             string sanitized = newNumber.RemoveNonNumericCharacters();
@@ -56,13 +61,13 @@ namespace CaseCore.Domain.Entities
             }
             _number = sanitized;
         }
-        public void UpdateType(int newTypeId)
+        /// <summary>
+        /// Updates the <see cref="Types.PhoneNumberType"/> of the phone number.
+        /// </summary>
+        /// <param name="newType">A <see cref="Types.PhoneNumberType"/></param>
+        public void UpdateType(PhoneNumberType newType)
         {
-            if (newTypeId < 1)
-            {
-                throw new PhoneNumberArgumentException("Cannot Update Phone Number Type: provided parameter is not a valid type.", nameof(newTypeId));
-            }
-            PhoneNumberTypeId = newTypeId;
+            PhoneNumberType = newType;
         }
     }
 }

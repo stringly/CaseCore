@@ -3,7 +3,7 @@
 namespace CaseCore.Domain.Exceptions.Types
 {
     /// <summary>
-    /// Exception class used in the <see cref="AddressType"></see> class.
+    /// Exception class used in the <see cref="Domain.Types.AddressType"></see> class.
     /// </summary>
     public class AddressTypeArgumentException : ArgumentException
     {

@@ -19,8 +19,6 @@ namespace CaseCore.Persistence.Configurations
                 .WithMany(x => x.Addresses)
                 .IsRequired();
             builder.HasOne(x => x.Address);
-
-
         }
     }
 }

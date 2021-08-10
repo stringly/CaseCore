@@ -1,10 +1,12 @@
-﻿using System;
+﻿using CaseCore.Common.Attributes;
+using System;
 
 namespace CaseCore.Domain.Common
 {
     /// <summary>
     /// Abstract base class for Entity classes
     /// </summary>
+    [IgnoreCodeCoverage]
     public abstract class BaseEntity
     {
         /// <summary>

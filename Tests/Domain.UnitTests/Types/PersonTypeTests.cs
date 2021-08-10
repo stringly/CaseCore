@@ -1,24 +1,21 @@
 ﻿using CaseCore.Domain.Types;
 using CaseCore.Domain.Exceptions.Types;
 using Xunit;
+using CaseCore.Domain.UnitTests.Common;
 
 namespace CaseCore.Domain.UnitTests.Types
 {
-    public class PersonTypeTests
+    public class PersonTypeTests : EntityTestBase
     {
         [Fact]
         public void Given_Valid_Values_PersonType_Is_Valid()
         {
-            // Arrange
-            string name = "Victim";
-            string abbreviation = "V";
-
-            // Act
-            var type = new PersonType(name, abbreviation);
+            // Arrange/Act            
+            var type = _factory.CreatePersonType();
 
             // Assert
-            Assert.Equal("Victim", type.Name);
-            Assert.Equal("V", type.Abbreviation);
+            Assert.Equal("Test", type.Name);
+            Assert.Equal("X", type.Abbreviation);
         }
         [Theory]
         [InlineData("")]
@@ -49,7 +46,7 @@ namespace CaseCore.Domain.UnitTests.Types
         public void Can_Update_FullName()
         {
             // Arrange
-            var newType = new PersonType("Victim", "V");
+            var newType = _factory.CreatePersonType();
             var newName = "Suspect";
 
             // Act
@@ -62,7 +59,7 @@ namespace CaseCore.Domain.UnitTests.Types
         public void Can_Update_Abbreviation()
         {
             // Arrange
-            var newType = new PersonType("Victim", "V");
+            var newType = _factory.CreatePersonType();
             var newAbbreviation = "S";
 
             // Act

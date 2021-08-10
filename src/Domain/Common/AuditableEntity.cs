@@ -1,10 +1,12 @@
-﻿using System;
+﻿using CaseCore.Common.Attributes;
+using System;
 
 namespace CaseCore.Domain.Common
 {
     /// <summary>
     /// Abstract class for an Entity that needs audit information
     /// </summary>
+    [IgnoreCodeCoverage]
     public abstract class AuditableEntity : BaseEntity
     {
         /// <summary>

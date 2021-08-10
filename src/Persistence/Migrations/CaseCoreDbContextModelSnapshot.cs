@@ -45,10 +45,10 @@ namespace CaseCore.Persistence.Migrations
                     b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("Latitude")
+                    b.Property<double?>("Latitude")
                         .HasColumnType("float");
 
-                    b.Property<double>("Longitude")
+                    b.Property<double?>("Longitude")
                         .HasColumnType("float");
 
                     b.Property<DateTime?>("Modified")
@@ -111,6 +111,19 @@ namespace CaseCore.Persistence.Migrations
                     b.Property<string>("ModifiedBy")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime?>("OccurredBetweenEndDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("OccurredBetweenStartDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("OccurredOnExactDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("ReportedOnDate")
+                        .IsRequired()
+                        .HasColumnType("datetime2");
+
                     b.HasKey("Id");
 
                     b.ToTable("Cases");
@@ -141,6 +154,144 @@ namespace CaseCore.Persistence.Migrations
                     b.ToTable("CaseAddress");
                 });
 
+            modelBuilder.Entity("CaseCore.Domain.Entities.CaseAssignment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("AssignedToName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
+
+                    b.Property<DateTime>("AssignmentDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("CaseAssignmentTypeId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CaseId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("Modified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Remarks")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(1000)")
+                        .HasMaxLength(1000);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CaseAssignmentTypeId");
+
+                    b.HasIndex("CaseId");
+
+                    b.ToTable("CaseAssignment");
+                });
+
+            modelBuilder.Entity("CaseCore.Domain.Entities.CaseOffense", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("CaseId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("Modified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("OffenseTypeId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CaseId");
+
+                    b.HasIndex("OffenseTypeId");
+
+                    b.ToTable("CaseOffense");
+                });
+
+            modelBuilder.Entity("CaseCore.Domain.Entities.CasePerson", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("CaseId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("Modified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("PersonId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CaseId");
+
+                    b.HasIndex("PersonId");
+
+                    b.ToTable("CasePerson");
+                });
+
+            modelBuilder.Entity("CaseCore.Domain.Entities.CaseStatus", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("CaseId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CaseStatusTypeId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("Modified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Remarks")
+                        .HasColumnType("nvarchar(1000)")
+                        .HasMaxLength(1000);
+
+                    b.Property<DateTime>("StatusDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CaseId");
+
+                    b.HasIndex("CaseStatusTypeId");
+
+                    b.ToTable("CaseStatus");
+                });
+
             modelBuilder.Entity("CaseCore.Domain.Entities.EmailAddress", b =>
                 {
                     b.Property<int>("Id")
@@ -168,9 +319,6 @@ namespace CaseCore.Persistence.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("CaseId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("Created")
                         .HasColumnType("datetime2");
 
@@ -187,6 +335,9 @@ namespace CaseCore.Persistence.Migrations
                     b.Property<string>("Gender")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("HeightInInches")
+                        .HasColumnType("int");
 
                     b.Property<string>("LastName")
                         .HasColumnType("nvarchar(100)")
@@ -221,8 +372,6 @@ namespace CaseCore.Persistence.Migrations
                         .HasMaxLength(10);
 
                     b.HasKey("Id");
-
-                    b.HasIndex("CaseId");
 
                     b.HasIndex("PersonTypeId");
 
@@ -386,6 +535,130 @@ namespace CaseCore.Persistence.Migrations
                         });
                 });
 
+            modelBuilder.Entity("CaseCore.Domain.Types.CaseAssignmentType", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime?>("Modified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(200)")
+                        .HasMaxLength(200);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CaseAssignmentType");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Initial"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Reassigned"
+                        });
+                });
+
+            modelBuilder.Entity("CaseCore.Domain.Types.CaseStatusType", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime?>("Modified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(25)")
+                        .HasMaxLength(25);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CaseStatusType");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Open"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "InActive"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "Closed (Arrest)"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Name = "Closed (Admin)"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Name = "Closed (Exception)"
+                        });
+                });
+
+            modelBuilder.Entity("CaseCore.Domain.Types.OffenseType", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Abbreviation")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(5)")
+                        .HasMaxLength(5);
+
+                    b.Property<DateTime?>("Modified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("OffenseType");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Abbreviation = "HOMI",
+                            Name = "Homicide"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Abbreviation = "RAPE",
+                            Name = "Rape"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Abbreviation = "ROBB",
+                            Name = "Robbery"
+                        });
+                });
+
             modelBuilder.Entity("CaseCore.Domain.Types.PersonType", b =>
                 {
                     b.Property<int>("Id")
@@ -530,12 +803,68 @@ namespace CaseCore.Persistence.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("CaseCore.Domain.Entities.CaseAssignment", b =>
+                {
+                    b.HasOne("CaseCore.Domain.Types.CaseAssignmentType", "CaseAssignmentType")
+                        .WithMany()
+                        .HasForeignKey("CaseAssignmentTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CaseCore.Domain.Entities.Case", "Case")
+                        .WithMany("CaseAssignments")
+                        .HasForeignKey("CaseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("CaseCore.Domain.Entities.CaseOffense", b =>
+                {
+                    b.HasOne("CaseCore.Domain.Entities.Case", "Case")
+                        .WithMany("CaseOffenses")
+                        .HasForeignKey("CaseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CaseCore.Domain.Types.OffenseType", "OffenseType")
+                        .WithMany()
+                        .HasForeignKey("OffenseTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("CaseCore.Domain.Entities.CasePerson", b =>
+                {
+                    b.HasOne("CaseCore.Domain.Entities.Case", "Case")
+                        .WithMany("Persons")
+                        .HasForeignKey("CaseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CaseCore.Domain.Entities.Person", "Person")
+                        .WithMany()
+                        .HasForeignKey("PersonId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("CaseCore.Domain.Entities.CaseStatus", b =>
+                {
+                    b.HasOne("CaseCore.Domain.Entities.Case", "Case")
+                        .WithMany("CaseStatuses")
+                        .HasForeignKey("CaseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CaseCore.Domain.Types.CaseStatusType", "CaseStatusType")
+                        .WithMany()
+                        .HasForeignKey("CaseStatusTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("CaseCore.Domain.Entities.Person", b =>
                 {
-                    b.HasOne("CaseCore.Domain.Entities.Case", null)
-                        .WithMany("Persons")
-                        .HasForeignKey("CaseId");
-
                     b.HasOne("CaseCore.Domain.Types.PersonType", "PersonType")
                         .WithMany()
                         .HasForeignKey("PersonTypeId")

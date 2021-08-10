@@ -1,10 +1,12 @@
-﻿using CaseCore.Domain.Common;
+﻿using CaseCore.Common.Attributes;
+using CaseCore.Domain.Common;
 using CaseCore.Domain.Exceptions.Types;
 
 namespace CaseCore.Domain.Types
 {
     public class PhoneNumberType : BaseEntity
     {
+        [IgnoreCodeCoverage]
         private PhoneNumberType() { }
         /// <summary>
         /// Creates a new Instance of the Class

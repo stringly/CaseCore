@@ -1,24 +1,21 @@
 ﻿using CaseCore.Domain.Types;
 using CaseCore.Domain.Exceptions.Types;
 using Xunit;
+using CaseCore.Domain.UnitTests.Common;
 
 namespace CaseCore.Domain.UnitTests.Types
 {
-    public class PhoneTypeTests
+    public class PhoneNumberTypeTests : EntityTestBase
     {
         [Fact]
         public void Given_Valid_Values_PhoneType_Is_Valid()
         {
-            // Arrange
-            string name = "Home";
-            string abbreviation = "H";
-
-            // Act
-            var type = new PhoneNumberType(name, abbreviation);
+            // Arrange/Act
+            var type = _factory.CreatePhoneNumberType();
 
             // Assert
-            Assert.Equal("Home", type.Name);
-            Assert.Equal("H", type.Abbreviation);
+            Assert.Equal("Test", type.Name);
+            Assert.Equal("X", type.Abbreviation);
         }
         [Theory]
         [InlineData("")]
@@ -49,7 +46,7 @@ namespace CaseCore.Domain.UnitTests.Types
         public void Can_Update_FullName()
         {
             // Arrange
-            var newType = new PhoneNumberType("Home", "H");
+            var newType = _factory.CreatePhoneNumberType();
             var newName = "Work";
 
             // Act
@@ -62,7 +59,7 @@ namespace CaseCore.Domain.UnitTests.Types
         public void Can_Update_Abbreviation()
         {
             // Arrange
-            var newType = new PhoneNumberType("Home", "H");
+            var newType = _factory.CreatePhoneNumberType();
             var newAbbreviation = "W";
 
             // Act
