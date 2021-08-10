@@ -3,13 +3,96 @@
     {
       "src": [
         {
-          "files": [
-            "src/**.csproj"
+          "files": "src/Application/**.csproj",
+          "exclude": [
+            "**/obj/**",
+            "**/bin/**"
           ],
-          "cwd": ".."
+          "cwd": "..",
+          "src": "../"
         }
       ],
-      "dest": "api",
+      "dest": "api/Application",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
+    },
+    {
+      "src": [
+        {
+          "files": "src/Common/**.csproj",
+          "exclude": [
+            "**/obj/**",
+            "**/bin/**"
+          ],
+          "cwd": "..",
+          "src": "../"
+        }
+      ],
+      "dest": "api/Common",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
+    },
+    {
+      "src": [
+        {
+          "files": "src/Domain/**.csproj",
+          "exclude": [
+            "**/obj/**",
+            "**/bin/**"
+          ],
+          "cwd": "..",
+          "src": "../"
+        }
+      ],
+      "dest": "api/Domain",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
+    },
+    {
+      "src": [
+        {
+          "files": "src/Infrastructure/**.csproj",
+          "exclude": [
+            "**/obj/**",
+            "**/bin/**"
+          ],
+          "cwd": "..",
+          "src": "../"
+        }
+      ],
+      "dest": "api/Infrastructure",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
+    },
+    {
+      "src": [
+        {
+          "files": "src/Persistence/**.csproj",
+          "exclude": [
+            "**/obj/**",
+            "**/bin/**"
+          ],
+          "cwd": "..",
+          "src": "../"
+        }
+      ],
+      "dest": "api/Persistence",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
+    },
+    {
+      "src": [
+        {
+          "files": "src/WebUI/**.csproj",
+          "exclude": [
+            "**/obj/**",
+            "**/bin/**"
+          ],
+          "cwd": "..",
+          "src": "../"
+        }
+      ],
+      "dest": "api/WebUI",
       "disableGitFeatures": false,
       "disableDefaultFilter": false
     }
@@ -19,7 +102,7 @@
       {
         "files": [
           "api/**.yml",
-          "api/index.md"
+          "api/**/index.md"
         ]
       },
       {
@@ -28,6 +111,10 @@
           "articles/**/toc.yml",
           "toc.yml",
           "*.md"
+        ],
+        "exclude": [
+          "obj/**",
+          "bin/**"
         ]
       }
     ],
