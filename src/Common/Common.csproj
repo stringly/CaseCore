@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\CaseCore.$(MSBuildThisFileName).xml</DocumentationFile>
     <RootNamespace>CaseCore.Common</RootNamespace>
     <AssemblyName>CaseCore.Common</AssemblyName>
   </PropertyGroup>

@@ -198,7 +198,7 @@ namespace CaseCore.Persistence.Migrations
 
                     b.HasIndex("CaseId");
 
-                    b.ToTable("CaseAssignment");
+                    b.ToTable("CaseAssignments");
                 });
 
             modelBuilder.Entity("CaseCore.Domain.Entities.CaseOffense", b =>
@@ -552,7 +552,7 @@ namespace CaseCore.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CaseAssignmentType");
+                    b.ToTable("CaseAssignmentTypes");
 
                     b.HasData(
                         new

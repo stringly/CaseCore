@@ -49,6 +49,10 @@ namespace CaseCore.Persistence
         /// <inheritdoc/>
         public DbSet<AddressType> AddressTypes { get; set; }
         /// <inheritdoc/>
+        public DbSet<CaseAssignment> CaseAssignments { get; set; }
+        /// <inheritdoc/>
+        public DbSet<CaseAssignmentType> CaseAssignmentTypes { get; set; }
+        /// <inheritdoc/>
         public DbSet<PersonType> PersonTypes { get; set; }
         /// <inheritdoc/>
         public DbSet<PhoneNumberType> PhoneNumberTypes { get; set; }

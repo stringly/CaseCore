@@ -26,7 +26,15 @@ namespace CaseCore.Application.Common.Interfaces
         /// <summary>
         /// A <seealso cref="DbSet{AddressType}"/> containing AddressType entities.
         /// </summary>
-        DbSet<AddressType> AddressTypes { get;set;}
+        DbSet<AddressType> AddressTypes { get; set; }
+        /// <summary>
+        /// A <seealso cref="DbSet{CaseAssignmentType}"/> containing Case AssignmentType entities.
+        /// </summary>
+        DbSet<CaseAssignmentType> CaseAssignmentTypes { get; set; }
+        /// <summary>
+        /// A <seealso cref="DbSet{CaseAssignment}"/> containing CaseAssignment entities.
+        /// </summary>
+        DbSet<CaseAssignment> CaseAssignments { get; set; }
         /// <summary>
         /// A <seealso cref="DbSet{PersonType}"/> containing PersonType entities.
         /// </summary>

@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using CaseCore.Application.Common.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.EntityFrameworkCore;
-using CaseCore.Application.Common.Interfaces;
 
 namespace CaseCore.Persistence
 {
@@ -22,7 +19,7 @@ namespace CaseCore.Persistence
         public static IServiceCollection AddPersistence(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<CaseCoreDbContext>(options =>
-                options.UseSqlServer(configuration.GetConnectionString("OvertimeCoreDatabase")));
+                options.UseSqlServer(configuration.GetConnectionString("CaseCoreDatabase")));
 
             services.AddScoped<ICaseCoreDbContext>(provider => provider.GetService<CaseCoreDbContext>());
             return services;

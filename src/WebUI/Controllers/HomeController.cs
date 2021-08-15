@@ -1,23 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using WebUI.Models;
 
 namespace WebUI.Controllers
 {
+    /// <summary>
+    /// View Controller that returns Home Views.
+    /// </summary>
+    [ApiExplorerSettings(IgnoreApi = true)]
+    [AllowAnonymous]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
+        /// <summary>
+        /// Creates a new instance of the Controller.
+        /// </summary>
+        /// <param name="logger">An implementation of <see cref="ILogger"/></param>
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
         }
-
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
@@ -26,12 +29,6 @@ namespace WebUI.Controllers
         public IActionResult Privacy()
         {
             return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }

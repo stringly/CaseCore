@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CaseCore.WebUI</name>
+    </assembly>
+    <members>
+        <member name="T:CaseCore.WebUI.Controllers.AddressTypeController">
+            <summary>
+            Controller that handles CRUD for the AddressType entity.
+            </summary>
+        </member>
+        <member name="M:CaseCore.WebUI.Controllers.AddressTypeController.GetAll">
+            <summary>
+            Returns a list of AddressTypes
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CaseCore.WebUI.Services.DateTimeProvider">
+            <summary>
+            Implementation of <see cref="T:CaseCore.Common.IDateTime"/> used to inject the system current time.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,486 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CaseCore.Application</name>
+    </assembly>
+    <members>
+        <member name="T:CaseCore.Application.AddressTypes.AddressTypeDto">
+            <summary>
+            Data Transfer class used for the <see cref="T:CaseCore.Domain.Types.AddressType"/> entity.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Application.AddressTypes.AddressTypeDto.Id">
+            <summary>
+            Integer Id for the AddressType
+            </summary>
+        </member>
+        <member name="P:CaseCore.Application.AddressTypes.AddressTypeDto.Name">
+            <summary>
+            Name of the AddressType
+            </summary>
+        </member>
+        <member name="P:CaseCore.Application.AddressTypes.AddressTypeDto.Abbreviation">
+            <summary>
+            Abbreviation for the AddressType
+            </summary>
+        </member>
+        <member name="T:CaseCore.Application.AddressTypes.Queries.GetAddressTypeList.AddressTypeListVm">
+            <summary>
+            Viewmodel class used in the AddressTypeList Query
+            </summary>
+        </member>
+        <member name="P:CaseCore.Application.AddressTypes.Queries.GetAddressTypeList.AddressTypeListVm.AddressTypes">
+            <summary>
+            A list of <see cref="T:CaseCore.Application.AddressTypes.AddressTypeDto"/>
+            </summary>
+        </member>
+        <member name="P:CaseCore.Application.AddressTypes.Queries.GetAddressTypeList.AddressTypeListVm.PagingInfo">
+            <summary>
+            An instance of <see cref="T:CaseCore.Application.Common.Models.PagingInfo"/> used to page the result list.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Application.AddressTypes.Queries.GetAddressTypeList.AddressTypeListVm.CurrentSort">
+            <summary>
+            String containing the current sorting applied to the list
+            </summary>
+        </member>
+        <member name="P:CaseCore.Application.AddressTypes.Queries.GetAddressTypeList.AddressTypeListVm.NameSort">
+            <summary>
+            A string containing a sorting tag for the Name field.
+            </summary>
+        </member>
+        <member name="T:CaseCore.Application.AddressTypes.Queries.GetAddressTypeList.GetAddressTypeListQuery">
+            <summary>
+            Implementation of <see cref="T:MediatR.IRequest"></see> that returns a list of <see cref="T:CaseCore.Domain.Types.AddressType"></see> in an <see cref="T:CaseCore.Application.AddressTypes.Queries.GetAddressTypeList.AddressTypeListVm"/>
+            </summary>
+        </member>
+        <member name="P:CaseCore.Application.AddressTypes.Queries.GetAddressTypeList.GetAddressTypeListQuery.SortOrder">
+            <summary>
+            A string containing a sort order value. 
+            </summary>
+            <remarks>
+            This field can sort the result list based on the following values:
+            <list type="bullet">
+            <item><description>Empty string: AddressType list will be sorted by Name in alphabetical order.</description></item>
+            <item><description>addressTypeName_desc: AddressType list will be sorted by Name in reverse alphabetical order.</description></item>       
+            </list>
+            </remarks>
+        </member>
+        <member name="P:CaseCore.Application.AddressTypes.Queries.GetAddressTypeList.GetAddressTypeListQuery.PageNumber">
+            <summary>
+            An integer page number. Defaults to 1.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Application.AddressTypes.Queries.GetAddressTypeList.GetAddressTypeListQuery.PageSize">
+            <summary>
+            An integer page size. Defaults to 1.
+            </summary>
+        </member>
+        <member name="T:CaseCore.Application.AddressTypes.Queries.GetAddressTypeList.GetFundBankTypeListQueryHandler">
+            <summary>
+            Implementation of <see cref="T:MediatR.IRequestHandler`2"></see> that handles requests for a list of a <see cref="T:CaseCore.Domain.Types.AddressType"></see>
+            </summary>
+        </member>
+        <member name="M:CaseCore.Application.AddressTypes.Queries.GetAddressTypeList.GetFundBankTypeListQueryHandler.#ctor(CaseCore.Application.Common.Interfaces.ICaseCoreDbContext,AutoMapper.IMapper)">
+            <summary>
+            Creates a new instance of the handler.
+            </summary>
+            <param name="context">An implementation of <see cref="T:CaseCore.Application.Common.Interfaces.ICaseCoreDbContext"/></param>
+            <param name="mapper">An implementation of <see cref="T:AutoMapper.IMapper"/></param>
+        </member>
+        <member name="M:CaseCore.Application.AddressTypes.Queries.GetAddressTypeList.GetFundBankTypeListQueryHandler.Handle(CaseCore.Application.AddressTypes.Queries.GetAddressTypeList.GetAddressTypeListQuery,System.Threading.CancellationToken)">
+            <summary>
+            Handles the request
+            </summary>
+            <param name="request">A <see cref="T:CaseCore.Application.AddressTypes.Queries.GetAddressTypeList.GetAddressTypeListQuery"/> object.</param>
+            <param name="cancellationToken">A CancellationToken.</param>
+            <returns>A <see cref="T:CaseCore.Application.AddressTypes.Queries.GetAddressTypeList.AddressTypeListVm"/> containing a list of Fund Bank Types.</returns>    
+        </member>
+        <member name="T:CaseCore.Application.Common.Behaviors.RequestAuthorizationBehavior`2">
+            <summary>
+            Behavior that performs authorization on requests.
+            </summary>
+            <typeparam name="TRequest"></typeparam>
+            <typeparam name="TResponse"></typeparam>
+        </member>
+        <member name="M:CaseCore.Application.Common.Behaviors.RequestAuthorizationBehavior`2.#ctor(System.Collections.Generic.IEnumerable{CaseCore.Application.Common.Interfaces.IAuthorizer{`0}})">
+            <summary>
+            Creates a new instance of the Behavior.
+            </summary>
+            <param name="authorizers"></param>
+        </member>
+        <member name="M:CaseCore.Application.Common.Behaviors.RequestAuthorizationBehavior`2.Handle(`0,System.Threading.CancellationToken,MediatR.RequestHandlerDelegate{`1})">
+            <summary>
+            Handles the authorization request.
+            </summary>
+            <param name="request">An implementation of <see cref="T:MediatR.IRequest"/></param>
+            <param name="cancellationToken">A cancellationToken</param>
+            <param name="next">A <see cref="T:MediatR.RequestHandlerDelegate`1"/></param>
+            <returns></returns>
+        </member>
+        <member name="T:CaseCore.Application.Common.Behaviors.RequestLogger`1">
+            <summary>
+            Logs incoming requests.
+            </summary>
+            <typeparam name="TRequest"></typeparam>
+        </member>
+        <member name="M:CaseCore.Application.Common.Behaviors.RequestLogger`1.#ctor(Microsoft.Extensions.Logging.ILogger{`0},CaseCore.Application.Common.Interfaces.ICurrentUserService)">
+            <summary>
+            Creates a new instance of the logger
+            </summary>
+            <param name="logger"></param>
+            <param name="currentUserService"></param>
+        </member>
+        <member name="M:CaseCore.Application.Common.Behaviors.RequestLogger`1.Process(`0,System.Threading.CancellationToken)">
+            <summary>
+            Processes the Request into logging
+            </summary>
+            <param name="request"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CaseCore.Application.Common.Behaviors.RequestPerformanceBehavior`2">
+            <summary>
+            Implements <see cref="T:MediatR.IPipelineBehavior`2"></see> to log performance of Requests
+            </summary>
+            <typeparam name="TRequest">The Request</typeparam>
+            <typeparam name="TResponse">The Response</typeparam>
+        </member>
+        <member name="M:CaseCore.Application.Common.Behaviors.RequestPerformanceBehavior`2.#ctor(Microsoft.Extensions.Logging.ILogger{`0},CaseCore.Application.Common.Interfaces.ICurrentUserService)">
+            <summary>
+            Creates a new Instance of the Class
+            </summary>
+            <param name="logger">An implementation of <see cref="T:Microsoft.Extensions.Logging.ILogger"></see></param>
+            <param name="currentUserService">An implementation of <see cref="T:CaseCore.Application.Common.Interfaces.ICurrentUserService"></see></param>
+        </member>
+        <member name="M:CaseCore.Application.Common.Behaviors.RequestPerformanceBehavior`2.Handle(`0,System.Threading.CancellationToken,MediatR.RequestHandlerDelegate{`1})">
+            <summary>
+            Handles the request.
+            </summary>
+            <param name="request">The request</param>
+            <param name="cancellation">A cancellation token</param>
+            <param name="next"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CaseCore.Application.Common.Behaviors.RequestValidationBehavior`2">
+            <summary>
+            Adds Fluent Validation to the pipeline
+            </summary>
+            <typeparam name="TRequest"></typeparam>
+            <typeparam name="TResponse"></typeparam>
+        </member>
+        <member name="M:CaseCore.Application.Common.Behaviors.RequestValidationBehavior`2.#ctor(System.Collections.Generic.IEnumerable{FluentValidation.IValidator{`0}})">
+            <summary>
+            Creates a new instance of the class
+            </summary>
+            <param name="validators"></param>
+        </member>
+        <member name="M:CaseCore.Application.Common.Behaviors.RequestValidationBehavior`2.Handle(`0,System.Threading.CancellationToken,MediatR.RequestHandlerDelegate{`1})">
+            <summary>
+            Handles the request.
+            </summary>
+            <param name="request"></param>
+            <param name="cancellationToken"></param>
+            <param name="next"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CaseCore.Application.Common.Exceptions.BadRequestException">
+            <summary>
+            Implementation of <see cref="T:System.Exception"/> used in the application layer to handle bad requests.
+            </summary>
+        </member>
+        <member name="M:CaseCore.Application.Common.Exceptions.BadRequestException.#ctor(System.String)">
+            <summary>
+            Creates a new instance of the exception.
+            </summary>
+            <param name="message">A string containing the exception message.</param>
+        </member>
+        <member name="T:CaseCore.Application.Common.Exceptions.DeleteFailureException">
+            <summary>
+            Implementation of <see cref="T:System.Exception"></see> used in the Application namespace when a Delete operation fails.
+            </summary>
+        </member>
+        <member name="M:CaseCore.Application.Common.Exceptions.DeleteFailureException.#ctor(System.String,System.Object,System.String)">
+            <summary>
+            Creates a new instance of the exception
+            </summary>
+            <param name="name">The Name of the Entity.</param>
+            <param name="key">The key of the Entity.</param>
+            <param name="message">A string containing the message.</param>
+        </member>
+        <member name="T:CaseCore.Application.Common.Exceptions.NotFoundException">
+            <summary>
+            An implementation of <see cref="T:System.Exception"></see> used in the EventsCore.Application namespace
+            </summary>
+        </member>
+        <member name="M:CaseCore.Application.Common.Exceptions.NotFoundException.#ctor(System.String,System.Object)">
+            <summary>
+            Creates a new instance of the exception
+            </summary>
+            <param name="name">The name of the Entity</param>
+            <param name="key">The key of the Entity that was not found.</param>
+        </member>
+        <member name="T:CaseCore.Application.Common.Exceptions.UnauthorizedException">
+            <summary>
+            Implementation of <see cref="T:System.Exception"></see> used in the Application namespace when a Authorization operation fails.
+            </summary>
+        </member>
+        <member name="M:CaseCore.Application.Common.Exceptions.UnauthorizedException.#ctor(System.String)">
+            <summary>
+            Creates a new instance of the Exception
+            </summary>
+            <param name="message">A string containing the exception message.</param>
+        </member>
+        <member name="T:CaseCore.Application.Common.Exceptions.ValidationException">
+            <summary>
+            Implementation of <see cref="T:System.Exception"></see> used in the application namespace
+            </summary>
+        </member>
+        <member name="M:CaseCore.Application.Common.Exceptions.ValidationException.#ctor">
+            <summary>
+            Creates a new Instance of the Exception
+            </summary>
+        </member>
+        <member name="M:CaseCore.Application.Common.Exceptions.ValidationException.#ctor(System.Collections.Generic.List{FluentValidation.Results.ValidationFailure})">
+            <summary>
+            
+            </summary>
+            <param name="failures"></param>
+        </member>
+        <member name="P:CaseCore.Application.Common.Exceptions.ValidationException.Failures">
+            <summary>
+            Contains the list of failed validation key/values
+            </summary>
+        </member>
+        <member name="T:CaseCore.Application.Common.Interfaces.IAuthorizer`1">
+            <summary>
+            Interface that defines an Authorizor contract.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:CaseCore.Application.Common.Interfaces.IAuthorizer`1.AuthorizeAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+            Handles the authorization.
+            </summary>
+            <param name="instance">The request instance to authorize.</param>
+            <param name="cancellation">A cancellation token.</param>
+            <returns></returns>
+        </member>
+        <member name="T:CaseCore.Application.Common.Interfaces.ICaseCoreDbContext">
+            <summary>
+            Interface that set defines the contract for the DbContext used in the application layer
+            </summary>
+        </member>
+        <member name="P:CaseCore.Application.Common.Interfaces.ICaseCoreDbContext.Cases">
+            <summary>
+            A <seealso cref="T:Microsoft.EntityFrameworkCore.DbSet`1"/> containing Case entities.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Application.Common.Interfaces.ICaseCoreDbContext.Addresses">
+            <summary>
+            A <seealso cref="T:Microsoft.EntityFrameworkCore.DbSet`1"/> containing Address entities.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Application.Common.Interfaces.ICaseCoreDbContext.Persons">
+            <summary>
+            A <seealso cref="T:Microsoft.EntityFrameworkCore.DbSet`1"/> containing Person entities.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Application.Common.Interfaces.ICaseCoreDbContext.AddressTypes">
+            <summary>
+            A <seealso cref="T:Microsoft.EntityFrameworkCore.DbSet`1"/> containing AddressType entities.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Application.Common.Interfaces.ICaseCoreDbContext.PersonTypes">
+            <summary>
+            A <seealso cref="T:Microsoft.EntityFrameworkCore.DbSet`1"/> containing PersonType entities.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Application.Common.Interfaces.ICaseCoreDbContext.PhoneNumberTypes">
+            <summary>
+            A <seealso cref="T:Microsoft.EntityFrameworkCore.DbSet`1"/> containing PhoneNumberType entities.
+            </summary>
+        </member>
+        <member name="M:CaseCore.Application.Common.Interfaces.ICaseCoreDbContext.SaveChangesAsync(System.Threading.CancellationToken)">
+            <summary>
+            Saves the changes to the Context
+            </summary>
+            <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken"></see></param>
+            <returns></returns>
+        </member>
+        <member name="T:CaseCore.Application.Common.Interfaces.ICurrentUserService">
+            <summary>
+            Defines a service to retrieve information about the current user.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Application.Common.Interfaces.ICurrentUserService.UserId">
+            <summary>
+            The current User's Id
+            </summary>
+        </member>
+        <member name="P:CaseCore.Application.Common.Interfaces.ICurrentUserService.IsAuthenticated">
+            <summary>
+            Whether the current user is authenticated.
+            </summary>
+        </member>
+        <member name="T:CaseCore.Application.Common.Mappings.IMapFrom`1">
+            <summary>
+            Defines a mapping 
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:CaseCore.Application.Common.Mappings.IMapFrom`1.Mapping(AutoMapper.Profile)">
+            <summary>
+            Sets the mapping profile.
+            </summary>
+            <param name="profile"></param>
+        </member>
+        <member name="T:CaseCore.Application.Common.Mappings.MappingProfile">
+            <summary>
+            Class that implements <see cref="T:AutoMapper.Profile"></see> to map objects
+            </summary>
+        </member>
+        <member name="M:CaseCore.Application.Common.Mappings.MappingProfile.#ctor">
+            <summary>
+            Creates a new instance of MappingProfile
+            </summary>
+        </member>
+        <member name="T:CaseCore.Application.Common.Models.AddAuthorizers">
+            <summary>
+            Static class that adds authorization handlers from the assembly.
+            </summary>
+        </member>
+        <member name="M:CaseCore.Application.Common.Models.AddAuthorizers.AddAuthorizersFromAssembly(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Reflection.Assembly,Microsoft.Extensions.DependencyInjection.ServiceLifetime)">
+            <summary>
+            Method that adds Authorizers from the project's assembly.
+            </summary>
+            <param name="services">An <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/> object.</param>
+            <param name="assembly">The <see cref="T:System.Reflection.Assembly"/></param>
+            <param name="lifetime">The <see cref="T:Microsoft.Extensions.DependencyInjection.ServiceLifetime"/></param>
+        </member>
+        <member name="M:CaseCore.Application.Common.Models.AddAuthorizers.GetTypesAssignableTo(System.Reflection.Assembly,System.Type)">
+            <summary>
+            Retrieves the types.
+            </summary>
+            <param name="assembly">The assembly containing the authorization handlers</param>
+            <param name="compareType">The type being compared.</param>
+            <returns></returns>
+        </member>
+        <member name="T:CaseCore.Application.Common.Models.Authorization">
+            <summary>
+            Assembly that contains Authorization handlers.
+            </summary>
+        </member>
+        <member name="T:CaseCore.Application.Common.Models.AuthorizationResult">
+            <summary>
+            Class containing the result of an authorization operation.
+            </summary>
+        </member>
+        <member name="M:CaseCore.Application.Common.Models.AuthorizationResult.#ctor">
+            <summary>
+            Creates a new instance of the class.
+            </summary>
+        </member>
+        <member name="M:CaseCore.Application.Common.Models.AuthorizationResult.#ctor(System.Boolean,System.String)">
+            <summary>
+            Creates a new instance of the class from parameters.
+            </summary>
+            <param name="isAuthorized">Boolean indicating whether the authorization passed.</param>
+            <param name="failureMessage">String containing any failure message.</param>
+        </member>
+        <member name="P:CaseCore.Application.Common.Models.AuthorizationResult.IsAuthorized">
+            <summary>
+            Bool indicating whether the authorization operation passed.
+            </summary>
+        </member>
+        <member name="P:CaseCore.Application.Common.Models.AuthorizationResult.FailureMessage">
+            <summary>
+            String containing the failure message
+            </summary>
+        </member>
+        <member name="M:CaseCore.Application.Common.Models.AuthorizationResult.Fail">
+            <summary>
+            Returns a failed instance with no message.
+            </summary>
+            <returns>A <see cref="T:CaseCore.Application.Common.Models.AuthorizationResult"/></returns>
+        </member>
+        <member name="M:CaseCore.Application.Common.Models.AuthorizationResult.Fail(System.String)">
+            <summary>
+            Returns a failed instance with a message.
+            </summary>
+            <param name="failureMessage">A string containing a failure message.</param>
+            <returns>A <see cref="T:CaseCore.Application.Common.Models.AuthorizationResult"/></returns>
+        </member>
+        <member name="M:CaseCore.Application.Common.Models.AuthorizationResult.Succeed">
+            <summary>
+            Returns a successful authorization result.
+            </summary>
+            <returns>A <see cref="T:CaseCore.Application.Common.Models.AuthorizationResult"/></returns>
+        </member>
+        <member name="T:CaseCore.Application.Common.Models.PagingInfo">
+            <summary>
+            Class used in List View Queries to control Paging
+            </summary>
+        </member>
+        <member name="P:CaseCore.Application.Common.Models.PagingInfo.TotalItems">
+            <summary>
+            Total items in the list
+            </summary>
+        </member>
+        <member name="P:CaseCore.Application.Common.Models.PagingInfo.ItemsPerPage">
+            <summary>
+            Items per page
+            </summary>
+        </member>
+        <member name="P:CaseCore.Application.Common.Models.PagingInfo.CurrentPage">
+            <summary>
+            Current Page
+            </summary>
+        </member>
+        <member name="P:CaseCore.Application.Common.Models.PagingInfo.TotalPages">
+            <summary>
+            Total pages containing items
+            </summary>
+        </member>
+        <member name="T:CaseCore.Application.Common.Models.Result">
+            <summary>
+            Class that collects a request's results
+            </summary>
+        </member>
+        <member name="P:CaseCore.Application.Common.Models.Result.Succeeded">
+            <summary>
+            Indicates whether the request succeeded
+            </summary>
+        </member>
+        <member name="P:CaseCore.Application.Common.Models.Result.Errors">
+            <summary>
+            Contains any validation error messages
+            </summary>
+        </member>
+        <member name="M:CaseCore.Application.Common.Models.Result.Success">
+            <summary>
+            Success result
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CaseCore.Application.Common.Models.Result.Failure(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Failure result
+            </summary>
+            <param name="errors"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CaseCore.Application.DependencyInjection">
+            <summary>
+            Configures Dependency Injection for the Application 
+            </summary>
+        </member>
+        <member name="M:CaseCore.Application.DependencyInjection.AddApplication(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configures services for the Application layer
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
