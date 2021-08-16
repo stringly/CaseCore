@@ -6,15 +6,13 @@ using FluentValidation.Results;
 using MediatR;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace CaseCore.Application.AddressTypes.Commands.UpsertAddressType
 {
     /// <summary>
-    /// Implements <see cref="IRequestHandler{TRequest, TResponse}"></see> to handle a request to update/insert an Event Type.
+    /// Implements <see cref="IRequestHandler{TRequest, TResponse}"></see> to handle a request to update/insert an Address Type.
     /// </summary>
     public class UpsertAddressTypeCommandHandler : IRequestHandler<UpsertAddressTypeCommand, int>
     {
@@ -53,7 +51,7 @@ namespace CaseCore.Application.AddressTypes.Commands.UpsertAddressType
                     }
                     catch (AddressTypeArgumentException e)
                     {
-                        throw new ValidationException(new List<ValidationFailure>() { new ValidationFailure(nameof(AddressType.Name), e.Message)});
+                        throw new ValidationException(new List<ValidationFailure>() { new ValidationFailure(e.ParamName, e.Message)});
                     }
                 }
                 if (!String.IsNullOrWhiteSpace(request.Abbreviation) && entity.Abbreviation != request.Abbreviation)
@@ -64,7 +62,7 @@ namespace CaseCore.Application.AddressTypes.Commands.UpsertAddressType
                     }
                     catch (AddressTypeArgumentException e)
                     {
-                        throw new ValidationException(new List<ValidationFailure>() { new ValidationFailure(nameof(AddressType.Abbreviation), e.Message)});
+                        throw new ValidationException(new List<ValidationFailure>() { new ValidationFailure(e.ParamName, e.Message)});
                     }
                 }
             }
@@ -76,7 +74,7 @@ namespace CaseCore.Application.AddressTypes.Commands.UpsertAddressType
                 }
                 catch (AddressTypeArgumentException e)
                 {
-                    throw new ValidationException(new List<ValidationFailure>() { new ValidationFailure(nameof(AddressType), e.Message)});
+                    throw new ValidationException(new List<ValidationFailure>() { new ValidationFailure(e.ParamName, e.Message)});
                 }                
                 await _context.AddressTypes.AddAsync(entity);
             }

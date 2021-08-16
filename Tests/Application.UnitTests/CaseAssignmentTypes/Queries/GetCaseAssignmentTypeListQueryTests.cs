@@ -3,10 +3,7 @@ using CaseCore.Application.CaseAssignmentTypes.Queries.GetCaseAssignmentTypeList
 using CaseCore.Application.UnitTests.Common;
 using CaseCore.Persistence;
 using Shouldly;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
@@ -14,12 +11,12 @@ using Xunit;
 namespace CaseCore.Application.UnitTests.CaseAssignmentTypes.Queries
 {
     [Collection("QueryCollection")]
-    public class GetCaseAssignmentTypeQueryTests
+    public class GetCaseAssignmentTypeListQueryTests
     {
         private readonly CaseCoreDbContext _context;
         private readonly IMapper _mapper;
 
-        public GetCaseAssignmentTypeQueryTests(QueryTestFixture fixture)
+        public GetCaseAssignmentTypeListQueryTests(QueryTestFixture fixture)
         {
             _context = fixture.Context;
             _mapper = fixture.Mapper;

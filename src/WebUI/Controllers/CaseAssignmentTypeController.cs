@@ -1,4 +1,6 @@
-﻿using CaseCore.Application.CaseAssignmentTypes.Queries.GetCaseAssignmentTypeDetail;
+﻿using CaseCore.Application.CaseAssignmentTypes.Commands.DeleteCaseAssignmentType;
+using CaseCore.Application.CaseAssignmentTypes.Commands.UpsertCaseAssignmentType;
+using CaseCore.Application.CaseAssignmentTypes.Queries.GetCaseAssignmentTypeDetail;
 using CaseCore.Application.CaseAssignmentTypes.Queries.GetCaseAssignmentTypeList;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -34,6 +36,32 @@ namespace CaseCore.WebUI.Controllers
         public async Task<ActionResult<CaseAssignmentTypeDetailVm>> Get([FromQuery] GetCaseAssignmentTypeDetailQuery query)
         {
             return Ok(await Mediator.Send(query));
+        }
+        /// <summary>
+        /// Creates or Updates an CaseAssignmentType.
+        /// </summary>
+        /// <param name="command">An <see cref="UpsertCaseAssignmentTypeCommand"/> object.</param>
+        /// <returns>An integer Id of the upserted CaseAssignmentType.</returns>
+        /// <remarks>
+        /// This method will update a CaseAssignmentType if the Id parameter is provided. If no Id parameter is present, the method will create a new CaseAssignmentType.
+        /// </remarks>
+        [HttpPost]
+        [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Post))]
+        public async Task<IActionResult> Upsert([FromBody] UpsertCaseAssignmentTypeCommand command)
+        {
+            return Ok(await Mediator.Send(command));
+        }
+        /// <summary>
+        /// Deletes a Case Assignment Type.
+        /// </summary>
+        /// <param name="command">A <see cref="DeleteCaseAssignmentTypeCommand"/> created from the querystring.</param>
+        /// <returns></returns>
+        [HttpDelete]
+        [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Delete))]
+        public async Task<IActionResult> Delete([FromQuery] DeleteCaseAssignmentTypeCommand command)
+        {
+            await Mediator.Send(command);
+            return NoContent();
         }
     }
 }

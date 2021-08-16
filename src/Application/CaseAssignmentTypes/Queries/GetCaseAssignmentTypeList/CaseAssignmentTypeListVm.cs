@@ -8,6 +8,7 @@ namespace CaseCore.Application.CaseAssignmentTypes.Queries.GetCaseAssignmentType
     /// </summary>
     public class CaseAssignmentTypeListVm
     {
+        /// <summary>
         /// A list of <see cref="CaseAssignmentTypeDto"/>
         /// </summary>
         public IEnumerable<CaseAssignmentTypeDto> CaseAssignmentTypes { get; set; }

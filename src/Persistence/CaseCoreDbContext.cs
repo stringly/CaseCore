@@ -1,20 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using CaseCore.Application.Common.Interfaces;
-using Microsoft.EntityFrameworkCore;
+﻿using CaseCore.Application.Common.Interfaces;
 using CaseCore.Common;
 using CaseCore.Domain.Common;
 using CaseCore.Domain.Entities;
-using System.Linq;
+using CaseCore.Domain.Types;
+using Microsoft.EntityFrameworkCore;
 using System.Threading;
 using System.Threading.Tasks;
-using CaseCore.Domain.Types;
-using System.Diagnostics;
-using CaseCore.Persistence.Configurations;
 
 namespace CaseCore.Persistence
 {
+    /// <summary>
+    /// Implementation of <see cref="CaseCoreDbContext"/>
+    /// </summary>
     public class CaseCoreDbContext : DbContext, ICaseCoreDbContext
     {
         private readonly ICurrentUserService _currentUserService;
@@ -47,11 +44,17 @@ namespace CaseCore.Persistence
         /// <inheritdoc/>
         public DbSet<Person> Persons { get; set; }
         /// <inheritdoc/>
+        public DbSet<PhoneNumber> PhoneNumbers { get; set; }
+        /// <inheritdoc/>
         public DbSet<AddressType> AddressTypes { get; set; }
         /// <inheritdoc/>
         public DbSet<CaseAssignment> CaseAssignments { get; set; }
         /// <inheritdoc/>
         public DbSet<CaseAssignmentType> CaseAssignmentTypes { get; set; }
+        /// <inheritdoc/>
+        public DbSet<CaseStatus> CaseStatuses { get; set; }
+        /// <inheritdoc/>
+        public DbSet<CaseStatusType> CaseStatusTypes { get; set; }
         /// <inheritdoc/>
         public DbSet<PersonType> PersonTypes { get; set; }
         /// <inheritdoc/>

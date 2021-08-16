@@ -59,13 +59,13 @@ namespace CaseCore.WebUI.Controllers
         /// <summary>
         /// Deletes an Address Type.
         /// </summary>
-        /// <param name="id">The Id of the AddressType to be deleted.</param>
+        /// <param name="command">A <see cref="DeleteAddressTypeCommand"/>.</param>
         /// <returns></returns>
-        [HttpDelete("{id}")]
+        [HttpDelete]
         [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Delete))]
-        public async Task<IActionResult> Delete(int id)
+        public async Task<IActionResult> Delete([FromQuery] DeleteAddressTypeCommand command)
         {
-            await Mediator.Send(new DeleteAddressTypeCommand { Id = id });
+            await Mediator.Send(command);
             return NoContent();
         }
     }

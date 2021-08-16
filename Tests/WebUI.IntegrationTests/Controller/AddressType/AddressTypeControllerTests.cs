@@ -33,7 +33,7 @@ namespace CaseCore.WebUI.IntegrationTests.Controller.AddressType
             var id = 1;
 
             // Act
-            var response = await _client.GetAsync($"api/AddressType/Get/{id}");
+            var response = await _client.GetAsync($"api/AddressType/Get?id={id}");
             
             // Assert
             response.EnsureSuccessStatusCode();
@@ -47,9 +47,7 @@ namespace CaseCore.WebUI.IntegrationTests.Controller.AddressType
             var invalidId = 100;
 
             // Act
-            var response = await _client.GetAsync($"api/AddressType/Get/{invalidId}");
-            var statusCode = HttpStatusCode.NotFound;
-            var responseCode = response.StatusCode;
+            var response = await _client.GetAsync($"api/AddressType/Get?id={invalidId}");
             // Assert
             Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
         }
@@ -95,7 +93,7 @@ namespace CaseCore.WebUI.IntegrationTests.Controller.AddressType
             var validId = 1;
 
             // Act
-            var response = await _client.DeleteAsync($"api/AddressType/Delete/{validId}");
+            var response = await _client.DeleteAsync($"api/AddressType/Delete?id={validId}");
 
             // Assert
             Assert.Equal(HttpStatusCode.NoContent, response.StatusCode);
@@ -107,7 +105,7 @@ namespace CaseCore.WebUI.IntegrationTests.Controller.AddressType
             var invalidId = 100;
 
             // Act
-            var response = await _client.DeleteAsync($"api/AddressType/Delete/{invalidId}");
+            var response = await _client.DeleteAsync($"api/AddressType/Delete?id={invalidId}");
 
             // Assert
             Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
