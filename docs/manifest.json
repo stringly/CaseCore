@@ -5,11 +5,803 @@
   "files": [
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.AddressTypes.AddressTypeDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.AddressTypes.AddressTypeDto.html",
+          "hash": "GQSSqJrQoWYc4HozoCh3gteTgjEroWOsNzEUamgeyMo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.AddressTypes.Commands.DeleteAddressType.DeleteAddressTypeCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.AddressTypes.Commands.DeleteAddressType.DeleteAddressTypeCommand.html",
+          "hash": "2/A6GB7eMsMd8T7F/1oJ0VfmSF+bhnaiV5xQJdArG3w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.AddressTypes.Commands.DeleteAddressType.DeleteAddressTypeCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.AddressTypes.Commands.DeleteAddressType.DeleteAddressTypeCommandHandler.html",
+          "hash": "55xf9hpJ/w0mLP+c6+t3lM193RGGrwiJvJA16tlTvqI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.AddressTypes.Commands.DeleteAddressType.DeleteAddressTypeCommandValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.AddressTypes.Commands.DeleteAddressType.DeleteAddressTypeCommandValidator.html",
+          "hash": "8mfqEmSF5cxL79SswtG5QXjQLYS815tSSFM7q8iWkzw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.AddressTypes.Commands.DeleteAddressType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.AddressTypes.Commands.DeleteAddressType.html",
+          "hash": "skriWaehfmfRFq8uf9+A/lUeQ1kj/SRQh68eeI90aTk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.AddressTypes.Commands.UpsertAddressType.UpsertAddressTypeCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.AddressTypes.Commands.UpsertAddressType.UpsertAddressTypeCommand.html",
+          "hash": "YYeft0zqvxIMMC0trWtyAPuA431vTGAOwg0hcimTFVE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.AddressTypes.Commands.UpsertAddressType.UpsertAddressTypeCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.AddressTypes.Commands.UpsertAddressType.UpsertAddressTypeCommandHandler.html",
+          "hash": "6YD1CTMZNEPyH3nkYB95cLn6EFeFFXr5XuYsnyKoLOU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.AddressTypes.Commands.UpsertAddressType.UpsertAddressTypeCommandValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.AddressTypes.Commands.UpsertAddressType.UpsertAddressTypeCommandValidator.html",
+          "hash": "MePb457STUqTCWDHPl8+HLkHBTR01SyGTgTwUbg/fkQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.AddressTypes.Commands.UpsertAddressType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.AddressTypes.Commands.UpsertAddressType.html",
+          "hash": "8ZlFbrI4jLRSB9/2I0JX8yC34sEW6oGjxVxS4L0iowU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.AddressTypes.Queries.GetAddressTypeDetail.AddressTypeDetailVm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.AddressTypes.Queries.GetAddressTypeDetail.AddressTypeDetailVm.html",
+          "hash": "KdsV/tgfar3YuYgq4wJl4MTKIZVlT1pyIdlSrSGJx1A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.AddressTypes.Queries.GetAddressTypeDetail.GetAddressTypeDetailQuery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.AddressTypes.Queries.GetAddressTypeDetail.GetAddressTypeDetailQuery.html",
+          "hash": "eWNpt+mQ5qJRXt0hwLD/7JSCkPLy333aKICTT5EEwgo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.AddressTypes.Queries.GetAddressTypeDetail.GetAddressTypeDetailQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.AddressTypes.Queries.GetAddressTypeDetail.GetAddressTypeDetailQueryHandler.html",
+          "hash": "mFw/Od0f/BaflJ3Ga4uOvGxPNns4o9+db9/jchArhEs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.AddressTypes.Queries.GetAddressTypeDetail.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.AddressTypes.Queries.GetAddressTypeDetail.html",
+          "hash": "4FRhMGfue6xOOmGi8gzQyVrrN/MSieM+eQOpWeoJdVA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.AddressTypes.Queries.GetAddressTypeList.AddressTypeListVm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.AddressTypes.Queries.GetAddressTypeList.AddressTypeListVm.html",
+          "hash": "jDrdOuAhe/LtBCdeO4xtlgr3EiF9ok6KqnOON+P+fIo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.AddressTypes.Queries.GetAddressTypeList.GetAddressTypeListQuery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.AddressTypes.Queries.GetAddressTypeList.GetAddressTypeListQuery.html",
+          "hash": "qQPaZhHT6N3zhnvIakFQUA3VvoHUeDiZmWpN21eQFyk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.AddressTypes.Queries.GetAddressTypeList.GetAddressTypeListQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.AddressTypes.Queries.GetAddressTypeList.GetAddressTypeListQueryHandler.html",
+          "hash": "7fHbjlUAluiFHtrlLDDlO+/aJyeLy4jpKjrgJMsqVBU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.AddressTypes.Queries.GetAddressTypeList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.AddressTypes.Queries.GetAddressTypeList.html",
+          "hash": "ZGAHTm6JuxLq5olQdptVM5w6xttai0APCWF4yHFQfWQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.AddressTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.AddressTypes.html",
+          "hash": "CBlgsYu1REeXKqgFm4+HEUvpPnu4VDYZzdfIYWmdNrw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.CaseAssignmentTypes.CaseAssignmentTypeDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.CaseAssignmentTypes.CaseAssignmentTypeDto.html",
+          "hash": "xEqFqSd41XrdRJWau7VbFJ0bdiRiA/ZXDSJg81FXpY8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.CaseAssignmentTypes.Commands.DeleteCaseAssignmentType.DeleteCaseAssignmentTypeCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.CaseAssignmentTypes.Commands.DeleteCaseAssignmentType.DeleteCaseAssignmentTypeCommand.html",
+          "hash": "1ts5a+1+KWFP+Mt2TM8YXpZHNXV3YoGBXePpxuKV9YY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.CaseAssignmentTypes.Commands.DeleteCaseAssignmentType.DeleteCaseAssignmentTypeCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.CaseAssignmentTypes.Commands.DeleteCaseAssignmentType.DeleteCaseAssignmentTypeCommandHandler.html",
+          "hash": "uwSW3djBsu73IHmJpxXsEOdCSDdlR7wdUJ8kY5jZaQo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.CaseAssignmentTypes.Commands.DeleteCaseAssignmentType.DeleteCaseAssignmentTypeCommandValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.CaseAssignmentTypes.Commands.DeleteCaseAssignmentType.DeleteCaseAssignmentTypeCommandValidator.html",
+          "hash": "1lF6r3K2p/IuhLOpe0BIkJm8nD92O27z3I21U3BJB+M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.CaseAssignmentTypes.Commands.DeleteCaseAssignmentType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.CaseAssignmentTypes.Commands.DeleteCaseAssignmentType.html",
+          "hash": "CPW9a/1C25ODz6AL4qnd35Uu1s26H1Ks4XdVOcTJ0Cg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.CaseAssignmentTypes.Commands.UpsertCaseAssignmentType.UpsertCaseAssignmentTypeCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.CaseAssignmentTypes.Commands.UpsertCaseAssignmentType.UpsertCaseAssignmentTypeCommand.html",
+          "hash": "5BL1TRXBA1MOKSOSKWVwVcjDM1fV/vSfAxMpiuANtQI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.CaseAssignmentTypes.Commands.UpsertCaseAssignmentType.UpsertCaseAssignmentTypeCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.CaseAssignmentTypes.Commands.UpsertCaseAssignmentType.UpsertCaseAssignmentTypeCommandHandler.html",
+          "hash": "nDFaprf98x3vEBErsB+KIe/h2tVUD/Ft1TUX1adtCsc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.CaseAssignmentTypes.Commands.UpsertCaseAssignmentType.UpsertCaseAssignmentTypeCommandValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.CaseAssignmentTypes.Commands.UpsertCaseAssignmentType.UpsertCaseAssignmentTypeCommandValidator.html",
+          "hash": "SaY59+o7lg1AkHs/7+7lKOSw73+2+k5B7OdK9e5NC4U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.CaseAssignmentTypes.Commands.UpsertCaseAssignmentType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.CaseAssignmentTypes.Commands.UpsertCaseAssignmentType.html",
+          "hash": "/RVUsN+erO5JbaU7lGTyzSsOet+Edh0ttoLjWEFwUr0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.CaseAssignmentTypes.Queries.GetCaseAssignmentTypeDetail.CaseAssignmentTypeDetailVm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.CaseAssignmentTypes.Queries.GetCaseAssignmentTypeDetail.CaseAssignmentTypeDetailVm.html",
+          "hash": "ijCpsA4DXje+2rdGhgXUa81DTjIwcykWGYSTslgWpE8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.CaseAssignmentTypes.Queries.GetCaseAssignmentTypeDetail.GetCaseAssignmentTypeDetailQuery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.CaseAssignmentTypes.Queries.GetCaseAssignmentTypeDetail.GetCaseAssignmentTypeDetailQuery.html",
+          "hash": "u8036X3jKYLhgrlNly974I9MuDhal/4IhFyqlOUTjHM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.CaseAssignmentTypes.Queries.GetCaseAssignmentTypeDetail.GetCaseAssignmentTypeDetailQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.CaseAssignmentTypes.Queries.GetCaseAssignmentTypeDetail.GetCaseAssignmentTypeDetailQueryHandler.html",
+          "hash": "5vt3mSugGzrPJJlZ1oPzSry6MAvQUplwtHIgIXuYvj4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.CaseAssignmentTypes.Queries.GetCaseAssignmentTypeDetail.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.CaseAssignmentTypes.Queries.GetCaseAssignmentTypeDetail.html",
+          "hash": "2BXEROPCoEhLlF0h6T/eh2M9VlQBRlifD7IjGososT8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.CaseAssignmentTypes.Queries.GetCaseAssignmentTypeList.CaseAssignmentTypeListVm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.CaseAssignmentTypes.Queries.GetCaseAssignmentTypeList.CaseAssignmentTypeListVm.html",
+          "hash": "eoM4P2O5iNk6lS2pwkn3PvILDrbchxyIxXKgjlgexR4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.CaseAssignmentTypes.Queries.GetCaseAssignmentTypeList.GetCaseAssignmentTypeListQuery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.CaseAssignmentTypes.Queries.GetCaseAssignmentTypeList.GetCaseAssignmentTypeListQuery.html",
+          "hash": "eMAE9IaU9zdyHOEg/7YnVkdYHh1q3sJ/hC6BdLRq4yg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.CaseAssignmentTypes.Queries.GetCaseAssignmentTypeList.GetCaseAssignmentTypeListQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.CaseAssignmentTypes.Queries.GetCaseAssignmentTypeList.GetCaseAssignmentTypeListQueryHandler.html",
+          "hash": "TJKTqPJQYwo4bJVrOZYkGnRmVplCGkLfUQUBsR3I/gs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.CaseAssignmentTypes.Queries.GetCaseAssignmentTypeList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.CaseAssignmentTypes.Queries.GetCaseAssignmentTypeList.html",
+          "hash": "KK5wBPg+xBFOMxnnSXzN81Xjqoaxby9tVnn1y5h6tXA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.CaseAssignmentTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.CaseAssignmentTypes.html",
+          "hash": "LUDSKWyl9a62KI8iMQIgskmmSU/2NrFmgiS6LZDSo4k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.CaseStatusTypes.CaseStatusTypeDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.CaseStatusTypes.CaseStatusTypeDto.html",
+          "hash": "hU3CZT1q45mYRAk2egLU4zA2hfJh6Qf1uAMGkeqWW20="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.CaseStatusTypes.Commands.DeleteCaseStatusType.DeleteCaseStatusTypeCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.CaseStatusTypes.Commands.DeleteCaseStatusType.DeleteCaseStatusTypeCommand.html",
+          "hash": "MO5oYMBlWg/vIlakHRRLGkCY1l6LrQk3aPYtvxm9YFI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.CaseStatusTypes.Commands.DeleteCaseStatusType.DeleteCaseStatusTypeCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.CaseStatusTypes.Commands.DeleteCaseStatusType.DeleteCaseStatusTypeCommandHandler.html",
+          "hash": "JO8ubPE1PTvaMwpr64tiLMncnppAty2+baRgLUXbKrI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.CaseStatusTypes.Commands.DeleteCaseStatusType.DeleteCaseStatusTypeCommandValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.CaseStatusTypes.Commands.DeleteCaseStatusType.DeleteCaseStatusTypeCommandValidator.html",
+          "hash": "XJmaakbwZVQETFzWdZ1Z91hnnIGzSJ9H9MkkGzq9bP8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.CaseStatusTypes.Commands.DeleteCaseStatusType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.CaseStatusTypes.Commands.DeleteCaseStatusType.html",
+          "hash": "l7L7lVaNr/DJqoJaj8LgpJIDkv51fkdbHy9oyo73BzI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.CaseStatusTypes.Commands.UpsertCaseStatusType.UpsertCaseStatusTypeCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.CaseStatusTypes.Commands.UpsertCaseStatusType.UpsertCaseStatusTypeCommand.html",
+          "hash": "9+W7iKIw3HJCKIheQQNAt0Eqi5cG5DopXRr3r507Nlw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.CaseStatusTypes.Commands.UpsertCaseStatusType.UpsertCaseStatusTypeCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.CaseStatusTypes.Commands.UpsertCaseStatusType.UpsertCaseStatusTypeCommandHandler.html",
+          "hash": "rLjc0Cvw2aMekL87tp1F328JvboNAUF3WI4zv6iXAn0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.CaseStatusTypes.Commands.UpsertCaseStatusType.UpsertCaseStatusTypeCommandValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.CaseStatusTypes.Commands.UpsertCaseStatusType.UpsertCaseStatusTypeCommandValidator.html",
+          "hash": "1w5uQUuHH/8PTSz8JUVJa0a6zLhsGllN2Csd3u2MaQQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.CaseStatusTypes.Commands.UpsertCaseStatusType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.CaseStatusTypes.Commands.UpsertCaseStatusType.html",
+          "hash": "oAfcEDeP46ebZH2jtZ/HiGZ4CGxm8MXsnkUXowsCoZs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.CaseStatusTypes.Queries.GetCaseStatusTypeDetail.CaseStatusTypeDetailVm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.CaseStatusTypes.Queries.GetCaseStatusTypeDetail.CaseStatusTypeDetailVm.html",
+          "hash": "TntnG/1klrtssO3oygXJfYFwI5hzzAoVzCZ1NlHy1Ws="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.CaseStatusTypes.Queries.GetCaseStatusTypeDetail.GetCaseStatusTypeDetailQuery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.CaseStatusTypes.Queries.GetCaseStatusTypeDetail.GetCaseStatusTypeDetailQuery.html",
+          "hash": "WcE7NcVk3bUx2xTKnf7AVuZEkH8qsDAR0OuVU6mgycc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.CaseStatusTypes.Queries.GetCaseStatusTypeDetail.GetCaseStatusTypeDetailQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.CaseStatusTypes.Queries.GetCaseStatusTypeDetail.GetCaseStatusTypeDetailQueryHandler.html",
+          "hash": "hwfAlO/ZeyWSZGEmbrxkAO4ariBpbmPbnQQydoKGzig="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.CaseStatusTypes.Queries.GetCaseStatusTypeDetail.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.CaseStatusTypes.Queries.GetCaseStatusTypeDetail.html",
+          "hash": "R78Yd2vs1SaeArPM6FHLCpQ3z/b4hmGa7QFHiEI6ViY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.CaseStatusTypes.Queries.GetCaseStatusTypeList.CaseStatusTypeListVm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.CaseStatusTypes.Queries.GetCaseStatusTypeList.CaseStatusTypeListVm.html",
+          "hash": "lgYC4d5y8ghhgDtDWSzD7fyycN3YhQ1CevlbKEu7xr0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.CaseStatusTypes.Queries.GetCaseStatusTypeList.GetCaseStatusTypeListQuery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.CaseStatusTypes.Queries.GetCaseStatusTypeList.GetCaseStatusTypeListQuery.html",
+          "hash": "EGJ2FHQ+OG/RmOW2HNF9eSKQpBATBFycNI4n9NqtUJk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.CaseStatusTypes.Queries.GetCaseStatusTypeList.GetCaseStatusTypeListQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.CaseStatusTypes.Queries.GetCaseStatusTypeList.GetCaseStatusTypeListQueryHandler.html",
+          "hash": "sGDyGEGtK+q+xdIaZo3pBYdjvmErA/k6dkV9BuVJfQo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.CaseStatusTypes.Queries.GetCaseStatusTypeList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.CaseStatusTypes.Queries.GetCaseStatusTypeList.html",
+          "hash": "51IksOKy7gBwtGqArmVdNskfzDFQRgDRL7Ew3OS0/JU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.CaseStatusTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.CaseStatusTypes.html",
+          "hash": "6CyeNa6ZDNJbjsc6qdopkN+/hSLyCP5zjDzluY2vA+8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.Common.Behaviors.RequestAuthorizationBehavior-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.Common.Behaviors.RequestAuthorizationBehavior-2.html",
+          "hash": "coa+pJQNW70ceIWqIlMlgri2NdxGTSyWOyxZp4L5k4c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.Common.Behaviors.RequestLogger-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.Common.Behaviors.RequestLogger-1.html",
+          "hash": "rmpwKHarrFp1eqvg+zRx8eikKzOXFi9f72Q7HTzzp/A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.Common.Behaviors.RequestPerformanceBehavior-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.Common.Behaviors.RequestPerformanceBehavior-2.html",
+          "hash": "/qt2kvlnX0ASo72wDlCfBKixotzFhNAl99ob/tDDdeQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.Common.Behaviors.RequestValidationBehavior-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.Common.Behaviors.RequestValidationBehavior-2.html",
+          "hash": "eUjzqL6I1wPO3bX6gd9ecpHoS7CzAEQ97HIkFOKUBEU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.Common.Behaviors.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.Common.Behaviors.html",
+          "hash": "eSEiAH21qrAQU+1gxM2mpELPB8euauM3dIMNSISk02Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.Common.Exceptions.BadRequestException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.Common.Exceptions.BadRequestException.html",
+          "hash": "DEewmbBU/UDzxWVHTBgMgQY6QIQBCFzvB7sjJPtShzo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.Common.Exceptions.DeleteFailureException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.Common.Exceptions.DeleteFailureException.html",
+          "hash": "9PR56NcfYWN5qflyZAYH6aqgBQxL5UEzYk0evznsDkI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.Common.Exceptions.NotFoundException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.Common.Exceptions.NotFoundException.html",
+          "hash": "5RektYMrJNXuJqRW4+pyffxSyOCRATyOmhTvAggiKeQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.Common.Exceptions.UnauthorizedException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.Common.Exceptions.UnauthorizedException.html",
+          "hash": "jY8BJb8fTAe39x82ezurJ68sqMJLIEg1c9EMCrLB8nU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.Common.Exceptions.ValidationException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.Common.Exceptions.ValidationException.html",
+          "hash": "516Yg+jLJgkRzuk52NLi0MRQvUuLOW8MTWRPOztxP0M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.Common.Exceptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.Common.Exceptions.html",
+          "hash": "WFxatWhkSV/bP6V0+pfkQlzgZew24c35yfDcP4qc8gQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.Common.Interfaces.IAuthorizer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.Common.Interfaces.IAuthorizer-1.html",
+          "hash": "QDvGe5ix7P66kWluAK8ugEJzRvolz8TRI1wkj9IcPLI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Application/CaseCore.Application.Common.Interfaces.ICaseCoreDbContext.yml",
       "output": {
         ".html": {
           "relative_path": "api/Application/CaseCore.Application.Common.Interfaces.ICaseCoreDbContext.html",
-          "hash": "DIrIg/7ljoULGOfsq09P1BYdiQuuGi5CYAP51Nucnsc="
+          "hash": "8mLoBGKA9q9vSmwWyR5m8k81LHEB5HfJqLf/ABipYQY="
         }
       },
       "is_incremental": false,
@@ -33,7 +825,115 @@
       "output": {
         ".html": {
           "relative_path": "api/Application/CaseCore.Application.Common.Interfaces.html",
-          "hash": "3GqJgwsOGCgLjJ9ziVIs1sxe3oXTqemgThJ0ELQ3I/E="
+          "hash": "hlLe14qKTlXI6bqCusj+nlfHb7zBlqTID8/nOLK3lPs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.Common.Mappings.IMapFrom-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.Common.Mappings.IMapFrom-1.html",
+          "hash": "JqEuXAVNxEkvKdxyEv3l0TPQ8FY2ujF4SSeHh8nfy74="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.Common.Mappings.MappingProfile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.Common.Mappings.MappingProfile.html",
+          "hash": "O0yX/+qjVMlzkK6ylJDm+6X2aIlg94IA48ntR56y8tU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.Common.Mappings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.Common.Mappings.html",
+          "hash": "Ms+RxnKfADkyMmE3z2QWzNsWxM0CfE63JROerLnINTY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.Common.Models.AddAuthorizers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.Common.Models.AddAuthorizers.html",
+          "hash": "qrj0rTqUEP8rUw1sUXWtFk18QTrnCbqDwFqFpH2HuDQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.Common.Models.Authorization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.Common.Models.Authorization.html",
+          "hash": "a6ybXpvoaA6SLQaUjn/ETzenWDGM0kh7HOolOyqVsX4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.Common.Models.AuthorizationResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.Common.Models.AuthorizationResult.html",
+          "hash": "6RpuYKvXjny6cd8/IMnb4ygsZ1JJFZIUpnBHwub8fGg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.Common.Models.PagingInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.Common.Models.PagingInfo.html",
+          "hash": "swPMjWrVqNmTbIqUA0UVYLmSvqT/fii5pdFl16X/ViM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.Common.Models.Result.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.Common.Models.Result.html",
+          "hash": "EgFYv0C0S68NInksxuqOyX1zfjktdE0Ia2YTco0l/Q8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.Common.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.Common.Models.html",
+          "hash": "aUEIFoju1mLNTKdiz+CxE7//PdQO3Mt1iXCQMiSvo+g="
         }
       },
       "is_incremental": false,
@@ -45,7 +945,439 @@
       "output": {
         ".html": {
           "relative_path": "api/Application/CaseCore.Application.DependencyInjection.html",
-          "hash": "/HAomMGDqKWoS+5fkwYBQp3gpWN1QHW1HX4/Tm6NW3o="
+          "hash": "TbVPTmaWV/gztyntlAwW6aNbTh0U5FqQBzh6y8p27ek="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.PersonTypes.Commands.DeletePersonType.DeletePersonTypeCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.PersonTypes.Commands.DeletePersonType.DeletePersonTypeCommand.html",
+          "hash": "5BS0wiZiApQbBDp0CGJjP/APDkjJBtAP0A6mFcX3h7U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.PersonTypes.Commands.DeletePersonType.DeletePersonTypeCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.PersonTypes.Commands.DeletePersonType.DeletePersonTypeCommandHandler.html",
+          "hash": "U17mYynyjzShCcD6DweXNXt2QDPjeQrtkiGUG+X35WM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.PersonTypes.Commands.DeletePersonType.DeletePersonTypeCommandValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.PersonTypes.Commands.DeletePersonType.DeletePersonTypeCommandValidator.html",
+          "hash": "sRta2C+/mMxoyJqciN3RfELIUAEPg/1DmOGmkOfy7hc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.PersonTypes.Commands.DeletePersonType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.PersonTypes.Commands.DeletePersonType.html",
+          "hash": "PC6sGc6uVAvK0agz4tYonrCIc3eulVdIa2T833S0II0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.PersonTypes.Commands.UpsertPersonType.UpsertPersonTypeCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.PersonTypes.Commands.UpsertPersonType.UpsertPersonTypeCommand.html",
+          "hash": "1ZhYc8ghH2Qf91SOkIerSwirNVSy2ThMW/p6jKObEDI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.PersonTypes.Commands.UpsertPersonType.UpsertPersonTypeCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.PersonTypes.Commands.UpsertPersonType.UpsertPersonTypeCommandHandler.html",
+          "hash": "YB3cRUxzJtdRLpfenqN1vDuD86hUos88ijZql1GOn+w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.PersonTypes.Commands.UpsertPersonType.UpsertPersonTypeCommandValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.PersonTypes.Commands.UpsertPersonType.UpsertPersonTypeCommandValidator.html",
+          "hash": "e83JJhMrTCdYn7af9fGwm+vDbjJ3b8LEtp8mx576u34="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.PersonTypes.Commands.UpsertPersonType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.PersonTypes.Commands.UpsertPersonType.html",
+          "hash": "RlXsJg2zOZD5XxR+GHM9wEb2zS9V3mTnE9Z2m+6rk8A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.PersonTypes.PersonTypeDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.PersonTypes.PersonTypeDto.html",
+          "hash": "KPeWArC8YH+pZvzVrnvouGZW3rIBKAEE/WmEFVzKoVQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.PersonTypes.Queries.GetPersonTypeDetail.GetPersonTypeDetailQuery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.PersonTypes.Queries.GetPersonTypeDetail.GetPersonTypeDetailQuery.html",
+          "hash": "Z1T2YORD9Zizt9xpUe1JbTYg/hEgmgPwZr3fswci5xc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.PersonTypes.Queries.GetPersonTypeDetail.GetPersonTypeDetailQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.PersonTypes.Queries.GetPersonTypeDetail.GetPersonTypeDetailQueryHandler.html",
+          "hash": "iv9w5q8UBd0lQ+91/9+Brs94BkfHZ+SggmLkAfzJezg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.PersonTypes.Queries.GetPersonTypeDetail.PersonTypeDetailVm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.PersonTypes.Queries.GetPersonTypeDetail.PersonTypeDetailVm.html",
+          "hash": "3rLZoxOkJz6LTzOQHpWKJHI5GVudk3twbD4FR9o3O0w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.PersonTypes.Queries.GetPersonTypeDetail.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.PersonTypes.Queries.GetPersonTypeDetail.html",
+          "hash": "TOQm94YdwyBDIwgg67Y9HASrCDQ7YWuVbVu5762KZmM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.PersonTypes.Queries.GetPersonTypeList.GetPersonTypeListQuery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.PersonTypes.Queries.GetPersonTypeList.GetPersonTypeListQuery.html",
+          "hash": "/Jj/D9XdgpZWDcWnLuQg5nMk+dr3puBeplzQyvAy28o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.PersonTypes.Queries.GetPersonTypeList.GetPersonTypeListQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.PersonTypes.Queries.GetPersonTypeList.GetPersonTypeListQueryHandler.html",
+          "hash": "n6LBzxrh3Qbx3tSFxABwEGH/3MvoeiUoraXIpUe+DwU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.PersonTypes.Queries.GetPersonTypeList.PersonTypeListVm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.PersonTypes.Queries.GetPersonTypeList.PersonTypeListVm.html",
+          "hash": "rB04OYtkwuudrF62MWJ1AonaCMREwNBK4yNQ95tcTQE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.PersonTypes.Queries.GetPersonTypeList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.PersonTypes.Queries.GetPersonTypeList.html",
+          "hash": "BYXLvRshU+grchshqzAepIakq68+LUlw0Am44hf8ulQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.PersonTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.PersonTypes.html",
+          "hash": "iVNfoVU4cMPqrM8kbw8oz/eFkcEn2r6muYVCx/AGqTE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.PhoneNumberTypes.Commands.DeletePhoneNumberType.DeletePhoneNumberTypeCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.PhoneNumberTypes.Commands.DeletePhoneNumberType.DeletePhoneNumberTypeCommand.html",
+          "hash": "DKD8EDlLw0kj+MwqbQQMbkSEjo8+hiDjl++DG0ZErII="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.PhoneNumberTypes.Commands.DeletePhoneNumberType.DeletePhoneNumberTypeCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.PhoneNumberTypes.Commands.DeletePhoneNumberType.DeletePhoneNumberTypeCommandHandler.html",
+          "hash": "qW7qJuZLgLBkE2L6g1Mvruke9Cx7c9sWqrP7kWHKBVY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.PhoneNumberTypes.Commands.DeletePhoneNumberType.DeletePhoneNumberTypeCommandValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.PhoneNumberTypes.Commands.DeletePhoneNumberType.DeletePhoneNumberTypeCommandValidator.html",
+          "hash": "8ZiMBCm45SFSdZ8V2ysmFAW/BYSa7R/sq5IW7DGE4zk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.PhoneNumberTypes.Commands.DeletePhoneNumberType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.PhoneNumberTypes.Commands.DeletePhoneNumberType.html",
+          "hash": "9Wg1XSJKmqN6bDzUOVImCE2Wx03tgmARuc5JU9u47TY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.PhoneNumberTypes.Commands.UpsertPhoneNumberType.UpsertPhoneNumberTypeCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.PhoneNumberTypes.Commands.UpsertPhoneNumberType.UpsertPhoneNumberTypeCommand.html",
+          "hash": "51rGpZlGKfUUW6amEO870bV6B7x5veBsddXxCgBou1k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.PhoneNumberTypes.Commands.UpsertPhoneNumberType.UpsertPhoneNumberTypeCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.PhoneNumberTypes.Commands.UpsertPhoneNumberType.UpsertPhoneNumberTypeCommandHandler.html",
+          "hash": "uKGOlJN6ckd6zXeCbx0m/VvbRBag00MlU0SDnMD1eLA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.PhoneNumberTypes.Commands.UpsertPhoneNumberType.UpsertPhoneNumberTypeCommandValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.PhoneNumberTypes.Commands.UpsertPhoneNumberType.UpsertPhoneNumberTypeCommandValidator.html",
+          "hash": "tBqXpxZi3vQkpu6KvCNqI0broURxd+HM9TW1UloWxtQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.PhoneNumberTypes.Commands.UpsertPhoneNumberType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.PhoneNumberTypes.Commands.UpsertPhoneNumberType.html",
+          "hash": "0y8fymdgZnD78bbSsNnkQ7DwWwktrDEQN/oV5FXx34Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.PhoneNumberTypes.PhoneNumberTypeDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.PhoneNumberTypes.PhoneNumberTypeDto.html",
+          "hash": "CvA/+OzpmoygD3VyMkon15rwvmiGQA+MY5OAMryTdw8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.PhoneNumberTypes.Queries.GetPhoneNumberTypeDetail.GetPhoneNumberTypeDetailQuery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.PhoneNumberTypes.Queries.GetPhoneNumberTypeDetail.GetPhoneNumberTypeDetailQuery.html",
+          "hash": "+Qecq0GyCMUzp8DbR0F00SbEOu+aPMTjJbeUtqABFZ4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.PhoneNumberTypes.Queries.GetPhoneNumberTypeDetail.GetPhoneNumberTypeDetailQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.PhoneNumberTypes.Queries.GetPhoneNumberTypeDetail.GetPhoneNumberTypeDetailQueryHandler.html",
+          "hash": "0RZ18K/1j3rXcCBX9qaFu9cIwWAsywo7McJAuJ038uI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.PhoneNumberTypes.Queries.GetPhoneNumberTypeDetail.PhoneNumberTypeDetailVm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.PhoneNumberTypes.Queries.GetPhoneNumberTypeDetail.PhoneNumberTypeDetailVm.html",
+          "hash": "PRdyS5hG0VNCAIKlE53NoT3wd9an8VdVMruabaB2/EM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.PhoneNumberTypes.Queries.GetPhoneNumberTypeDetail.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.PhoneNumberTypes.Queries.GetPhoneNumberTypeDetail.html",
+          "hash": "3vxG5QYgGhKIcyX83QB1E9VdJrrKkHgKYIhM1YYmKOY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.PhoneNumberTypes.Queries.GetPhoneNumberTypeList.GetPhoneNumberTypeListQuery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.PhoneNumberTypes.Queries.GetPhoneNumberTypeList.GetPhoneNumberTypeListQuery.html",
+          "hash": "Tb/c+w17Z5U0kffkXmYjFmMdzQBX7zqd+x87INs2rYM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.PhoneNumberTypes.Queries.GetPhoneNumberTypeList.GetPhoneNumberTypeListQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.PhoneNumberTypes.Queries.GetPhoneNumberTypeList.GetPhoneNumberTypeListQueryHandler.html",
+          "hash": "co1Dw1Xyu3G/CAa+NE3rgneaMvYf3tk+Y6oZqQDFD7A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.PhoneNumberTypes.Queries.GetPhoneNumberTypeList.PhoneNumberTypeListVm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.PhoneNumberTypes.Queries.GetPhoneNumberTypeList.PhoneNumberTypeListVm.html",
+          "hash": "ekRXPNYR5YesAu2zeApwj8JphnI/fqnESkk2tG1NlUc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.PhoneNumberTypes.Queries.GetPhoneNumberTypeList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.PhoneNumberTypes.Queries.GetPhoneNumberTypeList.html",
+          "hash": "zZmdKrVACbdz5EIOjFDlQwxhoaCBqUHhHKn7IDQgX6I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Application/CaseCore.Application.PhoneNumberTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application/CaseCore.Application.PhoneNumberTypes.html",
+          "hash": "nZ9g4R/+jiT82gI/4OQ6+8Kf0tfCZnNlUFZKhqQL/68="
         }
       },
       "is_incremental": false,
@@ -81,7 +1413,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Application/toc.html",
-          "hash": "HTf79xnz+6n/3FMpEBK2TS6I2mlvN3zDU8kaJk7+LPk="
+          "hash": "EBR03mdednVbgIWuh1Frj1y8EDeLCeJNJeRatkQqoTc="
         }
       },
       "is_incremental": false,
@@ -144,7 +1476,7 @@
           "hash": "TH7n6aK2BPteu+WPxr7ofMfE7jXmKY4JM0Ip2DsewzI="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -189,7 +1521,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Domain/CaseCore.Domain.Common.ExtensionMethods.html",
-          "hash": "UinlaisPJwMQ7g/3KswnrvW45raFC0SjIlXi0sYCme0="
+          "hash": "L7vaaefmAbLzjlSQg+C/m97NUjUqz3CDPdjKp7ZgF+Q="
         }
       },
       "is_incremental": false,
@@ -744,7 +2076,7 @@
           "hash": "C1p0VOjHJI/p5rW5BMTwzFr0vEv1zgexAnZsuPWPp3E="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -765,7 +2097,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Infrastructure/CaseCore.Infrastructure.DependencyInjection.html",
-          "hash": "UUXOa9rd4T7haOwkyW57CbGkJ7L2qV69pGpMv0yxmdo="
+          "hash": "Lkk4HMimyPldlj9asT53o5yO23Zw5y51aRMHr+gXR7k="
         }
       },
       "is_incremental": false,
@@ -777,7 +2109,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Infrastructure/CaseCore.Infrastructure.MachineDateTime.html",
-          "hash": "oFZ+4nb16t/39MEpp2mctLVNA3VIjSMj4hSqfwLUuFo="
+          "hash": "wKYNBfqmM/HXSLdtNwjkG50Wzvn90BZGGkb6TSadzuU="
         }
       },
       "is_incremental": false,
@@ -789,7 +2121,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Infrastructure/CaseCore.Infrastructure.html",
-          "hash": "6jHCUpS6ULaBtLLAYOIolALGgWB375HuruK8bW49ft0="
+          "hash": "sGpxt4guUfWA/S8fVOTa+m2NmKobphpoJlkiRO69e54="
         }
       },
       "is_incremental": false,
@@ -804,7 +2136,7 @@
           "hash": "Ow5IWp17sSieYif5OoAxwYCkblQoTkcZHOvKn4oTFos="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -825,7 +2157,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Persistence/CaseCore.Persistence.CaseCoreDbContext.html",
-          "hash": "JeAfVh98bZohSVYnHUlL6VOtBNeKtfRtbe5rX4AXAv4="
+          "hash": "eNB7IO38vHSlTfUC6kt/wj8pXm9lZv0vMj378NCA0ag="
         }
       },
       "is_incremental": false,
@@ -1089,7 +2421,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Persistence/CaseCore.Persistence.DependencyInjection.html",
-          "hash": "BVILTL9LHx3yoCtGjqbm387qIBo2c5rCw81HBjId9co="
+          "hash": "L8DxL4lK6yo1qhSd45zAiMtk7ZVeFimdpwdIS07Jt2U="
         }
       },
       "is_incremental": false,
@@ -1102,6 +2434,30 @@
         ".html": {
           "relative_path": "api/Persistence/CaseCore.Persistence.DesignTimeDbContextFactoryBase-1.html",
           "hash": "jOBBSkN1qCyl3utHPjV4SANRi2tPnL+LO4IVFybG1hA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Persistence/CaseCore.Persistence.Migrations.add_CaseAssignmentDbSet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Persistence/CaseCore.Persistence.Migrations.add_CaseAssignmentDbSet.html",
+          "hash": "zizmYvPU69XwJaDLMxv38IKTdmspHRwO3wyTs02e15E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Persistence/CaseCore.Persistence.Migrations.add_CaseAssignmentTypeDbSet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Persistence/CaseCore.Persistence.Migrations.add_CaseAssignmentTypeDbSet.html",
+          "hash": "2NId9OibsccixOoZAoOAZbDwvDUYlgca894wG5oCgeM="
         }
       },
       "is_incremental": false,
@@ -1137,7 +2493,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Persistence/CaseCore.Persistence.Migrations.html",
-          "hash": "MhPb4uKoia7KsP4GkPV92shANNojXmtByoUs2G8iu2g="
+          "hash": "9AaQUoYpbKjhNrW5fjY9aWQyigpTlqa5cKiGI+oYRq4="
         }
       },
       "is_incremental": false,
@@ -1149,7 +2505,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Persistence/CaseCore.Persistence.html",
-          "hash": "Goi15GVx75yyHB4DsPQD01qIIRRaT17jtBn4FHEQ5AU="
+          "hash": "JQK0RryXvVaLRN4B3jbmXlpyuhD7RnTpghJt4mXwBx8="
         }
       },
       "is_incremental": false,
@@ -1173,7 +2529,139 @@
       "output": {
         ".html": {
           "relative_path": "api/Persistence/toc.html",
-          "hash": "/3DNzwWIafe9co9gSK1JhLiEbPydJq0YrpHjob2jgaE="
+          "hash": "Av63yHMYfvSoejtssc7NWfRSAVg6Iisafpdf20xaAnk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebUI/CaseCore.WebUI.Common.CustomExceptionHandlerMiddleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebUI/CaseCore.WebUI.Common.CustomExceptionHandlerMiddleware.html",
+          "hash": "PAJdZsn5xrOVhbatFo0XUIUEPcvjaIKcMGt5NPBoakw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebUI/CaseCore.WebUI.Common.CustomExceptionHandlerMiddlewareExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebUI/CaseCore.WebUI.Common.CustomExceptionHandlerMiddlewareExtensions.html",
+          "hash": "BkeJr9u+Z1c+wYUMdi6d9z/vkhuKVKq3xse/LEIhFro="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebUI/CaseCore.WebUI.Common.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebUI/CaseCore.WebUI.Common.html",
+          "hash": "2S28fRF+G8VSc6PUpb7HjU3CmvbF6TCa9u/u7eZ+Xa0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebUI/CaseCore.WebUI.Controllers.AddressTypeController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebUI/CaseCore.WebUI.Controllers.AddressTypeController.html",
+          "hash": "CdBAeJiVxTtlMRyt/DAE9Xikl68B2YrRmL2JeznmYzg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebUI/CaseCore.WebUI.Controllers.BaseController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebUI/CaseCore.WebUI.Controllers.BaseController.html",
+          "hash": "I7KBDty1Jr0EnX4mR/2n9KChv73KMcn6eyVUs265XrQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebUI/CaseCore.WebUI.Controllers.CaseAssignmentTypeController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebUI/CaseCore.WebUI.Controllers.CaseAssignmentTypeController.html",
+          "hash": "+RhD7H7BkYwtdlQmPHVW8YTef+DctYmykRSq/96KT1g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebUI/CaseCore.WebUI.Controllers.CaseStatusTypeController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebUI/CaseCore.WebUI.Controllers.CaseStatusTypeController.html",
+          "hash": "r0webZ7uaw50MGcIHLKVH3K5HkGj5w/xX4isVu6zzJU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebUI/CaseCore.WebUI.Controllers.ErrorController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebUI/CaseCore.WebUI.Controllers.ErrorController.html",
+          "hash": "J51O75t3WEeJ/nr7UQegDSPbP3yM8J/ulYnDV6onPec="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebUI/CaseCore.WebUI.Controllers.PersonTypeController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebUI/CaseCore.WebUI.Controllers.PersonTypeController.html",
+          "hash": "MzoBX69+AnE7SJRXB38EVSsb6n+YIbNzA3fTp5lTUdQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebUI/CaseCore.WebUI.Controllers.PhoneNumberTypeController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebUI/CaseCore.WebUI.Controllers.PhoneNumberTypeController.html",
+          "hash": "EKxO3A2ppODrkEiIBQBLZZGGG8/VpjMGliqDB+NniSg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebUI/CaseCore.WebUI.Controllers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebUI/CaseCore.WebUI.Controllers.html",
+          "hash": "ekyRLGnV9QLpFy8aDR+RpZ8WHdHMAZ7Tc6OTKxtIXK8="
         }
       },
       "is_incremental": false,
@@ -1221,7 +2709,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WebUI/WebUI.Controllers.HomeController.html",
-          "hash": "EOg6XAqB6AHXlQqSZXgoo9csjnHwbhdAImQqrKRDqAA="
+          "hash": "U7/h+xNHrCF2Q1yr5Bl4AxYAxYc0qsq+AbtKwrZyFAk="
         }
       },
       "is_incremental": false,
@@ -1233,7 +2721,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WebUI/WebUI.Controllers.html",
-          "hash": "cdyuro5qwgN8QgThzRV/DPT8gA7/iO2HE4wjH1ZkZiM="
+          "hash": "Xaf3jOrTR/XXSg9BYEFKPHWjDaBVZ3zrGX95Fzig3ww="
         }
       },
       "is_incremental": false,
@@ -1281,7 +2769,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WebUI/WebUI.Startup.html",
-          "hash": "RpEjbru+72hX3jMfkqpFA9rO/0SkTsBtSttn91rPwYk="
+          "hash": "y0/VFT0OLxgCGsQBoX55LjSp9uIAui1zAhyP9UPov0o="
         }
       },
       "is_incremental": false,
@@ -1293,7 +2781,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WebUI/WebUI.html",
-          "hash": "vczNBXOYBdIf3nJIRbuokioc2oF5gjS8+8imCRWhvUc="
+          "hash": "R5V7uK2yiE+v1o2t0D4bL0nbrLvSKvW+fWbR29l4uco="
         }
       },
       "is_incremental": false,
@@ -1317,7 +2805,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WebUI/toc.html",
-          "hash": "2Xv6zuHeXiNzz0UQyXVe2fsPW2GgbEba0x57CMGlvX8="
+          "hash": "PqImXqcmsXVb3fBHg2qnVGrTNd2XEnOfa2bqvB6fdoE="
         }
       },
       "is_incremental": false,
@@ -1332,7 +2820,7 @@
           "hash": "BpTCWTUlaIKSDXcqaFhbuO6Oo7xxKbat6gOIPUd/DqY="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1356,7 +2844,7 @@
           "hash": "QwP0+DqOMXasGFTeqAEZumniSvQFhSy9tLlvUmcHjXY="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1383,7 +2871,7 @@
           "hash": "CadLJnpX3ho8LnUXa5g7mof+d9Pspxa1iPZz6u33+/g="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1402,25 +2890,23 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot build incrementally because config changed.",
+        "can_incremental": true,
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0,
-        "full_build_reason_code": "ConfigChanged"
+        "skipped_file_count": 0
       },
       "processors": {
         "ConceptualDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 9,
-          "skipped_file_count": 0
+          "skipped_file_count": 9
         },
         "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 98,
-          "skipped_file_count": 0
+          "total_file_count": 222,
+          "skipped_file_count": 17
         },
         "TocDocumentProcessor": {
           "can_incremental": false,

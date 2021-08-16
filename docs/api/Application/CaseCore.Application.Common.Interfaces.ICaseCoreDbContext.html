@@ -120,11 +120,11 @@
     <a href="https://github.com/stringly/CaseCore/new/master/apiSpec/new?filename=CaseCore_Application_Common_Interfaces_ICaseCoreDbContext_AddressTypes.md&amp;value=---%0Auid%3A%20CaseCore.Application.Common.Interfaces.ICaseCoreDbContext.AddressTypes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/stringly/CaseCore/blob/master/src/Application/Common/Interfaces/ICaseCoreDbContext.cs/#L29">View Source</a>
+    <a href="https://github.com/stringly/CaseCore/blob/master/src/Application/Common/Interfaces/ICaseCoreDbContext.cs/#L33">View Source</a>
   </span>
   <a id="CaseCore_Application_Common_Interfaces_ICaseCoreDbContext_AddressTypes_" data-uid="CaseCore.Application.Common.Interfaces.ICaseCoreDbContext.AddressTypes*"></a>
   <h4 id="CaseCore_Application_Common_Interfaces_ICaseCoreDbContext_AddressTypes" data-uid="CaseCore.Application.Common.Interfaces.ICaseCoreDbContext.AddressTypes">AddressTypes</h4>
-  <div class="markdown level1 summary"><p>A <seealso cref="!:DbSet&lt;AddressType>"></seealso> containing AddressType entities.</p>
+  <div class="markdown level1 summary"><p>A <seealso cref="!:DbSet&lt;AddressType>"></seealso> containing Address Type entities.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -142,6 +142,68 @@
     <tbody>
       <tr>
         <td><span class="xref">DbSet</span>&lt;<a class="xref" href="../Domain/CaseCore.Domain.Types.AddressType.html">AddressType</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stringly/CaseCore/new/master/apiSpec/new?filename=CaseCore_Application_Common_Interfaces_ICaseCoreDbContext_CaseAssignments.md&amp;value=---%0Auid%3A%20CaseCore.Application.Common.Interfaces.ICaseCoreDbContext.CaseAssignments%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stringly/CaseCore/blob/master/src/Application/Common/Interfaces/ICaseCoreDbContext.cs/#L50">View Source</a>
+  </span>
+  <a id="CaseCore_Application_Common_Interfaces_ICaseCoreDbContext_CaseAssignments_" data-uid="CaseCore.Application.Common.Interfaces.ICaseCoreDbContext.CaseAssignments*"></a>
+  <h4 id="CaseCore_Application_Common_Interfaces_ICaseCoreDbContext_CaseAssignments" data-uid="CaseCore.Application.Common.Interfaces.ICaseCoreDbContext.CaseAssignments">CaseAssignments</h4>
+  <div class="markdown level1 summary"><p>A <seealso cref="!:DbSet&lt;CaseAssignment>"></seealso> containing Case Assignment entities.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DbSet&lt;CaseAssignment&gt; CaseAssignments { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DbSet</span>&lt;<a class="xref" href="../Domain/CaseCore.Domain.Entities.CaseAssignment.html">CaseAssignment</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stringly/CaseCore/new/master/apiSpec/new?filename=CaseCore_Application_Common_Interfaces_ICaseCoreDbContext_CaseAssignmentTypes.md&amp;value=---%0Auid%3A%20CaseCore.Application.Common.Interfaces.ICaseCoreDbContext.CaseAssignmentTypes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stringly/CaseCore/blob/master/src/Application/Common/Interfaces/ICaseCoreDbContext.cs/#L37">View Source</a>
+  </span>
+  <a id="CaseCore_Application_Common_Interfaces_ICaseCoreDbContext_CaseAssignmentTypes_" data-uid="CaseCore.Application.Common.Interfaces.ICaseCoreDbContext.CaseAssignmentTypes*"></a>
+  <h4 id="CaseCore_Application_Common_Interfaces_ICaseCoreDbContext_CaseAssignmentTypes" data-uid="CaseCore.Application.Common.Interfaces.ICaseCoreDbContext.CaseAssignmentTypes">CaseAssignmentTypes</h4>
+  <div class="markdown level1 summary"><p>A <seealso cref="!:DbSet&lt;CaseAssignmentType>"></seealso> containing Case Assignment Type entities.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DbSet&lt;CaseAssignmentType&gt; CaseAssignmentTypes { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DbSet</span>&lt;<a class="xref" href="../Domain/CaseCore.Domain.Types.CaseAssignmentType.html">CaseAssignmentType</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -173,6 +235,68 @@
     <tbody>
       <tr>
         <td><span class="xref">DbSet</span>&lt;<a class="xref" href="../Domain/CaseCore.Domain.Entities.Case.html">Case</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stringly/CaseCore/new/master/apiSpec/new?filename=CaseCore_Application_Common_Interfaces_ICaseCoreDbContext_CaseStatuses.md&amp;value=---%0Auid%3A%20CaseCore.Application.Common.Interfaces.ICaseCoreDbContext.CaseStatuses%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stringly/CaseCore/blob/master/src/Application/Common/Interfaces/ICaseCoreDbContext.cs/#L41">View Source</a>
+  </span>
+  <a id="CaseCore_Application_Common_Interfaces_ICaseCoreDbContext_CaseStatuses_" data-uid="CaseCore.Application.Common.Interfaces.ICaseCoreDbContext.CaseStatuses*"></a>
+  <h4 id="CaseCore_Application_Common_Interfaces_ICaseCoreDbContext_CaseStatuses" data-uid="CaseCore.Application.Common.Interfaces.ICaseCoreDbContext.CaseStatuses">CaseStatuses</h4>
+  <div class="markdown level1 summary"><p>A <seealso cref="!:DbSet&lt;CaseAssignmentType>"></seealso> containing Case Status Type entities.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DbSet&lt;CaseStatus&gt; CaseStatuses { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DbSet</span>&lt;<a class="xref" href="../Domain/CaseCore.Domain.Entities.CaseStatus.html">CaseStatus</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stringly/CaseCore/new/master/apiSpec/new?filename=CaseCore_Application_Common_Interfaces_ICaseCoreDbContext_CaseStatusTypes.md&amp;value=---%0Auid%3A%20CaseCore.Application.Common.Interfaces.ICaseCoreDbContext.CaseStatusTypes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stringly/CaseCore/blob/master/src/Application/Common/Interfaces/ICaseCoreDbContext.cs/#L45">View Source</a>
+  </span>
+  <a id="CaseCore_Application_Common_Interfaces_ICaseCoreDbContext_CaseStatusTypes_" data-uid="CaseCore.Application.Common.Interfaces.ICaseCoreDbContext.CaseStatusTypes*"></a>
+  <h4 id="CaseCore_Application_Common_Interfaces_ICaseCoreDbContext_CaseStatusTypes" data-uid="CaseCore.Application.Common.Interfaces.ICaseCoreDbContext.CaseStatusTypes">CaseStatusTypes</h4>
+  <div class="markdown level1 summary"><p>A <seealso cref="!:DbSet&lt;CaseStatusType>"></seealso> containing Case Status Type entities.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DbSet&lt;CaseStatusType&gt; CaseStatusTypes { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DbSet</span>&lt;<a class="xref" href="../Domain/CaseCore.Domain.Types.CaseStatusType.html">CaseStatusType</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -213,11 +337,11 @@
     <a href="https://github.com/stringly/CaseCore/new/master/apiSpec/new?filename=CaseCore_Application_Common_Interfaces_ICaseCoreDbContext_PersonTypes.md&amp;value=---%0Auid%3A%20CaseCore.Application.Common.Interfaces.ICaseCoreDbContext.PersonTypes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/stringly/CaseCore/blob/master/src/Application/Common/Interfaces/ICaseCoreDbContext.cs/#L33">View Source</a>
+    <a href="https://github.com/stringly/CaseCore/blob/master/src/Application/Common/Interfaces/ICaseCoreDbContext.cs/#L54">View Source</a>
   </span>
   <a id="CaseCore_Application_Common_Interfaces_ICaseCoreDbContext_PersonTypes_" data-uid="CaseCore.Application.Common.Interfaces.ICaseCoreDbContext.PersonTypes*"></a>
   <h4 id="CaseCore_Application_Common_Interfaces_ICaseCoreDbContext_PersonTypes" data-uid="CaseCore.Application.Common.Interfaces.ICaseCoreDbContext.PersonTypes">PersonTypes</h4>
-  <div class="markdown level1 summary"><p>A <seealso cref="!:DbSet&lt;PersonType>"></seealso> containing PersonType entities.</p>
+  <div class="markdown level1 summary"><p>A <seealso cref="!:DbSet&lt;PersonType>"></seealso> containing Person Type entities.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -241,14 +365,45 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/stringly/CaseCore/new/master/apiSpec/new?filename=CaseCore_Application_Common_Interfaces_ICaseCoreDbContext_PhoneNumbers.md&amp;value=---%0Auid%3A%20CaseCore.Application.Common.Interfaces.ICaseCoreDbContext.PhoneNumbers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stringly/CaseCore/blob/master/src/Application/Common/Interfaces/ICaseCoreDbContext.cs/#L29">View Source</a>
+  </span>
+  <a id="CaseCore_Application_Common_Interfaces_ICaseCoreDbContext_PhoneNumbers_" data-uid="CaseCore.Application.Common.Interfaces.ICaseCoreDbContext.PhoneNumbers*"></a>
+  <h4 id="CaseCore_Application_Common_Interfaces_ICaseCoreDbContext_PhoneNumbers" data-uid="CaseCore.Application.Common.Interfaces.ICaseCoreDbContext.PhoneNumbers">PhoneNumbers</h4>
+  <div class="markdown level1 summary"><p>A <seealso cref="!:DbSet&lt;PhoneNumber>"></seealso> containing Phone Number entities.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DbSet&lt;PhoneNumber&gt; PhoneNumbers { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DbSet</span>&lt;<a class="xref" href="../Domain/CaseCore.Domain.Entities.PhoneNumber.html">PhoneNumber</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/stringly/CaseCore/new/master/apiSpec/new?filename=CaseCore_Application_Common_Interfaces_ICaseCoreDbContext_PhoneNumberTypes.md&amp;value=---%0Auid%3A%20CaseCore.Application.Common.Interfaces.ICaseCoreDbContext.PhoneNumberTypes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/stringly/CaseCore/blob/master/src/Application/Common/Interfaces/ICaseCoreDbContext.cs/#L37">View Source</a>
+    <a href="https://github.com/stringly/CaseCore/blob/master/src/Application/Common/Interfaces/ICaseCoreDbContext.cs/#L58">View Source</a>
   </span>
   <a id="CaseCore_Application_Common_Interfaces_ICaseCoreDbContext_PhoneNumberTypes_" data-uid="CaseCore.Application.Common.Interfaces.ICaseCoreDbContext.PhoneNumberTypes*"></a>
   <h4 id="CaseCore_Application_Common_Interfaces_ICaseCoreDbContext_PhoneNumberTypes" data-uid="CaseCore.Application.Common.Interfaces.ICaseCoreDbContext.PhoneNumberTypes">PhoneNumberTypes</h4>
-  <div class="markdown level1 summary"><p>A <seealso cref="!:DbSet&lt;PhoneNumberType>"></seealso> containing PhoneNumberType entities.</p>
+  <div class="markdown level1 summary"><p>A <seealso cref="!:DbSet&lt;PhoneNumberType>"></seealso> containing Phone Number Type entities.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -277,7 +432,7 @@
     <a href="https://github.com/stringly/CaseCore/new/master/apiSpec/new?filename=CaseCore_Application_Common_Interfaces_ICaseCoreDbContext_SaveChangesAsync_CancellationToken_.md&amp;value=---%0Auid%3A%20CaseCore.Application.Common.Interfaces.ICaseCoreDbContext.SaveChangesAsync(CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/stringly/CaseCore/blob/master/src/Application/Common/Interfaces/ICaseCoreDbContext.cs/#L43">View Source</a>
+    <a href="https://github.com/stringly/CaseCore/blob/master/src/Application/Common/Interfaces/ICaseCoreDbContext.cs/#L64">View Source</a>
   </span>
   <a id="CaseCore_Application_Common_Interfaces_ICaseCoreDbContext_SaveChangesAsync_" data-uid="CaseCore.Application.Common.Interfaces.ICaseCoreDbContext.SaveChangesAsync*"></a>
   <h4 id="CaseCore_Application_Common_Interfaces_ICaseCoreDbContext_SaveChangesAsync_CancellationToken_" data-uid="CaseCore.Application.Common.Interfaces.ICaseCoreDbContext.SaveChangesAsync(CancellationToken)">SaveChangesAsync(CancellationToken)</h4>
