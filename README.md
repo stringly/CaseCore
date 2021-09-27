@@ -1,6 +1,6 @@
 # CaseCore
 
-This project is my attempt at employing Clean Architecture principles to develop a web app in MVC Net Core that will allow users store information about Case Files.
+This project is my attempt at employing Clean Architecture principles to develop a web app in MVC Net Core that will allow users to store information about Case Files.
 
 ## Getting Started
 
